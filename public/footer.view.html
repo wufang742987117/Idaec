@@ -1,0 +1,45 @@
+<ui-view></ui-view>
+<div class="footer_conter">
+    <ul>
+        <li>
+            <h2>{{'FOOTER_T_1'|translate}}</h2>
+            <p class="down-info">
+                <a href="https://www.idaec.com/GoldCoinPro.apk">{{'DOWN_ANDROID'|translate}}</a>
+                <span>
+                </span>
+            </p>
+            <p class="down-info down-ios">
+                <a href="" ng-click="downIos()">{{'DOWN_IOS'|translate}}</a>
+                <span>
+                </span>
+            </p>
+        </li>
+        <li>
+            <h2>{{'FOOTER_T_2'|translate}}</h2>
+            <p>
+                <a href="/#!/help/trialcourse">{{'FOOTER_COURSE'|translate}}</a>
+                <a href="/#!/help/questions">{{'FOOTER_PROBLEM'|translate}}</a>
+                <a href="/#!/agreement">{{'FOOTER_AGREEMENT'|translate}}</a>
+                <a href="javascript://">{{'FOOTER_RATE'|translate}}</a>
+                <a href="/#!/order" ng-if="_username">{{'FOOTER_WORKER_ORDER'|translate}}</a>
+                <a href="/#!/login" ng-if="!_username">{{'FOOTER_WORKER_ORDER'|translate}}</a>
+            </p>
+        </li>
+        <li>
+            <h2>{{'FOOTER_T_3'|translate}}</h2>
+            <p>
+                <label>{{'FOOTER_EMAIL_ADD'|translate}}：service@idaec.com</label>
+               <!-- <label>{{'FOOTER_CONTACT_NUM'|translate}}：1383749444</label>-->
+            </p>
+        </li><!--
+        <li>
+            <h2>{{'FOOTER_T_4'|translate}}</h2>
+            <p>
+                <label>{{'FOOTER_TELEPHONE'|translate}}1：888-0000-000</label>
+                <label>{{'FOOTER_TELEPHONE'|translate}}2：888-0000-001</label>
+            </p>
+        </li>-->
+    </ul>
+    <p>CopyRight © 2017 idaec All Rights Reserved</p>
+</div>
+

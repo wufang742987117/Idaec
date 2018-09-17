@@ -1,0 +1,368 @@
+@charset "utf-8";
+//登陆注册样式开始
+.common-main {
+  overflow-x: hidden;
+  margin-top: 80px;
+  background: $themeColor;
+  input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+  }
+  .button-default {
+    cursor: not-allowed;
+  }
+
+  .glyphicon-refresh-animate {
+    animation: spin 1.4s infinite linear;
+  }
+
+  @keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+  }
+  
+  .common-main-title {
+    background: #fff;
+    text-align: center;
+    .zh-title {
+      color: $mainColor;
+    }
+    .en-title {
+      color: $default;
+      font-size: 28px;
+      font-weight: 200;
+      font-family: sans-serif;
+    }
+    .line {
+      color: $default;
+      font-size: 28px;
+      margin: 0 20px;
+    }
+  }
+  .form-horizontal {
+    .control-label {
+      color: $mainColor;
+    }
+    .form-control {
+      height: 38px;
+      font-size: .9rem;
+    }
+    .input-message {
+      margin-right: 106px;
+      .get-send-code {
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        padding-left: 12px;
+      }
+    }
+    .input-img {
+      float: right;
+      width: 96px;
+      height: 38px;
+      text-align: center;
+      border-radius: 4px;
+      background: #f5f5f5;
+      //border: 1px solid #ccc;
+      .send-code-image {
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+      .btn-code{
+        background: $button;
+        color: $color;
+        height: 38px;
+        width: 96px;
+        padding: 0;
+      }
+    }
+    .last-group{
+      margin-top: 2.5rem;
+    }
+    .login{
+      width: 100%;
+      height: 42px;
+      background: $button;
+      color:$color;
+      margin: .5rem 0;
+    }
+
+    .assist{
+      color:#aea5bc;
+    }
+    .back{
+      color:$button;
+    }
+    .has-error .form-control {
+      border-color: #e3556f;
+      box-shadow:none;
+    }
+    .text-error{
+      display: inline-block;
+      margin-right: 4px;
+      background: url(/assets/images/error.png) no-repeat;
+      width: 14px;
+      height: 14px;
+      background-size: cover;
+      position: relative;
+      top: 2px;
+    }
+    .text-success{
+      display: inline-block;
+      margin-right: 4px;
+      &:after{
+        content: '\2714';
+        font-size: .8rem;
+        background: $up;
+        color: #f5f5f5;
+        border-radius: 50%;
+        padding: 0 3px;
+      }
+    }
+    .text-submit{
+      display: inline-block;
+      margin-right: 4px;
+      &:after{
+        content: 'i';
+        font-size:  .8rem;
+        background: #4990e2;
+        color: #f5f5f5;
+        border-radius: 50%;
+        padding: 0 6px;
+      }
+    }
+    .warning{
+      color:#4990e2;
+    }
+    .error{
+      color:#e3556f;
+    }
+    .success{
+      color:#7ac02a;
+    }
+    .reset-success{
+      text-align: center;
+      color: #e44d68;
+      font-size: 14px;
+      margin-top: 3rem;
+      span{
+        color: $button;
+        font-size: 16px;
+      }
+    }
+  }
+  .clain-pins {
+    height: 4rem;
+    margin: 3rem auto;
+    .itemsdefault {
+      width: 25%;
+      text-align: center;
+      position: relative;
+      .content {
+        position: absolute;
+        height: 1.2rem;
+        border-bottom: 1px dashed #888;
+        width: 3rem;
+      }
+      .item-number {
+        border-radius: 50%;
+        background:$button-light;
+        width: 2.5rem;
+        height: 2.45rem;
+        margin: auto;
+        text-align: center;
+        div{
+          border-radius: 50%;
+          background: #87c9f1;
+          opacity: 1;
+          color: #fff;
+          width: 1.8rem;
+          height: 1.8rem;
+          text-align: center;
+          line-height: 1.8rem;
+          position: absolute;
+          margin-left: 4px;
+          margin-top: 4px;
+        }
+      }
+      //p{
+      //  color: #daabb4;
+      //}
+    }
+    .active{
+      .item-number>div{
+          background: $button;
+        }
+      p{
+        color:$button;
+      }
+    }
+  }
+}
+//.btn.disabled, .btn[disabled], fieldset[disabled] .btn{
+//  background: #40B2F0 !important;
+//  color:$color !important;
+//}
+//修改checkbox样式
+.chk_1 {
+  display: none;
+}
+.intro-main {
+   h3 {
+     text-align: center;
+   }
+  p {
+    text-indent: 2em;
+    padding: 0 20px;
+    line-height: 25px;
+    i {
+      font-weight: bold;
+      font-style: normal;
+      font-size: 20px;
+    }
+  }
+  p:nth-child(1) {
+    padding-top: 40px;
+  }
+}
+.chk_1 + label {
+  background-color: $color;
+  border: 1px solid #C1CACA;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 6px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin: -4px 4px 0 0;
+}
+.chk_1 + label:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.chk_1:checked + label {
+  background-color: $button;
+  border: 1px solid $button;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: $color;
+}
+
+.chk_1:checked + label:after {
+  content: '\2714';
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  color: #fff;
+  width: 100%;
+}
+
+// 分页插件
+.page-btn {
+  text-align: center;
+  .pagination{
+    margin: 10px 20px;
+
+    li {
+      a {
+        color: #494949;
+        outline: none;
+      }
+    }
+    .active {
+      a {
+        color: $color;
+        border-color: $button;
+        background-color: $button;
+      }
+    }
+    .disabled {
+      a {
+        color: #777777;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .common-main {
+    min-height: 560px;
+    margin-top: 80px;
+    .common-main-title {
+      padding:10px;
+      .zh-title{
+        font-size: 30px;
+      }
+    }
+    .form-horizontal {
+      //width: 420px;
+      margin: 80px auto;
+      .form-control {
+        margin-bottom: 6px;
+      }
+      .input-img {
+        margin-top: -44px;
+      }
+    }
+    .clain-pins {
+      width: 460px;
+      line-height: 3.5rem;
+      .content{
+        left:96px;
+      }
+    }
+
+  }
+}
+//媒介查询- -移动端
+@media screen and (max-width:768px){
+  .common-main {
+    margin-top: 50px;
+    .common-main-title {
+      padding:4px;
+      .zh-title{
+        font-size: 22px;
+      }
+      .en-title {
+        font-size: 1.6rem;
+      }
+    }
+    .form-horizontal {
+      margin-top: 3rem;
+      padding: 1rem;
+      .input-img {
+        margin-top: -38px;
+      }
+    }
+    .clain-pins {
+      .content{
+        left:68px;
+      }
+    }
+  }
+}
+.down-content {
+  width: 100%;
+  position: absolute;
+  top: 4rem;
+  img {
+    width: 100%;
+  }
+  .down-btn {
+    border: 1px solid #3b3131;
+    /* width: 20%; */
+    /* padding: 5px 20px; */
+    width: 80%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 30px;
+    font-size: 14px;
+    background: url(/assets/images/ios-icon.png) 20px no-repeat;
+    background-size: 20px;
+    a {
+      color:#000;
+    }
+  }
+}
+

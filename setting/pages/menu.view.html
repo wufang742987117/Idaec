@@ -1,0 +1,373 @@
+<div class="common-main" auto-height>
+    <div class="common-main-title">
+        <div class="container">
+            <span class="zh-title">{{'SETTING.MENU.TITLE'|translate}}</span>
+            <span class="en-title hidden-xs"><span class="line">|</span>PERSONAL CENTER</span>
+        </div>
+    </div>
+
+    <div class="container setting-main">
+        <div class="setting-module">
+            <!--<div class="module-title">{{'SETTING.MENU.BASIC'|translate}}</div>-->
+            <div class="module-con module-one">
+                <ul>
+                    <li ng-class="{'select-btm nopointer': data.current == 1}" ng-click="actions.setCurrent(1)">{{'SETTING.MENU.BASIC'|translate}}</li>
+                    <li ng-class="{'select-btm nopointer': data.current == 2}" ng-click="actions.setCurrent(2)">{{'SETTING.MENU.SECURITY'|translate}}</li>
+                    <li ng-class="{'select-btm nopointer': data.current == 3}" ng-click="actions.setCurrent(3)">{{'SETTING.MENU.OTHER'|translate}}</li>
+                </ul>
+                <div class="module-container" ng-if="data.current == 1">
+                    <div class="module-item">
+                        <div class="module-img"><img src="./assets/images/settings/realname-c@2x.png" alt=""></div>
+                        <div class="module-info">
+                            <h4>{{'SETTING.MENU.USER_ID'|translate}}</h4>
+                            <!--<small>{{'SETTING.MENU.USERINFO_TIPS'|translate}}</small>-->
+                        </div>
+                        <div class="module-status">
+                            <p>{{menu_display.name}}</p>
+                            <small>{{menu_display.user_id}}</small>
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-img">
+                            <img src="./assets/images/settings/email@2x.png" ng-if="!menu_display.email">
+                            <img src="./assets/images/settings/email-c@2x.png" ng-if="menu_display.email">
+                        </div>
+                        <div class="module-info">
+                            <h4>{{'SETTING.MENU.BIND_EMAIL'|translate}}</h4>
+                            <small>{{'SETTING.MENU.BIND_EMAIL_TIPS'|translate}}</small>
+                        </div>
+                        <div class="module-status">
+                            <a href="#!/setting/email" ng-if="!menu_display.email">{{'SETTING.MENU.BIND'|translate}}</a>
+
+                            <div ng-if="menu_display.email">
+                                <p>{{menu_display.email}}</p>
+                                <small>{{'SETTING.MENU.UNBIND'|translate}}</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-item">
+                        <div class="module-img">
+                            <img src="./assets/images/settings/iPhone@2x.png" ng-if="!menu_display.phone">
+                            <img src="./assets/images/settings/iPhone-c@2x.png" ng-if="menu_display.phone">
+                        </div>
+                        <div class="module-info">
+                            <h4>{{'SETTING.MENU.BIND_PHONE'|translate}}</h4>
+                            <small>{{'SETTING.MENU.BIND_PHONE_TIPS'|translate}}</small>
+                        </div>
+                        <div class="module-status">
+                            <a href="#!/setting/phone" ng-if="!menu_display.phone">{{'SETTING.MENU.BIND'|translate}}</a>
+
+                            <div ng-if="menu_display.phone">
+                                <p>{{menu_display.phone}}</p>
+                                <small>{{'SETTING.MENU.UNBIND'|translate}}</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-item">
+                        <div class="module-img">
+                            <img src="./assets/images/settings/email-c@2x.png">
+                        </div>
+                        <div class="module-info">
+                            <h4>{{'GOOGLE_VERIFY'|translate}}</h4>
+                            <small>{{'GOOGLE_VERIFY_TIP'|translate}}</small>
+                        </div>
+                        <div class="module-status" ng-if="!menu_display.auth">
+                            <a href="#!/setting/backupskey">{{'SETTING.MENU.SET'|translate}}</a>
+                        </div>
+                        <div class="module-status" ng-if="menu_display.auth">
+                            <small>{{'SETTING.MENU.SETED'|translate}}</small>
+                        </div>
+                    </div>
+
+                    <div class="module-item">
+                        <div class="module-img">
+                            <img src="./assets/images/settings/email-c@2x.png">
+                        </div>
+                        <div class="module-info">
+                            <h4>{{'ACCOUNT_REALNAME_TITLE'|translate}}></h4>
+                            <small>{{'ACCOUNT_REALNAME_TITLE_TIP'|translate}}</small>
+                        </div>
+                        <div class="module-status">
+                            <a href="#!/c2c/c2crealIdentity" ng-if="menu_display.kyc_status==0">{{'TRADE.DELEGATE.VIEW'|translate}}</a>
+                            <a href="#!/c2c/c2crealIdentity" ng-if="menu_display.kyc_status!=0">{{'TRADE.DELEGATE.VIEW'|translate}}</a>
+                        </div>
+                    </div>
+
+
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="setting-module">-->
+                    <!--<div class="module-title">{{'SETTING.MENU.PROMOTION'|translate}}</div>-->
+                    <!--<div class="module-con module-one">-->
+                    <style>
+                        /*.url {
+                            background: #efefef;
+                            padding: 10px;
+                        }*/
+                        @media screen and (max-width:768px) {
+                            .min-auto {
+                                position: relative;
+                                min-height: 180px;
+                            }
+
+                            .url-status.module-status {
+                                text-align: left !important;
+                                position: absolute !important;
+                                top: 95px !important;
+                                left: 75px !important;
+                            }
+                        }
+                    </style>
+                    <div class="module-item min-auto">
+                        <div class="module-img"><img src="./assets/images/settings/link-c@2x.png"></div>
+                        <div class="module-info">
+                            <h4>{{'SETTING.MENU.PROMOTION_URL'|translate}}</h4>
+                            <small>{{'SETTING.MENU.PROMOTION_URL_TIPS'|translate}}</small>
+                        </div>
+                        <div class="module-status url-status">
+                            <!-- <p style="background: #efefef;padding: 10px;">{{menu_display.url}}</p> -->
+                            <a target="_black" href="{{menu_display.url}}">{{menu_display.url}}</a>
+                            <small></small>
+                        </div>
+                    </div>
+                    <div class="module-item" style="padding-bottom: 0;">
+                        <div class="module-img">
+                            <img src="./assets/images/settings/qrcode-c@2x.png">
+                        </div>
+                        <div class="module-info">
+                            <h4>{{'SETTING.MENU.PROMOTION_QRCODE'|translate}}</h4>
+                            <small>{{'SETTING.MENU.PROMOTION_QRCODE_TIPS'|translate}}</small>
+                        </div>
+                        <div class="module-status">
+                            <div>
+                                <p>
+                                    <canvas style="width:80px;height:80px;" id="qrcode"></canvas>
+                                </p>
+                                <!-- <small>{{'SETTING.MENU.UNBIND'|translate}}</small> -->
+                            </div>
+                        </div>
+                    </div>
+										
+										<div class="module-item">
+												<div class="module-img">
+														<img src="./assets/images/settings/qrcode-c@2x.png">
+												</div>
+												<div class="module-info">
+														<h4>{{'SETTING.MENU.Quality_QRCODE'|translate}}</h4>
+														<!-- <small>{{'SETTING.MENU.PROMOTION_QRCODE_TIPS'|translate}}</small> -->
+												</div>
+												<div class="module-status" >
+														<small ng-if="!isJoin">{{'JOIN'|translate}}</small>
+														<small ng-if="isJoin">
+															<span ng-if="bbsLevel=='0'">{{'COMMON_LEVEL_1'|translate}}</span>
+															<span ng-if="bbsLevel=='1'">{{'COMMON_LEVEL_2'|translate}}</span>
+															<span ng-if="bbsLevel=='2'">{{'COMMON_LEVEL_3'|translate}}</span>
+															<span ng-if="bbsLevel=='3'">{{'COMMON_LEVEL_4'|translate}}</span>
+															<span ng-if="bbsLevel=='4'">{{'COMMON_LEVEL_5'|translate}}</span>
+														</small>
+												</div>
+										</div>
+										
+                </div>
+                <div class="module-container" ng-if="data.current == 2">
+                    <div class="module-pass-title">
+                        {{'SETTING_TIP_1'|translate}}
+                    </div>
+                    <div class="module-item">
+                        <div class="module-img"><img src="./assets/images/settings/pass-c@2x.png"></div>
+                        <div class="module-info">
+                            <h4>{{'SETTING.MENU.PASSWORD'|translate}}</h4>
+                            <!--<small>{{'SETTING.MENU.PASSWORD_TIPS'|translate}}</small>-->
+                        </div>
+                        <div class="module-status">
+                            <a href="#!/setting/password">{{'SETTING.MENU.MODIFY'|translate}}</a>
+                            <small>{{'SETTING.MENU.SETED'|translate}}</small>
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-img">
+                            <img src="./assets/images/settings/tpass@2x.png" ng-if="!menu_display.tfa">
+                            <img src="./assets/images/settings/tpass-c@2x.png" ng-if="menu_display.tfa">
+                        </div>
+                        <div class="module-info">
+                            <h4>{{'SETTING.MENU.TPASS'|translate}}</h4>
+                            <!--<small>{{'SETTING.MENU.TPASS_TIPS'|translate}}</small>-->
+                        </div>
+                        <div class="module-status">
+                            <a href="#!/setting/tpass" ng-if="!menu_display.tpass">{{'SETTING.MENU.SET'|translate}}</a>
+
+                            <div ng-if="menu_display.tpass">
+                                <a href="#!/setting/tpass">{{'SETTING.MENU.RESET'|translate}}</a>
+                                <!-- <label>
+                                    <input ng-model="tpassStatus"
+                                      value="tpassStatus"
+                                      ng-true-value="1"
+                                      ng-false-value="0"
+                                      ng-change="swtichTpass()" type="checkbox">
+                                    <input type="checkbox" ng-model="tpassStatus.disabled" ng-change="swtichTpass()"/>
+                                    {{'SETTING.MENU.TPASS_ENABLED'|translate}}</label> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-pass-title">
+                        {{'SETTING_TIP_2'|translate}}
+                    </div>
+                    <div class="module-item">
+                        <div class="module-img"><img src="./assets/images/settings/pass-c@2x.png"></div>
+                        <div class="module-info">
+                            <h4>{{'LOGIN_RETYPE'|translate}}</h4>
+                            <small>{{'LOGIN_RETYPE_TIP'|translate}}</small>
+                        </div>
+                        <div class="module-status">
+                            <a href="#!/setting/loginsafe" ng-if="!check_detail.LOGIN.id">{{'TRADE.SETTING_TP_2'|translate}}</a>
+                            <a href="#!/setting/loginsafe" ng-if="check_detail.LOGIN.id">{{'SETTING.MENU.MODIFY'|translate}}</a>
+                            <!--<small ng-if="check_detail.LOGIN.id">{{'SETTING.MENU.SETED'|translate}}</small>-->
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-img"><img src="./assets/images/settings/retype-c@2x.png"></div>
+                        <div class="module-info">
+                            <h4>{{'TRADE_RETYPE'|translate}}</h4>
+                            <small>{{'TRADE_RETYPE_tip'|translate}}</small>
+                        </div>
+                        <div class="module-status">
+                            <a href="#!/setting/tradesafe" ng-if="!check_detail.TRANS.id">{{'TRADE.SETTING_TP_2'|translate}}</a>
+                            <a href="#!/setting/tradesafe" ng-if="check_detail.TRANS.id">{{'SETTING.MENU.MODIFY'|translate}}</a>
+                            <!--<small ng-if="check_detail.TRANS.id">{{'SETTING.MENU.SETED'|translate}}</small>-->
+                        </div>
+                    </div>
+                    <div class="module-item">
+                        <div class="module-img"><img src="./assets/images/settings/retype-c@2x.png"></div>
+                        <div class="module-info">
+                            <h4>{{'WITHDRAW_RETYPE'|translate}}</h4>
+                            <small>{{'WITHDRAW_RETYPE_tip'|translate}}</small>
+                        </div>
+                        <div class="module-status">
+                            <a href="#!/setting/withdrawsafe" ng-if="!check_detail.WITHDRAW.id">{{'TRADE.SETTING_TP_2'|translate}}</a>
+                            <a href="#!/setting/withdrawsafe" ng-if="check_detail.WITHDRAW.id">{{'SETTING.MENU.MODIFY'|translate}}</a>
+                            <!--<small ng-if="check_detail.WITHDRAW.id">{{'SETTING.MENU.SETED'|translate}}</small>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="module-container" ng-if="data.current == 3">
+                    <div class="module-item">
+                        <div class="module-img">
+                            <img src="./assets/images/settings/api-c@2x.png">
+                        </div>
+                        <div class="module-info">
+                            <h4>{{'SETTING.MENU.API'|translate}}</h4>
+                            <small>{{'SETTING.MENU.API_TIPS'|translate}}</small>
+                        </div>
+                        <div class="module-status">
+                            <small ng-if="!menu_display.tpass">{{'SETTING.MENU.API_TIPS2'|translate}}</small>
+                            <a href="#!/setting/api" ng-if="menu_display.tpass">{{'SETTING.MENU.API_ASK'|translate}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="setting-module">-->
+        <!--<div class="module-title">{{'SETTING.MENU.SECURITY'|translate}}</div>-->
+        <!--<div class="module-con module-one">-->
+        <!--<div class="module-item">-->
+        <!--<div class="module-img"><img src="./assets/images/settings/pass-c@2x.png"></div>-->
+        <!--<div class="module-info">-->
+        <!--<h4>{{'SETTING.MENU.PASSWORD'|translate}}</h4>-->
+        <!--&lt;!&ndash;<small>{{'SETTING.MENU.PASSWORD_TIPS'|translate}}</small>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="module-status">-->
+        <!--<a href="#!/setting/password">{{'SETTING.MENU.MODIFY'|translate}}</a>-->
+        <!--<small>{{'SETTING.MENU.SETED'|translate}}</small>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="module-item">-->
+        <!--<div class="module-img">-->
+        <!--<img src="./assets/images/settings/tpass@2x.png" ng-if="!menu_display.tfa">-->
+        <!--<img src="./assets/images/settings/tpass-c@2x.png" ng-if="menu_display.tfa">-->
+        <!--</div>-->
+        <!--<div class="module-info">-->
+        <!--<h4>{{'SETTING.MENU.TPASS'|translate}}</h4>-->
+        <!--&lt;!&ndash;<small>{{'SETTING.MENU.TPASS_TIPS'|translate}}</small>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="module-status">-->
+        <!--<a href="#!/setting/tpass" ng-if="!menu_display.tpass">{{'SETTING.MENU.SET'|translate}}</a>-->
+
+        <!--<div ng-if="menu_display.tpass">-->
+        <!--<a href="#!/setting/tpass">{{'SETTING.MENU.RESET'|translate}}</a>-->
+        <!--&lt;!&ndash; <label>-->
+        <!--<input ng-model="tpassStatus"-->
+        <!--value="tpassStatus"-->
+        <!--ng-true-value="1"-->
+        <!--ng-false-value="0"-->
+        <!--ng-change="swtichTpass()" type="checkbox">-->
+        <!--<input type="checkbox" ng-model="tpassStatus.disabled" ng-change="swtichTpass()"/>-->
+        <!--{{'SETTING.MENU.TPASS_ENABLED'|translate}}</label> &ndash;&gt;-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="setting-module">-->
+        <!--<div class="module-title">{{'SETTING.MENU.OTHER'|translate}}</div>-->
+        <!--<div class="module-con module-one">-->
+        <!--<div class="module-item">-->
+        <!--<div class="module-img">-->
+        <!--<img src="./assets/images/settings/api-c@2x.png">-->
+        <!--</div>-->
+        <!--<div class="module-info">-->
+        <!--<h4>{{'SETTING.MENU.API'|translate}}</h4>-->
+        <!--<small>{{'SETTING.MENU.API_TIPS'|translate}}</small>-->
+        <!--</div>-->
+        <!--<div class="module-status">-->
+        <!--<small ng-if="!menu_display.tpass">{{'SETTING.MENU.API_TIPS2'|translate}}</small>-->
+        <!--<a href="#!/setting/api" ng-if="menu_display.tpass">{{'SETTING.MENU.API_ASK'|translate}}</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+<script type="text/ng-template" id="template">
+    <h5>{{'SETTING.MENU.TPASS_INPUT'|translate}}</h5>
+    <div class="modal-body text-center" style="padding: 30px;">
+        <input type="password" placeholder="{{'SETTING.MENU.TPASS'|translate}}" name="tpass" ng-model="tpass"
+               style="outline: none;
+          width: 200px; height: 34px; line-height: 34px; width: 100%; padding: 5px; display: block;">
+    </div>
+    <div class="dialog-contents modal-footer">
+        <button type="button" class="btn cancle" ng-click="cancel()">{{'SETTING.MENU.TPASS_CANCEL'|translate}}</button>
+        <button type="button" class="btn btn-danger" ng-click="confirm()">{{'SETTING.MENU.TPASS_OK'|translate}}</button>
+    </div>
+</script>
+
+<!-- 精品链推广弹窗 -->
+<!-- <script type="text/ng-template" id="cloud-template">
+	<div class="recharge_bod">
+		<p class="rege_addre">{{'SETTING.MENU.Quality_QRCODE'|translate}}</p>
+		<input type="text"  onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" maxlength="5"  ng-model="joinData.recommended" style="border-radius: 3px;border: 1px solid #ccc;" placeholder="{{'JOIN_FROM_ID'|translate}}" id="currency-number" name="number"onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')" required/>
+		<button href="javascript://" ng-click="confirmJoin()" ng-disabled="!joinData.recommended" class="btn txBtn" style="display: block;border-radius:3px;background:#11cfe0;color: #fff;text-align: center;margin: 10px 0 0;">{{'BUTTON.CONFIRM'|translate}}</button>
+	</div>
+</script> -->
+
+<script type="text/ng-template" id="cloud-template">
+	<h5>{{'SETTING.MENU.Quality_QRCODE'|translate}}</h5>
+    <div class="modal-body text-center">
+        <form class="form-horizontal" name="myForm2" novalidate>
+						<div class="form-group">
+								<label for="currency-address" class="col-sm-4 control-label"><b><span class="down">*</span></b>{{'JOIN_FROM_ID'|translate}}：</label>
+									<div class="col-sm-8">
+											<input type="text" class="form-control" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+											onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" maxlength="5"  ng-model="joinData.recommended" style="border-radius: 3px;border: 1px solid #ccc;" placeholder="{{'JOIN_FROM_ID'|translate}}" id="currency-number" name="number"onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')" required/>
+									</div>
+            </div>
+            <div class="form-group last-group">
+                <div class="col-sm-offset-4 col-sm-8">
+										<button href="javascript://" class="btn btn-danger add" ng-click="confirmJoin()" ng-disabled="!joinData.recommended" class="btn txBtn" style="display: block;border-radius:3px;background:#11cfe0;color: #fff;text-align: center;margin: 10px 0 0;">{{'BUTTON.CONFIRM'|translate}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>

@@ -1,0 +1,148 @@
+@charset "utf-8";
+.setting-ullist {
+  border-radius: 4px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color:#f2f2f2!important;
+  .navleft {
+    float: left;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    width: 16%;
+    padding: 10px 0 30px 0;
+    .navcontanier {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      .showle i {
+        display: block;
+      }
+      .nav-list {
+        float: right;
+        padding: 10px 0px 10px 0px;
+        border-bottom: 1px solid #eeeeee;
+        font-size: 16px;
+        width: 75%;
+        text-align: left;
+      }
+      i {
+        width: 4px;
+        height: 20px;
+        background: #12cfe0;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+      }
+    }
+    .navcontanier:hover {
+      color:#12cfe0;
+
+    }
+
+    .Quo_tit_H {
+        color: #12cfe0;
+    }
+  }
+  .ulnavr {
+    position: relative;
+    width: 80%;
+    min-height: 427px;
+    float: right;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    .box-container {
+      //min-height: 427px;
+      background-repeat: no-repeat!important;
+    }
+    .apphelp-step-1 {
+      margin-top: 10px;
+      background: url("/assets/images/apphelp-step_1.jpg");
+      height: 290px;
+      background-size: 100%;
+    }
+    .apphelp-step-2 {
+      background: url("/assets/images/apphelp-step_2.jpg");
+      height: 365px;
+      background-size: 100%;
+    }
+    .apphelp-step-3 {
+      background: url("/assets/images/apphelp-step_3.jpg");
+      height: 250px;
+      background-size: 100%;
+    }
+    .realname-step-1 {
+      margin-top: 10px;
+      background: url("/assets/images/realname-step_1.jpg");
+      height: 300px;
+      background-size: 100%;
+    }
+    .realname-step-2 {
+      background: url("/assets/images/realname-step_2.jpg");
+      height: 460px;
+      background-size: 100%;
+    }
+    .withdraw-step-1 {
+      margin-top: 10px;
+      background: url("/assets/images/withdraw-step_1.jpg");
+      height: 300px;
+      background-size: 100%;
+    }
+    .withdraw-step-2 {
+      background: url("/assets/images/withdraw-step_2.jpg");
+      height: 395px;
+      background-size: 100%;
+    }
+    .withdraw-step-3 {
+      background: url("/assets/images/withdraw-step_3.jpg");
+      height: 295px;
+      background-size: 100%;
+    }
+    .withdraw-step-4 {
+      background: url("/assets/images/withdraw-step_4.jpg");
+      height: 520px;
+      background-size: 100%;
+    }
+    .trade-step {
+      background: url("/assets/images/trade-step.jpg");
+      height: 700px;
+      background-size: 100%;
+    }
+    .register-step {
+      background: url("/assets/images/register-step.jpg");
+      height: 800px;
+      background-size: 100%;
+    }
+    .c2ctrade-step-1 {
+        background: url("/assets/images/c2ctrade-step-1.jpg");
+        height: 500px;
+        background-size: 100%;
+        margin-top: 15px;
+      }
+    .c2ctrade-step-2 {
+      background: url("/assets/images/c2ctrade-step-2.jpg");
+      height: 540px;
+      background-size: 100%;
+    }
+    .safe-step {
+      background: url(/assets/images/nodata.png) center no-repeat;
+      background-size: 25%;
+    }
+    .nodata-en {
+      background: url(/assets/images/noData_en.jpg) center no-repeat;
+      height: 427px;
+      background-size: 100%;
+    }
+    .nodata-zh {
+      background: url(/assets/images/noData_zh.jpg) center no-repeat;
+      height: 427px;
+      background-size: 100%;
+    }
+  }
+  p {
+    position: absolute;
+    bottom:20px;
+    width: 100%;
+    text-align: center;
+  }
+}

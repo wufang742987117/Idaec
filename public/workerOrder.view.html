@@ -1,0 +1,152 @@
+<div class="common-main">
+    <div class="common-main-title">
+        <div class="container">
+            <span class="zh-title">{{'WORK_LIST'|translate}}</span>
+            <span class="en-title hidden-xs"><span class="line">|</span>Work List</span>
+        </div>
+    </div>
+    <div class="container account-main work-main">
+        <form action="" name="asset_form">
+            <div class="detail-title">
+                <label>idaec</label>><span>{{'WORK_TITLE'|translate}}</span>
+            </div>
+            <div class="detail-tip">
+                {{'WORK_TIP'|translate}}
+            </div>
+            <h2>{{'WORK_TITLE'|translate}}</h2>
+
+            <label class="question_tip">{{'WORK_QUESTION_TIP_1'|translate}}</label>
+            <select class="form-control" id="select_ul" ng-change="selectChange()" ng-model="params.type" ng-init="params.type='1'">
+                <option value="1">{{'SELECT_OPTION_0'|translate}}</option>
+                <option value="2">{{'SELECT_OPTION_1'|translate}}</option>
+                <option value="3">{{'SELECT_OPTION_2'|translate}}</option>
+                <option value="4">{{'SELECT_OPTION_3'|translate}}</option>
+                <option value="5">{{'SELECT_OPTION_4'|translate}}</option>
+                <option value="6">{{'SELECT_OPTION_5'|translate}}</option>
+                <option value="7">{{'SELECT_OPTION_6'|translate}}</option>
+                <option value="8">{{'SELECT_OPTION_7'|translate}}</option>
+                <option value="9">{{'SELECT_OPTION_8'|translate}}</option>
+                <option value="10">{{'SELECT_OPTION_9'|translate}}</option>
+            </select>
+
+            <div ng-if="select_index==1||select_index==2">
+                <label class="question_tip">{{'WORK_QUESTION_TIP_RECHARGE_2'|translate}}</label>
+                <!--<input type="text" class="form-control"  ng-model="params.asset">-->
+                <select class="form-control" id="" ng-model="params.asset" >
+                    <option ng-repeat="v in assetTeam" value="{{v.symbol}}" ng-selected="$index==0">
+                        {{v.symbol}}
+                    </option>
+                </select>
+
+                <div ng-if="select_index==1">
+                    <label class="question_tip">{{'WORK_QUESTION_TIP_RECHARGE_3'|translate}}</label>
+                    <input type="text" class="form-control mtb3" ng-model="params.custom_field_1">
+                    <label class="less-tip">{{'WORK_QUESTION_TIP_RECHARGE_LESS_TIP_1'|translate}}</label>
+
+                    <label class="question_tip">{{'WORK_QUESTION_TIP_RECHARGE_4'|translate}}</label>
+                    <input type="text" class="form-control mtb3" ng-model="params.custom_field_2">
+                    <label class="less-tip">{{'WORK_QUESTION_TIP_RECHARGE_LESS_TIP_2'|translate}}</label>
+                </div>
+
+                <div ng-if="select_index==2">
+                    <label class="question_tip">{{'WORK_QUESTION_TIP_WITHDRW_3'|translate}}</label>
+                    <input type="text" class="form-control mtb3" ng-model="params.custom_field_1">
+                    <label class="less-tip">{{'WORK_QUESTION_TIP_RECHARGE_LESS_TIP_1'|translate}}</label>
+
+                    <label class="question_tip">{{'WORK_QUESTION_TIP_WITHDRW_4'|translate}}</label>
+                    <input type="text" class="form-control mtb3" ng-model="params.custom_field_2">
+                    <label class="less-tip">{{'WORK_QUESTION_TIP_RECHARGE_LESS_TIP_2_2'|translate}}</label>
+                </div>
+            </div>
+
+            <label class="question_tip">{{'WORK_QUESTION_TIP_RECHARGE_5'|translate}}<span>*</span></label>
+            <input type="text" class="form-control mtb3" ng-model="params.uid" readonly>
+            <label class="less-tip">{{'WORK_QUESTION_TIP_RECHARGE_LESS_TIP_3'|translate}}</label>
+
+            <label class="question_tip">{{'WORK_QUESTION_TIP_RECHARGE_6'|translate}}<span>*</span></label>
+            <input type="text" class="form-control mtb3" name="phone" required ng-model="params.phone" ng-minlength="11" ng-pattern="/^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/">
+            <label class="less-tip">{{'WORK_QUESTION_TIP_RECHARGE_LESS_TIP_4'|translate}}</label>
+
+            <!--<p class="error error-tip" ng-if="asset_form.phone.$invalid"><span class="text-error"></span>123</p>-->
+            <p class="error error-tip" ng-if="asset_form.phone.$invalid"><span class="text-error"></span>{{ 'BIND_NUM_INVALID_TIP' | translate }}</p>
+
+            <label class="question_tip">{{'WORK_QUESTION_TIP_RECHARGE_7'|translate}}<span>*</span></label>
+            <input type="email" class="form-control mtb3" ng-model="params.email" name="email" required>
+            <label class="less-tip">{{'WORK_QUESTION_TIP_RECHARGE_LESS_TIP_5'|translate}}</label>
+
+            <p class="error error-tip" ng-if="asset_form.email.$invalid"><span class="text-error"></span>{{ 'EMAIL_ADDRESS_TIP' | translate }}</p>
+
+            <label class="question_tip">{{'WORK_QUESTION_TIP_RECHARGE_8'|translate}}<span>*</span></label>
+            <input type="text" class="form-control" ng-model="params.title" name="title" maxlength="100" required>
+
+            <p class="error error-tip" ng-if="asset_form.title.$invalid"><span class="text-error"></span>{{ 'TITLE_WARN_TIP' | translate }}</p>
+
+            <label class="question_tip">{{'WORK_QUESTION_TIP_RECHARGE_9'|translate}}<span>*</span></label>
+            <textarea class="form-control mtb3" rows="3" ng-model="params.description" name="description" required maxlength="1000"></textarea>
+            <label class="less-tip">{{'WORK_QUESTION_TIP_RECHARGE_LESS_TIP_6'|translate}}</label>
+
+            <p class="error error-tip" ng-if="asset_form.description.$invalid"><span class="text-error"></span>{{ 'DES_WARN_TIP' | translate }}</p>
+
+            <label class="question_tip">{{'WORK_QUESTION_TIP_RECHARGE_10'|translate}}</label>
+
+            <form id="form" action="" method="post" enctype="multipart/form-data">
+              <div class="row form-group">
+                 <div class="panel-body" style="padding: 0 15px;">
+                   <div class="col-sm-6" style="padding:0;">
+                      <input id="input-id-en" name="file" multiple type="file" data-show-caption="true" ng-show="language=='en'">
+                       <input id="input-id-zh" name="file" multiple type="file" data-show-caption="true" ng-show="language=='zh'">
+                   </div>
+                 </div>
+              </div>
+            </form>
+            <button type="button" class="btn" ng-disabled="asset_form.$invalid"  ng-click="order_submit()" style="background-color:#17cddb;color:#fff">{{'ORDER_COMMIT'|translate}}</button>
+        </form>
+    </div>
+</div>
+
+
+<script>  
+        // $(function () {
+        //     initFileInput("input-id",'en');
+        // })
+        //
+        // function initFileInput(ctrlName,language) {
+        //         var control = $('#' + ctrlName);
+        //         control.fileinput({
+        //             language: language, //设置语言
+        //             uploadUrl: "", //上传的地址
+        //             allowedFileExtensions: ['jpg', 'gif', 'png','doc','docx','pdf','ppt','pptx','txt'],//接收的文件后缀
+        //             maxFilesNum : 5,//上传最大的文件数量
+        //             //uploadExtraData:{"id": 1, "fileName":'123.mp3'},
+        //             uploadAsync: true, //默认异步上传
+        //             showUpload: true, //是否显示上传按钮
+        //             showRemove : true, //显示移除按钮
+        //             showPreview : true, //是否显示预览
+        //             showCaption: false,//是否显示标题
+        //             browseClass: "btn btn-primary", //按钮样式
+        //             dropZoneEnabled: true,//是否显示拖拽区域
+        //             //minImageWidth: 50, //图片的最小宽度
+        //             //minImageHeight: 50,//图片的最小高度
+        //             //maxImageWidth: 1000,//图片的最大宽度
+        //             //maxImageHeight: 1000,//图片的最大高度
+        //             maxFileSize: 0,//单位为kb，如果为0表示不限制文件大小
+        //             //minFileCount: 0,
+        //             maxFileCount: 10, //表示允许同时上传的最大文件个数
+        //             enctype: 'multipart/form-data',
+        //             validateInitialCount:true,
+        //             previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+        //             msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+        //
+        //         }).on('filepreupload', function(event, data, previewId, index) {     //上传中
+        //             var form = data.form, files = data.files, extra = data.extra,
+        //             response = data.response, reader = data.reader;
+        //             console.log('文件正在上传');
+        //         }).on("fileuploaded", function (event, data, previewId, index) {    //一个文件上传成功
+        //             console.log('文件上传成功！'+data.id);
+        //
+        //         }).on('fileerror', function(event, data, msg) {  //一个文件上传失败
+        //             console.log('文件上传失败！'+data.id);
+        //         })
+        //     }
+ </script>  
+

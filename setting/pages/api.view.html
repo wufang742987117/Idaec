@@ -1,0 +1,49 @@
+<div class="common-main" auto-height>
+  <div class="common-main-title">
+    <div class="container">
+      <span class="zh-title">{{"SETTING.GEN_API" | translate}}</span>
+      <span class="en-title"><span class="line">|</span>CREATE API KEY</span>
+    </div>
+  </div>
+  <div class="container setting-action">
+   <!-- ng-show="api.needPost || api.haveGet" -->
+    <form novaildate class="form-horizontal isform">
+      <div class="apikey" ng-show="api.needPost || api.haveGet">
+        <div class="apikey-t">{{"SETTING.API_KEY"|translate}}</div>
+        <div class="apikey-c" style="margin-bottom: 20px;">{{result.apikey}}</div>
+        <div class="apikey-t">{{"SETTING.SIGNATURE"|translate}}</div>
+        <div class="apikey-c">{{result.signature}}</div>
+        <!-- <p>{{"SETTING.API_KEY"|translate}}</p>
+        <p disabled="disabled" class="input APIsign" style="color:#777;height:40px;line-height:40px;">{{result.apikey}}</p>
+        <p>{{"SETTING.SIGNATURE"|translate}}</p>
+        <p disabled="disabled" class="input APIsign">{{result.signature}}</p> -->
+      </div>
+
+    <!-- </form> -->
+    <!-- <form novaildate class="form-horizontal" ng-show="showTpass && !hideTpassInput"> -->
+        <!-- <p>{{'SETTING.TPASS'|translate}}</p> -->
+        
+        <div class="form-group" ng-show="showTpass && !hideTpassInput">
+          <label for="buy" class="col-sm-3 control-label">{{"SETTING.MENU.TPASS"|translate}}:</label>
+          <div class="col-sm-9">
+            <input class="form-control input-sm" type="password" ng-model="tpass" required>
+            <span class="error" ng-if="form.name.$dirty && form.name.$invalid"><span class="text-error"></span>{{"SETTING.MENU.TPASS_INPUT"|translate}}</span>
+          </div>
+        </div>
+    <!-- </form> -->
+    <!-- <form novaildate class="form-horizontal"> -->
+    <div class="form-group" style="padding-top: 15px;">
+      <div class="col-sm-offset-3 col-sm-9">
+        <button ng-click="postApi()" ng-show="showTpass && showGet" class="btn btn-submit btn-block" ng-disabled="!tpass">
+            <span ng-show="submit_sending"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+            <span ng-hide="submit_sending">{{"SETTING.API_BUTTON" | translate}}</span>
+        </button>
+        <button ng-click="getApi()" ng-show="showTpass && !showGet" class="btn btn-submit btn-block" ng-disabled="!tpass">
+            <span ng-show="submit_sending"><i class="glyphicon glyphicon-refresh spinning"></i></span>
+            <span ng-hide="submit_sending">{{"SETTING.API_BUTTON" | translate}}</span>
+        </button>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>

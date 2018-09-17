@@ -1,0 +1,194 @@
+@charset "utf-8";
+//头部公共样式开始
+
+//媒介查询- -pc
+@media screen and (min-width: 1100px) {
+  html, body, input {
+    font-size: 13px;
+  }
+  .container {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+  }
+  .container-fluid {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .navbar {
+    width: 100%;
+    //background: url(/assets/images/banner@2x.jpg) no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a2853', endColorstr='#2c4783', GradientType=1); /* IE6-9 */
+    font-size: 16px;
+    padding: 15px;
+    margin-bottom: 0;
+    background-size: cover;
+    border: 0;
+    .navbar-brand {
+      padding-top: 11px;
+      img {
+        width: 130px;
+      }
+    }
+    .nav-app {
+      display: none;
+    }
+    .navbar-nav > li .common {
+      color: $default;
+      padding: 12px 0;
+      display: inline-block;
+    }
+    .navbar-nav > li > a {
+      color: $color;
+    }
+    .navbar-nav > li > a.active,
+    .navbar-nav > li > a:hover {
+      color: $button;
+    }
+    .nav > li > a:hover,
+    .nav > li > a:focus,
+    .nav > li > a:active {
+      background: none;
+    }
+    .second-nav {
+      position: relative;
+      cursor: pointer;
+      ul {
+        display: none;
+        position: absolute;
+        min-width: 82px;
+        height: 190px;
+        background: $color;
+        opacity: .9;
+        z-index: 1;
+        //left: -10px;
+        box-shadow: 0 0 20px rgba(77, 68, 86, 0.3);
+        li {
+          height: 37px;
+          line-height: 37px;
+          text-align: center;
+          padding: 0 4px;
+          a {
+            color: $fontColor;
+            padding: 6px 10px;
+            border-bottom: 1px dashed $default;
+            font-size: 13px;
+          }
+          a:hover,
+          a.isactive {
+            color: $button;
+          }
+        }
+
+        li:last-child > a {
+          border-bottom: none;
+        }
+      }
+    }
+    .language:hover > ul,
+    .second-nav:hover > ul {
+      display: block;
+    }
+    .language {
+      cursor: pointer;
+      ul {
+        display: none;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        z-index: 2;
+        li {
+          border-bottom: 1px dashed #ddd;
+        }
+        li:last-child {
+          border-bottom: none;
+        }
+      }
+      .languageBtn {
+        width: 30px;
+        margin: 12px;
+      }
+    }
+  }
+  .nobackground {
+    background: none;
+  }
+}
+
+//媒介查询- -移动端
+@media screen and (max-width: 768px) {
+  html, body, input {
+    font-size: 12px;
+    background:$themeColor;
+  }
+  .navbar {
+    width: 100%;
+    background: $mainColor;
+    font-size: 1rem;
+    .navbar-brand {
+      padding: 1.35rem 0;
+      height: 0;
+      img {
+        width: 90px;
+      }
+    }
+    .nav {
+      display: none;
+    }
+    .nav-app {
+      float: right;
+      .login-nav li {
+        display: inline-block;
+        padding: 1.3rem .4rem;
+        a {
+          color: $color;
+        }
+        a:hover,
+        a.active {
+          color: $button;
+        }
+      }
+    }
+    .navbar-toggle {
+      margin-right: 0;
+      position: relative;
+    }
+    .header-nav {
+      display: none;
+      position: absolute;
+      background: #151F3F;
+      top: 4.2rem;
+      width: 60%;
+      right: 0;
+      padding: .5rem;
+      opacity: .8;
+      li {
+        padding: .5rem 1rem;
+        a {
+          color: $color;
+        }
+        .active,
+        .isactive{
+          color: $button;
+        }
+      }
+      li:last-child {
+        padding: -.5rem 1rem;
+      }
+    }
+    .icon-bar {
+      background: #fff;
+    }
+    .nabar-app {
+      width: 100%;
+      .login-nav li {
+        float: right;
+      }
+      .nav-line {
+        padding: 1.3rem 0;
+        color: #fff;
+      }
+    }
+  }
+}
+

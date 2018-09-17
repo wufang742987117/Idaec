@@ -1,0 +1,867 @@
+@charset "utf-8";
+.common-main {
+  padding-bottom: 28px;
+  .nav-clain-pins {
+    .clain-pins-step {
+      width: 100%;
+      height: 38px;
+      .itemsdefault {
+        width: 160px;
+        padding-top: 8px;
+        p {
+          padding-top: 6px;
+          color: #aea5bc;
+          font-weight: 700;
+          .content {
+            border-top: 1px dashed #aea5bc;
+            width: 34px;
+            display: inline-block;
+            height: 6px;
+            margin-left: 10px;
+          }
+
+          a {
+            color: #aea5bc;
+          }
+        }
+      }
+      .active .item-number > div {
+        background: #e44d68;
+      }
+      .active p {
+        color: #e44d68;
+        .content {
+          border-top: 1px dashed #e44d68;
+        }
+        a {
+          color: #e44d68;
+        }
+      }
+      .item-number {
+        border-radius: 50%;
+        background: $button-light;
+        width: 2.4rem;
+        height: 2.4rem;
+        text-align: center;
+        float: left;
+        div {
+          border-radius: 50%;
+          background: $button-light;
+          opacity: 1;
+          color: #fff;
+          width: 1.8rem;
+          height: 1.8rem;
+          text-align: center;
+          line-height: 1.8rem;
+          position: absolute;
+          margin-left: 4px;
+          margin-top: 4px;
+        }
+      }
+      .last {
+        width: 16%;
+      }
+    }
+
+  }
+  .account-main {
+    color: $fontColor;
+    min-height: 640px;
+    margin-top: 28px;
+    background: $color;
+    .account-title {
+      height: 90px;
+      margin: 21px 28px;
+      border-bottom: 1px $default dashed;
+      h5 {
+        color: #6a5f76;
+      }
+      .number {
+        color: $fontColor;
+        font-weight: 600;
+      }
+    }
+    .detail-main {
+      margin-top: 20px;
+      .fund {
+        margin-top: 40px;
+        h4 {
+          border-left: 5px solid $button;
+          font-size: 16px;
+          padding-left: 28px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+
+        .charge {
+          width: 100%;
+          ul {
+            height: 38px;
+            line-height: 38px;
+            width: 98%;
+            overflow-x: auto;
+            margin: 4px 10px;
+            white-space: nowrap;
+            overflow-y: hidden;
+            li {
+              display: inline;
+              color: $default;
+              text-align: center;
+              cursor: pointer;
+              padding: 0 20px;
+            }
+            li.active {
+              color: $button;
+              border-bottom: none;
+            }
+          }
+        }
+        .table {
+          tr th {
+            color: $default;
+            text-align: center;
+            border-bottom: solid 1px #ddd;
+          }
+          tr td {
+            text-align: center;
+            border-top: solid 1px #f5f2f8;
+            padding: 0;
+            height: 32px;
+            line-height: 32px;
+            font-size: 12px;
+            a {
+              display: inline-block;
+              line-height: 16px;
+            }
+            .lock,
+            .withdraw {
+              color: $button;;
+            }
+            .account-deposit {
+              background: $button;
+              color: $color;
+              border-radius: 2px;
+            }
+            .applying {
+              color: $default;
+            }
+            .hash-sel {
+              width: auto;
+              color: #4990e2;
+            }
+          }
+        }
+        .fund-nav-title {
+          li {
+            width: 25%;
+            float: left;
+            font-size: 14px;
+            padding-bottom: 1rem;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+				.bbs-title {
+					li {
+						width: 20%;
+					}
+				}
+        li.active {
+          color: $fontColor;
+          font-weight: 700;
+          border-bottom: 2px solid $button;
+          cursor: pointer;
+        }
+      }
+    }
+
+    //账户管理
+    .management {
+      .fund {
+        position: relative;
+        .recharge-nav-title {
+          border-bottom: 0 !important;
+        }
+        .addbank {
+          position: absolute;
+          top: 0;
+          border: 0;
+          background: none;
+          cursor: pointer;
+          color: $button;
+          .add {
+            font-size: 20px;
+            display: inline-block;
+            font-weight: 700;
+          }
+        }
+        .delete {
+          cursor: pointer;
+          color: $button;
+        }
+      }
+    }
+  }
+
+  //充币充值
+  .recharge-main {
+    .recharge-nav-title {
+      margin-top: 36px;
+      height: 40px;
+      border-bottom: solid 1px #dbd9dd;
+      li {
+        width: 176px;
+        font-size: 16px;
+        height: 40px;
+        float: left;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        .dot-top {
+          position: absolute;
+          margin: 8px 6px;
+          width: 4px;
+          height: 4px;
+          border-left: 4px solid transparent;
+          border-bottom: 8px solid #000;
+          border-right: 4px solid transparent;
+          cursor: pointer;
+        }
+        .dot-down {
+          position: absolute;
+          margin: 8px 6px;
+          width: 4px;
+          height: 4px;
+          border-left: 4px solid transparent;
+          border-top: 8px solid #000;
+          border-right: 4px solid transparent;
+          cursor: pointer;
+        }
+        .balance-box {
+          position: absolute;
+          width: 395px;
+          margin-top: 18px;
+          border: 1px solid #ddd;
+          border-top: none;
+          box-shadow: 0 0 4px 0 rgba(136, 136, 136, 0.5);
+          padding: 10px;
+          color: #988ea2;
+          z-index: 100;
+          background: $color;
+          cursor: pointer;
+          div {
+            border-right: 1px dashed #988ea2;
+            padding: 8px;
+            font-size: 14px;
+            width: 33%;
+            float: left;
+          }
+          div:nth-child(3n) {
+            border-right: none;
+          }
+          .active {
+            color: $button;
+          }
+        }
+      }
+    }
+    .deposit-type {
+      .mothod {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      ul {
+        position: relative;
+        height: 58px;
+        margin-left: 30px;
+        li {
+          float: left;
+          padding: 10px;
+          img {
+            margin-right: 10px;
+          }
+          p {
+            padding-right: 18px;
+            border-right: 1px dashed #979797;
+          }
+        }
+        li:last-child > p {
+          border-right: none;
+        }
+        li.active {
+          position: relative;
+          i {
+            position: absolute;
+            width: 12px;
+            height: 13px;
+            background: url(/assets/images/triangle.png) no-repeat 50%;
+            background-size: contain;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+      .deposit-text {
+        padding-left: 100px;
+        margin-top: 30px;
+      }
+      .bank-step {
+        margin-top: 40px;
+      }
+      .clain-pins-step {
+        width: 100%;
+        .itemsdefault {
+          p {
+            line-height: 30px;
+            color: $button;
+            font-weight: 700;
+          }
+        }
+        .gl {
+          width: 12px;
+          height: 12px;
+          font-weight: 700;
+          display: inline-block;
+          margin-left: 10px;
+        }
+        .active .item-number > div {
+          background: #e44d68;
+        }
+        .item-number {
+          border-radius: 50%;
+          background: $button-light;
+          width: 2.4rem;
+          height: 2.4rem;
+          text-align: center;
+          float: left;
+          margin-right: 20px;
+          div {
+            border-radius: 50%;
+            background: $button;
+            opacity: 1;
+            color: #fff;
+            width: 1.8rem;
+            height: 1.8rem;
+            text-align: center;
+            line-height: 1.8rem;
+            position: absolute;
+            margin-left: 3.5px;
+            margin-top: 4px;
+          }
+        }
+      }
+      .charge-money {
+        text-align: center;
+        .charge-input {
+          border-bottom: 1px dashed #c7c7c7;
+          padding: 38px 0;
+          .money {
+            width: 240px;
+            height: 38px;
+            line-height: 38px;
+            margin-left: 40px;
+            padding-left: 10px;
+          }
+        }
+        button {
+          width: 266px;
+          color: $color;
+          font-size: 16px;
+          border-radius: 4px;
+          border: 0;
+          margin: 50px;
+        }
+        .new-account {
+          height: 38px;
+          background: #e32849;
+        }
+        .withdraw {
+          background: $button;
+        }
+        .btn-code {
+          background: $button;
+        }
+        .input-img button[disabled] {
+          background: $button;
+          opacity: .8;
+        }
+        .money-address {
+          border-bottom: 1px solid #ddd;
+          margin: 0;
+          .copy-address {
+            display: inline-block;
+            background: $button;
+            width: 68px;
+            height: 38px;
+            line-height: 38px;
+            border-radius: 2px;
+            color: $color;
+            margin-left: 10px;
+          }
+        }
+        .data-code {
+          position: relative;
+          padding-top: 40px;
+          h4 {
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            background: #fff;
+            width: 40px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+      .notice {
+        h5 {
+          font-weight: 700;
+        }
+        p {
+          line-height: 20px;
+          text-indent: -20px;
+        }
+      }
+      .bank-step2 {
+        width: 100%;
+        border-right: 1px dashed #c7c7c7;
+        margin: 30px 0;
+        table {
+          width: 60%;
+          margin: auto;
+          border: 1px solid #ddd;
+          tr td:first-child {
+            border-right: 1px solid #ddd;
+            color: $default;
+          }
+          tr td:last-child {
+            color: $button;
+            font-weight: 700;
+          }
+        }
+        .bank-notice h5 {
+          margin: 30px 80px;
+        }
+      }
+      .sina {
+        padding: 5px 0 5px 80px;
+        .itemsdefault {
+          width: 260px;
+        }
+      }
+      .sina-step1 {
+        margin-top: 20px;
+        .sina-notice {
+          font-size: 12px;
+          width: 26%;
+          margin: 2rem auto;
+          font-weight: 700;
+          text-align: left;
+          line-height: 1.8rem;
+        }
+      }
+      .sina-charge-input {
+        margin: 30px 120px;
+        text-align: left;
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 30px;
+        h5 {
+          margin-bottom: 30px;
+          font-weight: 700;
+        }
+      }
+      .sina-charge-money {
+        width: 50%;
+        border-right: 1px dashed #c7c7c7;
+        .form-horizontal {
+          margin: 0 auto;
+          width: 72%;
+        }
+        .form-group {
+          margin-bottom: 0;
+          select.bank-type, input {
+            //width: 240px;
+            height: 38px;
+            line-height: 38px;
+            padding-left: 10px;
+          }
+          .province,
+          .city {
+            width: 47%;
+          }
+          .input-img {
+            background: $button;
+            line-height: 38px;
+            color: $color;
+            border: none;
+          }
+          .input-message input {
+            width: 160px;
+          }
+          .input-img:hover {
+            opacity: .8;
+            cursor: pointer;
+          }
+          .next {
+            width: 60%;
+            margin-top: 30px;
+          }
+          .next:hover {
+            opacity: .8;
+          }
+        }
+      }
+      .gift-charge {
+        .form-horizontal {
+          width: 100%;
+          p {
+            font-size: 12px;
+          }
+          .step-success {
+            margin-top: 30px;
+            font-size: 16px;
+          }
+        }
+      }
+
+    }
+  }
+  table {
+    tr:nth-child(even) {
+      background: #f4fbff;
+    }
+  }
+  input::-webkit-input-placeholder {
+    color: #999;
+  }
+  input:-moz-placeholder {
+    color: #999;;
+  }
+  input::-moz-placeholder {
+    color: #999;
+  }
+  input:-ms-input-placeholder {
+    color: #999;
+  }
+  //充币充值结束
+
+  //提现提币
+  .withdraw-type {
+    .sina-step1 {
+      margin-bottom: 50px;
+    }
+    .withdraw-tr:nth-child(even) {
+      background: #f4fbff;
+    }
+    .authentication {
+      display: inline-block;
+      width: 348px;
+      height: 38px;
+      background: $button;
+      color: $color;
+      line-height: 38px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .authentication:hover {
+      opacity: .8;
+    }
+    .form-horizontal {
+      position: relative;
+      margin: 0 auto;
+      .add-account-app,
+      .add-account {
+        position: absolute;
+        cursor: pointer;
+        padding: 2px 12px;
+      }
+      .add-account:hover {
+        color: #888;
+        border: 1px solid #888;
+        opacity: .8;
+      }
+      .bank-notice {
+        font-size: 12px;
+        transform: scale(0.9);
+        display: inline-block;
+      }
+      .input-img {
+        //background: $button;
+        line-height: 38px;
+        color: $color;
+        border: none;
+        cursor: pointer;
+      }
+      .form-group:nth-child(2) {
+        border-bottom: 1px dashed #ddd;
+        padding-bottom: 20px;
+      }
+      button {
+        padding: 0;
+        width: 100% !important;
+        margin: 0 !important;
+      }
+      .probably {
+        color: $default;
+      }
+    }
+    .form {
+      .form-group:nth-child(2) {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.text-error {
+  display: inline-block;
+  margin-right: 4px;
+  background: url(/assets/images/error.png) no-repeat;
+  width: 14px;
+  height: 14px;
+  background-size: cover;
+  position: relative;
+  top: 2px;
+}
+
+.ngdialog.ngdialog-theme-default {
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+  .ngdialog-content {
+    background: $color;
+    .form-group {
+      box-shadow: none;
+      outline: none;
+      .remarks {
+        resize: none;
+      }
+      .data-num {
+        color: $fontColor;
+        margin-bottom: 20px;
+      }
+      //input {
+      //  border: 1px solid #ccc;
+      //}
+    }
+    .cancle:hover {
+      opacity: .8;
+    }
+    button {
+      outline: none;
+      border: none;
+    }
+    .cancle {
+      width: 60px;
+      border-radius: 2px;
+      border: 1px solid $button;
+      color: $button;
+      background: #fff;
+    }
+    .btn-danger {
+      background: $button;
+      color: $color;
+    }
+    .modal-body {
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+    }
+    .modal-footer {
+      border-top: 0;
+    }
+    .add {
+      width: 100%;
+      background: #40B2F0;
+      color: #fff;
+      margin-top: 20px;
+    }
+  }
+}
+
+.scroll > ul::-webkit-scrollbar {
+  height: 8px;
+  background-color: #FFFFFF;
+}
+
+.scroll > ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+
+.scroll > ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #f4fbff;
+}
+
+.with-getcode {
+  padding: 0px;
+  height: 38px;
+  border-radius: 2px;
+  background-color: #11cfe0;
+  border: none;
+  transition: background-color .3s;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 1100px) {
+  .fund {
+    .addbank {
+      right: 40px;
+    }
+    .table {
+      tr td:first-child {
+        width: 20%;
+      }
+      tr td:last-child {
+        width: 25%;
+      }
+      a {
+        padding: 4px 10px;
+      }
+    }
+  }
+  .deposit-type {
+    padding: 28px;
+    .clain-pins-step {
+      height: 38px;
+      background: #f4fbff;
+      padding: 5px 100px;
+      .itemsdefault {
+        width: 300px;
+      }
+    }
+    .charge-money {
+      width: 50%;
+      border-right: 1px dashed #c7c7c7;
+      margin: 30px 0;
+      .data-code h4 {
+        margin-left: -30px;
+      }
+      .charge-input {
+        margin: 30px;
+        span {
+          margin-left: 30px;
+        }
+      }
+    }
+    .notice {
+      width: 50%;
+      h5 {
+        margin: 50px 80px;
+      }
+      p {
+        padding-left: 100px;
+      }
+    }
+    .ngdialog-content {
+      width: 450px !important;
+      margin-top: 12%;
+      .modal-body {
+        padding: 40px;
+      }
+    }
+  }
+  .form-horizontal {
+    width: 365px;
+    margin-right: 70px;
+    .data-num {
+      padding-top: 7px;
+    }
+    //.form-group:nth-child(2) {
+    //  margin-top: -20px;
+    //}
+    .add-account-app{
+      display: none;
+    }
+    .add-account {
+      border: 1px solid #ddd;
+      right: -36px;
+      color: #ddd;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-horizontal {
+    width: 100%;
+    margin-top: 0;
+    .add-account{
+      display: none;
+    }
+    .add-account-app {
+      right: 0;
+      top: 0;
+      border:0;
+      color: $button;
+    }
+  }
+  .fund .addbank {
+    right: 0;
+  }
+  .charge-money {
+    width: 100%;
+    .data-code h4 {
+      margin-left: -20px;
+    }
+  }
+  .notice {
+    p {
+      padding-left: 5%;
+    }
+    .hint {
+      text-align: left;
+      text-indent: 0 !important;
+    }
+  }
+  .clain-pins-step {
+    .itemsdefault {
+      background: #f4fbff;
+      width: 100%;
+      padding: .5rem 0 0 1rem;;
+    }
+  }
+  .table {
+    table-layout: fixed;
+    tr td:first-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    a {
+      padding: 0 2px;
+    }
+    .withdraw {
+      margin-right: 0;
+    }
+    .account-deposit {
+      background: #40B2F0;
+      color: #fff;
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+  }
+  .ngdialog-content {
+    width: 90% !important;
+    .modal-body {
+      padding: 40px;
+    }
+  }
+  .form-group {
+    label {
+      float: left;
+    }
+  }
+  .bank-notice{
+    margin-left: 1.2rem;
+  }
+}
+
+
+
+
+

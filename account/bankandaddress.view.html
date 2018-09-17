@@ -1,0 +1,155 @@
+<div class="common-main">
+    <div class="common-main-title">
+        <div class="container">
+            <span class="zh-title">{{'ACCOUNT.ADDRESS_MANAGE'|translate}}</span>
+            <span class="en-title hidden-xs"><span class="line">|</span>ADDRESS MANAGEMENT</span>
+        </div>
+    </div>
+    <div class="container account-main recharge-main">
+        <div class="detail-main management">
+            <div class="fund">
+                <ul class="recharge-nav-title">
+                    <!--<li ng-class="{'active':type == 'bank'}" ng-click="getAssetType('bank')">银行卡管理</li>-->
+                    <li ng-class="{'active':type == 'address'}">{{'ACCOUNT.ADDRESS_MANAGE'|translate}}</li>
+                </ul>
+                <div class="addbank">
+                    <span class="add"> + </span>
+                    <!--<span ng-if="type == 'bank'" ng-click="addAccount()">添加银行卡</span>-->
+                    <span ng-if="type == 'address'" ng-click="addbalanceAccount()">{{'ACCOUNT.ADD_ADDRESS'|translate}}</span>
+                </div>
+
+                <!--数字货币地址管理-->
+                <div class="charge scroll" ng-if="type == 'address'">
+                    <ul>
+                        <li ng-class="{'active':isactive == it.symbol}" ng-repeat="it in balances"
+                            ng-click="getFundName(it.symbol,it)">{{'ASSET.'+ it.symbol | translate}}
+                        </li>
+                    </ul>
+                </div>
+                <table class="table" ng-if="type == 'address'">
+                    <tr>
+                        <th width="18%">{{'TRADE.ORDER_TIME'|translate}}</th>
+                        <th width="15%">{{'TRADE.DELEGATE.ASSET'|translate}}</th>
+                        <th width="20%">{{'ACCOUNT.WALLET_ADDRESS'|translate}}</th>
+                        <th width="15%">Memo</th>
+                        <th width="15%">{{'ACCOUNT.BANK_OTHER_NAME'|translate}}</th>
+                        <th width="15%">{{'TRADE.DELEGATE.OPTION'|translate}}</th>
+                    </tr>
+                    <tr ng-if="address.length == 0">
+                        <td colspan="6">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+                    </tr>
+                    <tr ng-repeat="item in address">
+                        <td>{{item.created_at | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td>{{'ASSET.'+ isactive | translate}}</td>
+                        <td>{{item.address}}</td>
+                        <td ng-if="item.address_part_two !== null">{{item.address_part_two}}</td>
+                        <td ng-if="item.address_part_two == null"></td>
+                        <td>{{item.remark}}</td>
+                        <td>
+                            <span class="delete" href="javascript:;" ng-click="deleteAddressmessage(item,item.id)">{{'ACCOUNT.DELETE'|translate}}</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="templateId">
+    <h5>{{'ACCOUNT.DELETE_ADDRESS'|translate}}</h5>
+    <div class="modal-body text-center">
+        <p><span class="text-error"></span>{{'ACCOUNT.DELETE_SURE'|translate}}</p>
+    </div>
+    <div class="dialog-contents modal-footer">
+        <button type="button" class="btn cancle" ng-click="closeThisDialog()">{{'TRADE.CANCEL'|translate}}</button>
+        <button type="button" class="btn btn-danger" ng-click="confirm()">{{'SETTING.MENU.TPASS_OK'|translate}}</button>
+    </div>
+</script>
+
+<!--提币地址添加-->
+<script type="text/ng-template" id="currency-template">
+    <h5>{{'ACCOUNT.ADD_ADDRESS'|translate}}</h5>
+    <div class="modal-body text-center">
+        <form class="form-horizontal" name="myForm2" novalidate>
+            <!--<div class="form-group">-->
+                <!--<label for="remark" class="col-sm-4 control-label"><b><span class="down">*</span></b>{{'ACCOUNT.ADDRESS_NAME'|translate}}：</label>-->
+                <!--<div class="col-sm-8">-->
+                    <!--<select type="text" class="form-control remarks" id="remark" placeholder="请输入地址名称" ng-model="params.remark">-->
+                        <!--<option value="" selected="selected">&#45;&#45; {{'ACCOUNT.SELECT_ADDRESS_REQ'|translate}} &#45;&#45;</option>-->
+                        <!--<option value="{{item.symbol}}" ng-repeat="item in balances">{{item.symbol | translate}}</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="form-group">
+                <label for="remark" class="col-sm-4 control-label"><b><span class="down">*</span></b>{{'ACCOUNT.ADDRESS_NAME'|translate}}：</label>
+
+                <div class="col-sm-8">
+                    <input type="text" class="form-control remarks" id="remark" maxlength="30" placeholder="{{'ACCOUNT.ADDRESS_NAME_REQ'|translate}}" ng-model="params.remarks"/>
+                </div>
+            </div>
+            <div class="form-group"
+                 ng-class="{'has-error': myForm2.balance_address.$dirty && !myForm2.balance_address.$valid}">
+                <label for="currency-address" class="col-sm-4 control-label"><b><span class="down">*</span></b>{{'ACCOUNT.SEL_ADDRESS'|translate}}：</label>
+
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="currency-address" placeholder="{{'ACCOUNT.SELECT_ADDRESS_REQ'|translate}}"
+                           name="balance_address" ng-model="params.address" ng-pattern="/^[a-zA-Z0-9]*$/" maxlength="50"
+                           required/>
+                    <span class="help-block pull-left"
+                          ng-show="myForm2.balance_address.$dirty && !myForm2.balance_address.$valid"><span
+                            class="text-error"></span>{{'ACCOUNT.SELECT_ADDRESS_ERROR'|translate}}</span>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{'has-error': myForm2.memo.$dirty && !myForm2.memo.$valid}" ng-if="activeBalance.coin_type==1">
+                <label for="currency-memo" class="col-sm-4 control-label"><b><span
+                        class="down">*</span></b>Memo：</label>
+
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="currency-memo" name="memo" placeholder="请输入提币Memo"
+                           ng-model="params.address_part_two" ng-pattern="/^[a-zA-Z0-9]*$/" maxlength="30" required/>
+                    <span class="help-block pull-left" ng-show="myForm2.memo.$dirty && !myForm2.memo.$valid"><span
+                            class="text-error"></span>{{'ACCOUNT.MEMO_ERROR'|translate}}</span>
+                </div>
+            </div>
+            <div class="form-group"  ng-class="{'has-error':errorVcode}">
+                <label for="verify_Code" class="col-sm-4 control-label"><b><span class="down">*</span></b>{{'REGISTER.CHECK_CODE'|translate}}：</label>
+                <div class="col-sm-8">
+                    <div class="input-message pull-left">
+                        <input type="text" class="form-control get-send-code" id="verify_Code" name="vcode" placeholder="{{'ACCOUNT.PHONE_EMAIL_REQ'|translate}}" ng-pattern='/^[0-9]\d*$/' maxlength="6"
+                               ng-change="getVerifyphoneCode()" ng-model="params.secret" maxlength="6" style="width: 72%"required/>
+                    </div>
+                    <div class="input-img pull-right" ng-click="getVerifyCode()" style="line-height: 32px;margin-top: -34px">
+                        <button type="button" class="btn btn-code" ng-disabled="isshow" style="width:80px;font-size: 12px;height: 32px;color:#fff;background:#40B2F0;padding:0">
+                            <span ng-if="language=='zh'">{{text}}</span>
+                            <span ng-if="language!=='zh'">{{en_text}}</span>
+                        </button>
+                    </div>
+                    <span class="help-block text-left" style="clear: both;" ng-show="errorVcode"><span class="text-error"></span>{{'MESSAGE.ERR_AUTH_ANSWER_REJECTED'|translate}}</span>
+                </div>
+            </div>
+            <!--<div class="form-group">-->
+                <!--<label for="addressremark" class="col-sm-4 control-label">{{'ACCOUNT.ADDRESS_NAME'|translate}}：</label>-->
+
+                <!--<div class="col-sm-8">-->
+                    <!--<textarea type="text" class="form-control remarks" id="addressremark" maxlength="300" placeholder="{{'ACCOUNT.ADDRESS_NAME_REQ'|translate}}" ng-model="params.remarks"></textarea>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="dialog-contents modal-footer">-->
+                <!--<p class="down text-center" ng-if="errmessage">{{'ACCOUNT.ADDRESS_ERROR'|translate}}</p>-->
+                <!--<div class="col-sm-offset-4 col-sm-8">-->
+                    <!--<button type="button" class="btn btn-danger add" ng-click="confirm()" ng-disabled="myForm2.$invalid || errorVcode">-->
+                        <!--{{'ACCOUNT.ADD_SUBMIT'|translate}}-->
+                    <!--</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="form-group last-group">
+                <p class="down text-center" ng-if="errmessage">{{'ACCOUNT.ADDRESS_ERROR'|translate}}</p>
+                <div class="col-sm-offset-4 col-sm-8">
+                    <button type="submit" class="btn add" ng-click="confirm()" ng-disabled="myForm2.$invalid || errorVcode" style="width: 100%;">
+                        {{'ACCOUNT.ADD_SUBMIT'|translate}}
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>

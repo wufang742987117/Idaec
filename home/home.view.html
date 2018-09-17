@@ -1,0 +1,275 @@
+<div class="common-main trade_desk" xmlns="http://www.w3.org/1999/html">
+    <div class="home_content">
+        <!--banner-->
+        <div class="home_banner">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="3000" style="height: 100%">
+                <ol class="carousel-indicators">
+                    <li ng-repeat="bannerInfo in bannerList" data-target="#myCarousel" data-slide-to="{{$index}}" ng-class="{active:$index==0}">
+                    </li>
+                </ol>
+                <div class="carousel-inner inner-content">
+                    <!--banner图-->
+                    <div class="item" ng-class="{active:$index==0}" ng-repeat="bannerInfo in bannerList"  style="height: 100%">
+                        <a href={{bannerInfo.resource_url}} ng-if="bannerInfo.resource_url!='go-down'">
+                            <img ng-src="{{bannerInfo.img_url}}">
+                        </a>
+                        <go-down ng-if="bannerInfo.resource_url=='go-down'">
+                            <img ng-src="{{bannerInfo.img_url}}">
+                        </go-down>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <!--GCC/BTC-->
+        <div class="Quotation_bod">
+            <!--TAB-->
+            <div class="Quotation_title">
+                <a href="javascript://"  ng-class="{'Quo_tit_H': data.current == 1}" ng-click="actions.setCurrent(1)">GCC</a>
+                <a href="javascript://" ng-class="{'Quo_tit_H': data.current == 2}" ng-click="actions.setCurrent(2)">BTC</a>
+            </div>
+            <!--GCC-->
+            <div class="Quotation_list" ng-if="data.current==1" >
+                <div class="mobile_tip" style="color: #fff;padding: 10px;font-size: 16px;">{{'HOME_DISTINGUISH_1'|translate}}{{'HOME_DISTINGUISH_2'|translate}}</div>
+                <div class="list_main">
+                    <ul>
+                        <li>
+                            <!--<img src="../assets/images/type_size.png">-->
+                            {{'HOME_CURRENCT_T_1'|translate}} GCC</li>
+                        <li>{{'HOME_CURRENCT_T_2'|translate}}(GCC)</li>
+                        <li>{{'HOME_CURRENCT_T_3'|translate}}(GCC)</li>
+                        <li>{{'HOME_CURRENCT_T_4'|translate}}(GCC)</li>
+                        <li>{{'HOME_CURRENCT_T_5'|translate}}</li>
+                        <li>{{'HOME_CURRENCT_T_6'|translate}}</li>
+                        <li>{{'HOME_CURRENCT_T_7'|translate}}</li>
+                    </ul>
+                    <label>{{'HOME_DISTINGUISH_1'|translate}}</br>{{'HOME_DISTINGUISH_2'|translate}}</label>
+                    <div class="main_sj">
+                        <ul>
+                            <li><img src="/assets/images/qb_icon.png">BTC/GCC</li>
+                            <li>{{btcGccDataList.last | amount| number:8 }}</li>
+                            <li>{{btcGccDataList.high24h | amount| number: 8 }}</li>
+                            <li>{{btcGccDataList.low24h | amount| number: 8 }}</li>
+                            <li>{{btcGccDataList.vol24h | amount | number:2}}</li>
+                            <li ng-class="{true:'down',false:'up'}[btcGccDataList.quote_change <0]"><span ng-if="btcGccDataList.quote_change >= 0">+</span>{{btcGccDataList.quote_change | number: 2}}%</li>
+                            <li><a href="/#!/trade">{{'HOME_PROFESSIONAL_TRANSACTION'|translate}}</a><img src="/assets/images/hqt_icon.png"></li>
+                        </ul>
+                        <ul>
+                            <li><img src="/assets/images/qb_icon.png">ETH/GCC</li>
+                            <li>{{ethGccDataList.last | amount| number:8 }}</li>
+                            <li>{{ethGccDataList.high24h | amount| number: 8 }}</li>
+                            <li>{{ethGccDataList.low24h | amount| number: 8 }}</li>
+                            <li>{{ethGccDataList.vol24h | amount | number:2}}</li>
+                            <li ng-if="ethGccDataList" ng-class="{true:'down',false:'up'}[ethGccDataList.quote_change <0]"><span ng-if="ethGccDataList.quote_change >= 0">+</span>{{ethGccDataList.quote_change | number: 2}}%</li>
+                            <li ng-if="!ethGccDataList" class="up">+0.00%</li>
+                            <li><a href="/#!/trade">{{'HOME_PROFESSIONAL_TRANSACTION'|translate}}</a><img src="/assets/images/hqt_icon.png"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mobile_tip" style="color: #fff;padding: 10px;font-size: 16px;">{{'HOME_DISTINGUISH_3'|translate}}{{'HOME_DISTINGUISH_4'|translate}}{{'HOME_DISTINGUISH_2'|translate}}</div>
+                <div class="list_main">
+                    <ul>
+                        <li>{{'HOME_CURRENCT_T_1'|translate}} GCC</li>
+                        <li>{{'HOME_CURRENCT_T_2'|translate}}(GCC)</li>
+                        <li>{{'HOME_CURRENCT_T_3'|translate}}(GCC)</li>
+                        <li>{{'HOME_CURRENCT_T_4'|translate}}(GCC)</li>
+                        <li>{{'HOME_CURRENCT_T_5'|translate}}</li>
+                        <li>{{'HOME_CURRENCT_T_6'|translate}}</li>
+                        <li>{{'HOME_CURRENCT_T_7'|translate}}</li>
+                    </ul>
+                    <label>{{'HOME_DISTINGUISH_3'|translate}}</br>{{'HOME_DISTINGUISH_4'|translate}}</br>{{'HOME_DISTINGUISH_2'|translate}}</label>
+                    <div class="main_sj">
+                        <ul>
+                            <li><img src="/assets/images/qb_icon.png">GDC/GCC</li>
+                            <li>{{gdcGccDataList.last | amount| number:8 }}</li>
+                            <li>{{gdcGccDataList.high24h | amount| number: 8 }}</li>
+                            <li>{{gdcGccDataList.low24h | amount| number: 8 }}</li>
+                            <li>{{gdcGccDataList.vol24h | amount | number:2}}</li>
+                            <li ng-class="{true:'down',false:'up'}[gdcGccDataList.quote_change <0]"><span ng-if="gdcGccDataList.quote_change >= 0">+</span>{{gdcGccDataList.quote_change | number: 2}}%</li>
+                            <li><a href="/#!/trade">{{'HOME_PROFESSIONAL_TRANSACTION'|translate}}</a><img src="/assets/images/hqt_icon.png"></li>
+                        </ul>
+                        <ul>
+                            <li><img src="/assets/images/qb_icon.png">GBC/GCC</li>
+                            <li>{{gbcGccDataList.last | amount| number:8 }}</li>
+                            <li>{{gbcGccDataList.high24h | amount| number: 8 }}</li>
+                            <li>{{gbcGccDataList.low24h | amount| number: 8 }}</li>
+                            <li>{{gbcGccDataList.vol24h | amount | number:2}}</li>
+                            <li ng-class="{true:'down',false:'up'}[gbcGccDataList.quote_change <0]"><span ng-if="gbcGccDataList.quote_change >= 0">+</span>{{gbcGccDataList.quote_change | number: 2}}%</li>
+                            <li><a href="/#!/trade">{{'HOME_PROFESSIONAL_TRANSACTION'|translate}}</a><img src="/assets/images/hqt_icon.png"></li>
+                        </ul>
+                        <ul>
+                            <li><img src="/assets/images/qb_icon.png">CSL/GCC</li>
+                            <li>{{cslGccDataList.last | amount| number:8 }}</li>
+                            <li>{{cslGccDataList.high24h | amount| number: 8 }}</li>
+                            <li>{{cslGccDataList.low24h | amount| number: 8 }}</li>
+                            <li>{{cslGccDataList.vol24h | amount | number:2}}</li>
+                            <li ng-class="{true:'down',false:'up'}[cslGccDataList.quote_change <0]"><span ng-if="cslGccDataList.quote_change >= 0">+</span>{{cslGccDataList.quote_change | number: 2}}%</li>
+                            <li><a href="/#!/trade">{{'HOME_PROFESSIONAL_TRANSACTION'|translate}}</a><img src="/assets/images/hqt_icon.png"></li>
+                        </ul>
+                        <ul>
+                            <li><img src="/assets/images/qb_icon.png">QGC/GCC</li>
+                            <li>{{qgcGccDataList.last | amount| number:8 }}</li>
+                            <li>{{qgcGccDataList.high24h | amount| number: 8 }}</li>
+                            <li>{{qgcGccDataList.low24h | amount| number: 8 }}</li>
+                            <li>{{qgcGccDataList.vol24h | amount | number:2}}</li>
+                            <li ng-class="{true:'down',false:'up'}[qgcGccDataList.quote_change<0]"><span ng-if="qgcGccDataList.quote_change >= 0">+</span>{{qgcGccDataList.quote_change| number: 2}}%</li>
+                            <li><a href="/#!/trade">{{'HOME_PROFESSIONAL_TRANSACTION'|translate}}</a><img src="/assets/images/hqt_icon.png"></li>
+                        </ul>
+						<ul>
+							<li><img src="/assets/images/qb_icon.png">IDC/GCC</li>
+							<li>{{idcGccDataList.last | amount| number:8 }}</li>
+							<li>{{idcGccDataList.high24h | amount| number: 8 }}</li>
+							<li>{{idcGccDataList.low24h | amount| number: 8 }}</li>
+							<li>{{idcGccDataList.vol24h | amount | number:2}}</li>
+							<li ng-class="{true:'down',false:'up'}[idcGccDataList.quote_change<0]"><span ng-if="idcGccDataList.quote_change >= 0">+</span>{{idcGccDataList.quote_change| number: 2}}%</li>
+							<li><a href="/#!/trade">{{'HOME_PROFESSIONAL_TRANSACTION'|translate}}</a><img src="/assets/images/hqt_icon.png"></li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--BTC-->
+            <div class="Quotation_list" ng-if="data.current==2">
+                <div class="mobile_tip" style="color: #fff;padding: 10px;font-size: 16px;">{{'HOME_DISTINGUISH_1'|translate}}{{'HOME_DISTINGUISH_2'|translate}}</div>
+                <div class="list_main">
+                    <ul>
+                        <li>{{'HOME_CURRENCT_T_1'|translate}} BTC</li>
+                        <li>{{'HOME_CURRENCT_T_2'|translate}}(BTC)</li>
+                        <li>{{'HOME_CURRENCT_T_3'|translate}}(BTC)</li>
+                        <li>{{'HOME_CURRENCT_T_4'|translate}}(BTC)</li>
+                        <li>{{'HOME_CURRENCT_T_5'|translate}}</li>
+                        <li>{{'HOME_CURRENCT_T_6'|translate}}</li>
+                        <li>{{'HOME_CURRENCT_T_7'|translate}}</li>
+                    </ul>
+                    <label>{{'HOME_DISTINGUISH_1'|translate}}</br>{{'HOME_DISTINGUISH_2'|translate}}</label>
+                    <div class="main_sj">
+                        <!-- <ul>
+                             <li><img src="/assets/images/qb_icon.png">BTC/GCC</li>
+                             <li>57200.00</li>
+                             <li>67854.28</li>
+                             <li>598587.77</li>
+                             <li>2443.3455</li>
+                             <li>-14.24%</li>
+                             <li><a href="javascript://">{{'HOME_PROFESSIONAL_TRANSACTION'|translate}}</a><img src="/assets/images/hqt_icon.png"></li>
+                         </ul>-->
+                    </div>
+                </div>
+                <div class="mobile_tip" style="color: #fff;padding: 10px;font-size: 16px;">{{'HOME_DISTINGUISH_3'|translate}}{{'HOME_DISTINGUISH_4'|translate}}{{'HOME_DISTINGUISH_2'|translate}}</div>
+                <div class="list_main">
+                    <ul>
+                        <li>{{'HOME_CURRENCT_T_1'|translate}} BTC</li>
+                        <li>{{'HOME_CURRENCT_T_2'|translate}}(BTC)</li>
+                        <li>{{'HOME_CURRENCT_T_3'|translate}}(BTC)</li>
+                        <li>{{'HOME_CURRENCT_T_4'|translate}}(BTC)</li>
+                        <li>{{'HOME_CURRENCT_T_5'|translate}}</li>
+                        <li>{{'HOME_CURRENCT_T_6'|translate}}</li>
+                        <li>{{'HOME_CURRENCT_T_7'|translate}}</li>
+                    </ul>
+                    <label>{{'HOME_DISTINGUISH_3'|translate}}</br>{{'HOME_DISTINGUISH_4'|translate}}</br>{{'HOME_DISTINGUISH_2'|translate}}</label>
+                    <div class="main_sj">
+                        <ul>
+                            <li><img src="/assets/images/qb_icon.png">GDC/BTC</li>
+                            <li>{{gdcBtcDataList.last | amount| number:8 }}</li>
+                            <li>{{gdcBtcDataList.high24h | amount| number: 8 }}</li>
+                            <li>{{gdcBtcDataList.low24h | amount| number: 8 }}</li>
+                            <li>{{gdcBtcDataList.vol24h | amount | number:2}}</li>
+                            <li ng-class="{true:'down',false:'up'}[gdcBtcDataList.quote_change <0]">{{gdcBtcDataList.quote_change | number: 2}}%</li>
+                            <li><a href="/#!/trade">{{'HOME_PROFESSIONAL_TRANSACTION'|translate}}</a><img src="/assets/images/hqt_icon.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--优势-->
+        <div class="advantage">
+            <ul class="pclist">
+                <li>
+                    <h2>{{'HOME_ADVANTAGE_T_1'|translate}}</h2>
+                    <p>{{'HOME_ADVANTAGE_F_1'|translate}}</p>
+                </li>
+                <li>
+                    <h2>{{'HOME_ADVANTAGE_T_2'|translate}}</h2>
+                    <p>{{'HOME_ADVANTAGE_F_2'|translate}}</p>
+                </li>
+                <li>
+                    <h2>{{'HOME_ADVANTAGE_T_3'|translate}}</h2>
+                    <p>{{'HOME_ADVANTAGE_F_3'|translate}}</p>
+                </li>
+            </ul>
+            <ul class="mobilelist">
+                <li>
+                    <div class="dvimg_1">
+
+                    </div>
+                    <div class="dvtext">
+                        <h5>{{'HOME_ADVANTAGE_T_1'|translate}}</h5>
+                        <p>{{'HOME_ADVANTAGE_F_1'|translate}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="dvimg_2">
+
+                    </div>
+                    <div class="dvtext">
+                        <h5>{{'HOME_ADVANTAGE_T_2'|translate}}</h5>
+                        <p>{{'HOME_ADVANTAGE_F_2'|translate}}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="dvimg_3">
+
+                    </div>
+                    <div class="dvtext">
+                        <h5>{{'HOME_ADVANTAGE_T_3'|translate}}</h5>
+                        <p>{{'HOME_ADVANTAGE_F_3'|translate}}</p>
+                    </div>
+                </li>
+                <!--<li>-->
+                    <!--<img src="/assets/images/home_cc_icon.png" alt="">-->
+                    <!--<h2>{{'HOME_ADVANTAGE_T_1'|translate}}</h2>-->
+                    <!--<p>{{'HOME_ADVANTAGE_F_1'|translate}}</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<img src="/assets/images/home_jq_icon.png" alt="">-->
+                    <!--<h2>{{'HOME_ADVANTAGE_T_1'|translate}}</h2>-->
+                    <!--<p>{{'HOME_ADVANTAGE_F_1'|translate}}</p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <!--新闻-->
+        <div class="News_list">
+            <h1>{{'HOME_NEWS_T'|translate}}</h1>
+            <a href="/#!/news" >{{'CARD_MORE'|translate}}</a>
+            <ul>
+                <li ng-repeat="new in param.newslist" ng-click="getDetailUrl(new.id)">
+                    <a href="javascript://" >{{new.subject}}</a>
+                    <label>{{new.publication_date|date:'yyyy-MM-dd'}}</label>
+                </li>
+            </ul>
+        </div>
+        <!--公告-->
+        <div class="News_list">
+            <h1>{{'HOME_NOTICE_T'|translate}}</h1>
+            <a href="/#!/news">{{'CARD_MORE'|translate}}</a>
+            <ul>
+                <li ng-repeat="notice in param.noticeslist">
+                    <a href="javascript://" ng-click="getDetailUrl(notice.id)">{{notice.subject}}</a>
+                    <label>{{notice.publication_date|date:'yyyy-MM-dd'}}</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--&lt;!&ndash;App下载&ndash;&gt;-->
+    <!--<div class="App_download">-->
+    <!--<div><p>{{'HOME_ANDROID_D'|translate}}</p></div>-->
+    <!--&lt;!&ndash;<div><p>{{'HOME_IOS_D'|translate}}</p></div>&ndash;&gt;-->
+    <!--</div>-->
+</div>
+

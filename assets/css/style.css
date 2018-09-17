@@ -1,0 +1,6211 @@
+@charset "UTF-8";
+/* line 4, ../sass/style.scss */
+.animated {
+  -webkit-animation-duration: 3.5s !important;
+  -moz-animation-duration: 3.5s !important;
+  -o-animation-duration: 3.5s !important;
+  animation-duration: 3.5s !important;
+}
+
+/* line 16, ../sass/common/_public.scss */
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21, ../sass/common/_public.scss */
+body {
+  font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif,"宋体";
+  color: #151F3F;
+}
+
+/* line 26, ../sass/common/_public.scss */
+a, a:hover, a:active .a-old, a:focus {
+  text-decoration: none;
+}
+
+/* line 29, ../sass/common/_public.scss */
+.font-color {
+  color: #151F3F;
+}
+
+/* line 32, ../sass/common/_public.scss */
+.down {
+  color: #FF0000;
+}
+
+/* line 35, ../sass/common/_public.scss */
+._up {
+  color: #7ec62a;
+}
+
+/* line 38, ../sass/common/_public.scss */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  Display: none !important;
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 6, ../sass/common/_header.scss */
+  html, body, input {
+    font-size: 13px;
+  }
+
+  /* line 9, ../sass/common/_header.scss */
+  .container {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+  }
+
+  /* line 14, ../sass/common/_header.scss */
+  .container-fluid {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  /* line 18, ../sass/common/_header.scss */
+  .navbar {
+    width: 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a2853', endColorstr='#2c4783', GradientType=1);
+    /* IE6-9 */
+    font-size: 16px;
+    padding: 15px;
+    margin-bottom: 0;
+    background-size: cover;
+    border: 0;
+  }
+  /* line 27, ../sass/common/_header.scss */
+  .navbar .navbar-brand {
+    padding-top: 11px;
+  }
+  /* line 29, ../sass/common/_header.scss */
+  .navbar .navbar-brand img {
+    width: 130px;
+  }
+  /* line 33, ../sass/common/_header.scss */
+  .navbar .nav-app {
+    display: none;
+  }
+  /* line 36, ../sass/common/_header.scss */
+  .navbar .navbar-nav > li .common {
+    color: #69788e;
+    padding: 12px 0;
+    display: inline-block;
+  }
+  /* line 41, ../sass/common/_header.scss */
+  .navbar .navbar-nav > li > a {
+    color: #fff;
+  }
+  /* line 44, ../sass/common/_header.scss */
+  .navbar .navbar-nav > li > a.active,
+  .navbar .navbar-nav > li > a:hover {
+    color: #11cfe0;
+  }
+  /* line 48, ../sass/common/_header.scss */
+  .navbar .nav > li > a:hover,
+  .navbar .nav > li > a:focus,
+  .navbar .nav > li > a:active {
+    background: none;
+  }
+  /* line 53, ../sass/common/_header.scss */
+  .navbar .second-nav {
+    position: relative;
+    cursor: pointer;
+  }
+  /* line 56, ../sass/common/_header.scss */
+  .navbar .second-nav ul {
+    display: none;
+    position: absolute;
+    min-width: 82px;
+    height: 190px;
+    background: #fff;
+    opacity: .9;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(77, 68, 86, 0.3);
+  }
+  /* line 66, ../sass/common/_header.scss */
+  .navbar .second-nav ul li {
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    padding: 0 4px;
+  }
+  /* line 71, ../sass/common/_header.scss */
+  .navbar .second-nav ul li a {
+    color: #151F3F;
+    padding: 6px 10px;
+    border-bottom: 1px dashed #69788e;
+    font-size: 13px;
+  }
+  /* line 77, ../sass/common/_header.scss */
+  .navbar .second-nav ul li a:hover,
+  .navbar .second-nav ul li a.isactive {
+    color: #11cfe0;
+  }
+  /* line 83, ../sass/common/_header.scss */
+  .navbar .second-nav ul li:last-child > a {
+    border-bottom: none;
+  }
+  /* line 88, ../sass/common/_header.scss */
+  .navbar .language:hover > ul,
+  .navbar .second-nav:hover > ul {
+    display: block;
+  }
+  /* line 92, ../sass/common/_header.scss */
+  .navbar .language {
+    cursor: pointer;
+  }
+  /* line 94, ../sass/common/_header.scss */
+  .navbar .language ul {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 2;
+  }
+  /* line 100, ../sass/common/_header.scss */
+  .navbar .language ul li {
+    border-bottom: 1px dashed #ddd;
+  }
+  /* line 103, ../sass/common/_header.scss */
+  .navbar .language ul li:last-child {
+    border-bottom: none;
+  }
+  /* line 107, ../sass/common/_header.scss */
+  .navbar .language .languageBtn {
+    width: 30px;
+    margin: 12px;
+  }
+
+  /* line 113, ../sass/common/_header.scss */
+  .nobackground {
+    background: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 120, ../sass/common/_header.scss */
+  html, body, input {
+    font-size: 12px;
+    background: #f1f1f1;
+  }
+
+  /* line 124, ../sass/common/_header.scss */
+  .navbar {
+    width: 100%;
+    background: #151F3F;
+    font-size: 1rem;
+  }
+  /* line 128, ../sass/common/_header.scss */
+  .navbar .navbar-brand {
+    padding: 1.35rem 0;
+    height: 0;
+  }
+  /* line 131, ../sass/common/_header.scss */
+  .navbar .navbar-brand img {
+    width: 90px;
+  }
+  /* line 135, ../sass/common/_header.scss */
+  .navbar .nav {
+    display: none;
+  }
+  /* line 138, ../sass/common/_header.scss */
+  .navbar .nav-app {
+    float: right;
+  }
+  /* line 140, ../sass/common/_header.scss */
+  .navbar .nav-app .login-nav li {
+    display: inline-block;
+    padding: 1.3rem .4rem;
+  }
+  /* line 143, ../sass/common/_header.scss */
+  .navbar .nav-app .login-nav li a {
+    color: #fff;
+  }
+  /* line 146, ../sass/common/_header.scss */
+  .navbar .nav-app .login-nav li a:hover,
+  .navbar .nav-app .login-nav li a.active {
+    color: #11cfe0;
+  }
+  /* line 152, ../sass/common/_header.scss */
+  .navbar .navbar-toggle {
+    margin-right: 0;
+    position: relative;
+  }
+  /* line 156, ../sass/common/_header.scss */
+  .navbar .header-nav {
+    display: none;
+    position: absolute;
+    background: #151F3F;
+    top: 4.2rem;
+    width: 60%;
+    right: 0;
+    padding: .5rem;
+    opacity: .8;
+  }
+  /* line 165, ../sass/common/_header.scss */
+  .navbar .header-nav li {
+    padding: .5rem 1rem;
+  }
+  /* line 167, ../sass/common/_header.scss */
+  .navbar .header-nav li a {
+    color: #fff;
+  }
+  /* line 170, ../sass/common/_header.scss */
+  .navbar .header-nav li .active,
+  .navbar .header-nav li .isactive {
+    color: #11cfe0;
+  }
+  /* line 175, ../sass/common/_header.scss */
+  .navbar .header-nav li:last-child {
+    padding: -.5rem 1rem;
+  }
+  /* line 179, ../sass/common/_header.scss */
+  .navbar .icon-bar {
+    background: #fff;
+  }
+  /* line 182, ../sass/common/_header.scss */
+  .navbar .nabar-app {
+    width: 100%;
+  }
+  /* line 184, ../sass/common/_header.scss */
+  .navbar .nabar-app .login-nav li {
+    float: right;
+  }
+  /* line 187, ../sass/common/_header.scss */
+  .navbar .nabar-app .nav-line {
+    padding: 1.3rem 0;
+    color: #fff;
+  }
+}
+/* line 2, ../sass/common/_footer.scss */
+.footer_conter {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 20px 0;
+  background: #262626;
+  float: left;
+}
+/* line 9, ../sass/common/_footer.scss */
+.footer_conter > ul {
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+/* line 14, ../sass/common/_footer.scss */
+.footer_conter > ul li {
+  width: 40%;
+  height: auto;
+  float: left;
+}
+/* line 18, ../sass/common/_footer.scss */
+.footer_conter > ul li:nth-child(3) {
+  width: 20%;
+  text-align: right;
+}
+/* line 21, ../sass/common/_footer.scss */
+.footer_conter > ul li:nth-child(3) p {
+  float: right;
+}
+/* line 24, ../sass/common/_footer.scss */
+.footer_conter > ul li:nth-child(3) label {
+  float: right;
+}
+/* line 28, ../sass/common/_footer.scss */
+.footer_conter > ul li h2 {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #ddd;
+  font-size: 16px;
+  font-weight: 500;
+  float: left;
+  margin: 0 0 15px 0;
+}
+/* line 38, ../sass/common/_footer.scss */
+.footer_conter > ul li .down-info {
+  text-align: center;
+}
+/* line 40, ../sass/common/_footer.scss */
+.footer_conter > ul li .down-info a {
+  background: #262626;
+  font-size: 14px;
+}
+/* line 44, ../sass/common/_footer.scss */
+.footer_conter > ul li .down-info span {
+  width: 100px;
+  height: 130px;
+  background: #fff;
+  display: block;
+  background: #fff url(/assets/images/Android_ewm.png) center 35px no-repeat;
+}
+/* line 48, ../sass/common/_footer.scss */
+.footer_conter > ul li .down-ios {
+  margin-left: 50px;
+}
+/* line 50, ../sass/common/_footer.scss */
+.footer_conter > ul li .down-ios span {
+  background: #fff url(/assets/images/IOS_ewm.png) center 34px no-repeat;
+  background-size: 95%;
+}
+/* line 55, ../sass/common/_footer.scss */
+.footer_conter > ul li p {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  float: left;
+}
+/* line 60, ../sass/common/_footer.scss */
+.footer_conter > ul li p label, .footer_conter > ul li p a {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  color: #949999;
+  font-size: 14px;
+  float: left;
+  font-weight: 100;
+  margin: 0;
+}
+/* line 71, ../sass/common/_footer.scss */
+.footer_conter > ul li p a:hover {
+  text-decoration: underline;
+}
+/* line 77, ../sass/common/_footer.scss */
+.footer_conter > p {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  padding-top: 20px;
+  text-align: center;
+  color: #949999;
+}
+
+/*//尾部公共样式开始
+footer{
+  width: 100%;
+  color: $color;
+  .footer-line{
+    border-bottom: 1px solid $color;
+  }
+  
+  .bs-docs-footer-links{
+    li{
+      float: left;
+      margin-right: 5rem;
+      a{
+        color: $color;
+        font-size: 1.2rem;
+      };
+      a:hover,
+      a.active{
+        color: $button;
+      }
+    }
+  }
+  .footer-contactUs{
+    margin: 26px 0;
+    color: $default;
+  }
+  .languageBtn{
+    width: 32px;
+    height: 24px;
+  }
+  .copyright{
+    color: $default;
+  }
+  .copyright-top{
+    margin-top: 18px;
+  }
+  .partners{
+    margin-top: 3rem;
+    a{
+      display: inline-block;
+      margin-left: 3rem;
+    }
+  }
+}
+.navbar-inverse {
+  background-color: #1A2853;
+  border-color: #1A2853;
+}
+
+@media screen and (min-width: 1100px) {
+  footer {
+    padding-top:3rem;
+    padding-bottom: 4rem;
+  }
+  .partners-app{
+    display: none;
+  }
+}
+//媒介查询- -移动端
+@media screen and (max-width:768px){
+  footer {
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+  .footer-contactUs,
+  .partners{
+    display: none;
+  }
+}*/
+/* line 2, ../sass/common/_home.scss */
+.home_content {
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+  margin: 30px auto;
+}
+/* line 7, ../sass/common/_home.scss */
+.home_content .home_banner {
+  width: 100%;
+  height: 400px;
+  float: left;
+  cursor: pointer;
+}
+/* line 15, ../sass/common/_home.scss */
+.home_content .Quotation_bod {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  background: #1a262d;
+  border-radius: 4px !important;
+  margin-top: 20px;
+}
+/* line 23, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_title {
+  width: 100%;
+  height: 60px;
+  float: left;
+}
+/* line 27, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_title a {
+  width: auto;
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+  padding: 0 50px;
+  float: left;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 4px solid #1a262d;
+  box-sizing: border-box;
+}
+/* line 40, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_title a:hover {
+  border-bottom: 4px solid #12cfe0;
+}
+/* line 44, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_title .Quo_tit_H {
+  border-bottom: 4px solid #12cfe0;
+}
+/* line 48, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list {
+  width: 100%;
+  height: 340px;
+  box-sizing: border-box;
+  float: left;
+}
+/* line 53, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .mobile_tip {
+  display: none;
+}
+/* line 56, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+/* line 62, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main ul {
+  width: 100%;
+  height: 40px;
+  padding: 0 20px 0 50px;
+  box-sizing: border-box;
+  float: left;
+  border-top: 1px solid #36464f;
+  border-bottom: 1px solid #36464f;
+}
+/* line 70, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main ul li {
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  width: 14.28%;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+/* line 80, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main > label {
+  position: absolute;
+  width: 45px;
+  height: 120px;
+  overflow: hidden;
+  line-height: 60px;
+  text-align: center;
+  left: 5px;
+  top: 40px;
+  color: #949999;
+}
+/* line 91, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 0 20px 0 50px;
+}
+/* line 97, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj::-webkit-scrollbar {
+  width: 10px;
+  background-color: #111c22;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+/* line 103, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj::-webkit-scrollbar-thumb {
+  background-color: #385160;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+/* line 108, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj ul {
+  width: 1130px;
+  padding: 0;
+  border: none;
+}
+/* line 112, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj ul:hover {
+  background: #101c24;
+}
+/* line 115, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj ul li {
+  font-size: 12px;
+  text-align: center;
+}
+/* line 118, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj ul li a {
+  color: #12cfe0;
+  text-decoration: underline;
+}
+/* line 121, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj ul li a:hover {
+  text-decoration: none;
+}
+/* line 125, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj ul li img {
+  margin: 0 5px;
+}
+/* line 128, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj ul li:nth-child(2) {
+  color: #25df9a;
+}
+/* line 131, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj ul li.down {
+  color: #ff0101;
+}
+/* line 134, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main .main_sj ul li.up {
+  color: #25df9a;
+}
+/* line 143, ../sass/common/_home.scss */
+.home_content .Quotation_bod .Quotation_list .list_main:nth-child(2) > label {
+  line-height: 40px;
+}
+/* line 152, ../sass/common/_home.scss */
+.home_content .advantage {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  background: #1a262d;
+  border-radius: 4px !important;
+  margin-top: 20px;
+}
+/* line 160, ../sass/common/_home.scss */
+.home_content .advantage .mobilelist {
+  display: none;
+}
+/* line 163, ../sass/common/_home.scss */
+.home_content .advantage .pclist {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin: 40px 0;
+}
+/* line 170, ../sass/common/_home.scss */
+.home_content .advantage .pclist li {
+  width: 33.33%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  padding: 100px 50px 0 50px;
+  box-sizing: border-box;
+}
+/* line 177, ../sass/common/_home.scss */
+.home_content .advantage .pclist li:nth-child(1) {
+  background: url("/assets/images/home_jm_icon.png") top center no-repeat;
+}
+/* line 180, ../sass/common/_home.scss */
+.home_content .advantage .pclist li:nth-child(2) {
+  background: url("/assets/images/home_cc_icon.png") top center no-repeat;
+}
+/* line 183, ../sass/common/_home.scss */
+.home_content .advantage .pclist li:nth-child(3) {
+  background: url("/assets/images/home_jq_icon.png") top center no-repeat;
+}
+/* line 186, ../sass/common/_home.scss */
+.home_content .advantage .pclist li h2 {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  line-height: 30px;
+  font-size: 16px;
+  color: #fff;
+  float: left;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* line 197, ../sass/common/_home.scss */
+.home_content .advantage .pclist li p {
+  width: 80%;
+  margin: 0 10%;
+  height: auto;
+  overflow: hidden;
+  line-height: 20px;
+  font-size: 12px;
+  color: #949999;
+  float: left;
+  text-align: center;
+}
+/* line 213, ../sass/common/_home.scss */
+.home_content .News_list {
+  width: 49.15%;
+  height: 190px;
+  overflow: hidden;
+  float: left;
+  background: #1a262d;
+  border-radius: 4px !important;
+  margin-top: 20px;
+}
+/* line 221, ../sass/common/_home.scss */
+.home_content .News_list:last-child {
+  float: right;
+}
+/* line 224, ../sass/common/_home.scss */
+.home_content .News_list > h1 {
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  font-size: 16px;
+  color: #fff;
+  text-indent: 20px;
+  margin: 0;
+}
+/* line 234, ../sass/common/_home.scss */
+.home_content .News_list > a {
+  width: auto;
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  float: right;
+  margin: 15px 20px 15px 0;
+  font-size: 14px;
+  color: #777;
+}
+/* line 243, ../sass/common/_home.scss */
+.home_content .News_list > a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+/* line 248, ../sass/common/_home.scss */
+.home_content .News_list > ul {
+  width: 100%;
+  height: 125px;
+  border-top: 1px solid #36464f;
+  float: left;
+  padding: 0 20px;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+/* line 256, ../sass/common/_home.scss */
+.home_content .News_list > ul li {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  float: left;
+}
+/* line 261, ../sass/common/_home.scss */
+.home_content .News_list > ul li a {
+  width: auto;
+  max-width: 430px;
+  overflow: hidden;
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  float: left;
+}
+/* line 270, ../sass/common/_home.scss */
+.home_content .News_list > ul li a:hover {
+  text-decoration: underline;
+}
+/* line 274, ../sass/common/_home.scss */
+.home_content .News_list > ul li label {
+  float: right;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  text-align: right;
+  color: #eee;
+  font-weight: 100;
+}
+
+/* line 288, ../sass/common/_home.scss */
+.App_download {
+  position: fixed;
+  width: 120px;
+  height: 150px;
+  background: #283339;
+  left: 50%;
+  bottom: 200px;
+  margin-left: 620px;
+  border-radius: 6px !important;
+}
+/* line 297, ../sass/common/_home.scss */
+.App_download div {
+  width: 100px;
+  height: 130px;
+  float: left;
+  margin: 5px 10px 0 10px;
+  background: #fff url("/assets/images/iOS_ewm.png") center 35px no-repeat;
+}
+/* line 303, ../sass/common/_home.scss */
+.App_download div p {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  font-family: '宋体';
+  background: #283339;
+}
+/* line 314, ../sass/common/_home.scss */
+.App_download div:first-child {
+  background: #fff url("/assets/images/Android_ewm.png") center 35px no-repeat;
+}
+
+/* line 320, ../sass/common/_home.scss */
+.inner-content {
+  height: 100% !important;
+  width: 100% !important;
+}
+/* line 323, ../sass/common/_home.scss */
+.inner-content img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1500px) {
+  /* line 331, ../sass/common/_home.scss */
+  .App_download {
+    border: 1px solid #fff;
+    left: auto;
+    margin: 0;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 346, ../sass/common/_home.scss */
+  .common-main .work-main .detail-tip {
+    width: 100% !important;
+  }
+
+  /* line 349, ../sass/common/_home.scss */
+  .home_content {
+    width: 100%;
+    margin: 10px auto;
+  }
+  /* line 352, ../sass/common/_home.scss */
+  .home_content .home_banner {
+    width: 100%;
+    height: 150px;
+  }
+  /* line 355, ../sass/common/_home.scss */
+  .home_content .home_banner img {
+    height: 100% !important;
+  }
+  /* line 359, ../sass/common/_home.scss */
+  .home_content .Quotation_bod {
+    margin-top: 10px !important;
+  }
+  /* line 361, ../sass/common/_home.scss */
+  .home_content .Quotation_bod .Quotation_list {
+    height: 400px !important;
+  }
+  /* line 363, ../sass/common/_home.scss */
+  .home_content .Quotation_bod .Quotation_list .mobile_tip {
+    display: block;
+  }
+  /* line 368, ../sass/common/_home.scss */
+  .home_content .Quotation_bod .Quotation_title a {
+    width: 50%;
+    text-align: center;
+  }
+  /* line 374, ../sass/common/_home.scss */
+  .home_content .Quotation_bod .list_main label {
+    display: none;
+  }
+  /* line 377, ../sass/common/_home.scss */
+  .home_content .Quotation_bod .list_main ul {
+    padding: 0 !important;
+  }
+  /* line 379, ../sass/common/_home.scss */
+  .home_content .Quotation_bod .list_main ul li {
+    width: 25% !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+  }
+  /* line 386, ../sass/common/_home.scss */
+  .home_content .Quotation_bod .list_main ul li:nth-child(3), .home_content .Quotation_bod .list_main ul li:nth-child(4), .home_content .Quotation_bod .list_main ul li:nth-child(5) {
+    display: none;
+  }
+  /* line 390, ../sass/common/_home.scss */
+  .home_content .Quotation_bod .list_main .main_sj {
+    padding: 0 !important;
+  }
+  /* line 392, ../sass/common/_home.scss */
+  .home_content .Quotation_bod .list_main .main_sj ul {
+    width: 100% !important;
+  }
+  /* line 399, ../sass/common/_home.scss */
+  .home_content .advantage .pclist {
+    display: none;
+  }
+  /* line 402, ../sass/common/_home.scss */
+  .home_content .advantage .mobilelist {
+    display: block;
+  }
+  /* line 404, ../sass/common/_home.scss */
+  .home_content .advantage .mobilelist li {
+    border-bottom: 1px solid #636262;
+    overflow: hidden;
+  }
+  /* line 407, ../sass/common/_home.scss */
+  .home_content .advantage .mobilelist li .dvimg_1 {
+    background: url("/assets/images/home_jm_icon.png") center center no-repeat;
+    height: 80px;
+    background-size: 50px;
+    width: 25%;
+    float: left;
+  }
+  /* line 414, ../sass/common/_home.scss */
+  .home_content .advantage .mobilelist li .dvimg_2 {
+    background: url("/assets/images/home_cc_icon.png") center center no-repeat;
+    height: 80px;
+    background-size: 50px;
+    width: 25%;
+    float: left;
+  }
+  /* line 421, ../sass/common/_home.scss */
+  .home_content .advantage .mobilelist li .dvimg_3 {
+    background: url("/assets/images/home_jq_icon.png") center center no-repeat;
+    height: 80px;
+    background-size: 50px;
+    width: 25%;
+    float: left;
+  }
+  /* line 428, ../sass/common/_home.scss */
+  .home_content .advantage .mobilelist li .dvtext {
+    width: 70%;
+    float: left;
+    color: #fff;
+    padding-right: 10px;
+  }
+  /* line 433, ../sass/common/_home.scss */
+  .home_content .advantage .mobilelist li .dvtext p {
+    color: #ccc;
+  }
+  /* line 440, ../sass/common/_home.scss */
+  .home_content .News_list {
+    width: 100%;
+  }
+  /* line 444, ../sass/common/_home.scss */
+  .home_content .News_list ul li a {
+    width: 75%;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  /* line 450, ../sass/common/_home.scss */
+  .home_content .News_list ul li label {
+    width: 25%;
+  }
+}
+  /*.home-main {
+    position: relative;
+    background: $color;
+
+    // 币种信息
+    .trade-preview {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #dcdadd;
+      height: 86px;
+
+      .up {
+        color: #83c03e !important;
+      }
+      .down {
+        color: #d94e68 !important;
+      }
+
+      .top {
+        display: flex;
+        height: 52px;
+        border-bottom: 1px solid #dcdadd;
+
+        .split {
+          flex: 1;
+          border-left: 1px solid #dcdadd;
+
+          .inner {
+            margin: 8px 0 0 30px;
+          }
+
+          small {
+            font-weight: 200;
+            display: block;
+            margin-bottom: 2px;
+            color: #6a5f76;
+            font-size: 12px;
+          }
+          span {
+            font-weight: 400;
+            font-size: 14px;
+            color: $fontColor;
+          }
+        }
+        .split:first-child {
+          border-left: none;
+        }
+      }
+      .bottom {
+        height: 33px;
+        line-height: 33px;
+        padding-left: 30px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $fontColor;
+      }
+    }
+    .home-banner {
+      position: relative;
+      width: 100%;
+      //min-height: 960px;
+      background: url("/assets/images/banner@2x.jpg") no-repeat center center;
+      background-size: cover;
+      .content {
+        //position: absolute;
+        //width: 668px;
+        //top: 50%;
+        //left: 50%;
+        //margin-top: -170px;
+        //margin-left: -334px;
+        color: $color;
+        h3 > span {
+          height: 1px;
+          display: inline-block;
+          border-bottom: 1px solid #ddd;
+        }
+        p {
+          margin-top: 2rem;
+          color: $default;
+          padding: 20px;
+        }
+        .new-account {
+          display: inline-block;
+          width: 266px;
+          height: 40px;
+          line-height: 40px;
+          background: $button;
+          color: $color;
+          font-size: 16px;
+          border-radius: 4px;
+          margin-top: 50px;
+        }
+        .new-account:hover {
+          opacity: .8;
+        }
+      }
+      .balance-type {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: auto;
+        opacity: .8;
+        background-color: #141d36;
+        z-index: 1;
+        ul {
+          li {
+            display: inline-block;
+            padding: 14px;
+            height: 74px;
+            color: $color;
+            p:first-child {
+              color: $color;
+              font-weight: 600;
+            }
+          }
+          li.active {
+            background: #213569;
+          }
+          li:hover {
+            background: #213569;
+          }
+        }
+      }
+    }
+    .balance-table {
+      position: relative;
+      height: 86px;
+      margin: 40px 0;
+      border: 1px solid #dcdadd;
+      li {
+        float: left;
+        width: 25%;
+        height: 56px;
+        padding: .6rem 3rem;
+        border-right: 1px solid #dcdadd;
+        border-bottom: 1px solid #dcdadd;
+      }
+      .last {
+        border-right: 0;
+      }
+      .last-balance-text {
+        width: 100%;
+        height: 20px;
+        border-bottom: 0;
+      }
+    }
+
+    .home-phone {
+      position: relative;
+      width: 100%;
+      background: url(/assets/images/shutterstock.jpg) no-repeat top center;
+      background-size: cover;
+      background-attachment: fixed;
+      .mask {
+        position: absolute;
+        width: 100%;
+        height: 340px;
+        background: #213569;
+        background-size: cover;
+        z-index: 1;
+        opacity: .9;
+      }
+      .phone-image {
+        opacity: 0;
+        height: 392px;
+        position: relative;
+        top: -4px;
+        z-index: 2;
+      }
+      .wx-code {
+        opacity: 0;
+        position: relative;
+        z-index: 2;
+        float: right;
+        color: #fff;
+        .code-text {
+          margin-top: 20px;
+          h4 {
+            position: absolute;
+          }
+          .android-load {
+            position: absolute;
+            bottom: -3rem;
+            background: $button;
+            width: 185px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: $color;
+            border-radius: 4px;
+          }
+          .android-load:hover {
+            opacity: .8;
+          }
+        }
+        p {
+          color: $default;
+        }
+        .code {
+          display: inline-block;
+          float: right;
+          position: relative;
+          bottom: -38px;
+        }
+      }
+    }
+    .home-message {
+
+      img {
+        transition: box-shadow 0.4s, transform 1s;
+        border-radius: 10px;
+      }
+      img:hover {
+        transform: rotate(360deg);
+      }
+      h4 {
+        color: #272130;
+        font-weight: 600;
+      }
+      p {
+        color: $default;
+        margin: 0;
+        font-size: 12px;
+      }
+    }
+    .goback {
+      position: absolute;
+    }
+    .load-image {
+      background: url(/assets/images/load-image.png) no-repeat 50% 50%;
+      height: 400px;
+      opacity: .6;
+    }
+
+    @keyframes k-down {
+      from {
+        top: -80px;
+        opacity: 0
+      }
+      to {
+        top: 0px;
+        opacity: 1
+      }
+    }
+    @keyframes k-left {
+      from {
+        left: -80px;
+        opacity: 0
+      }
+      to {
+        left: 0px;
+        opacity: 1
+      }
+    }
+    @keyframes k-up {
+      from {
+        bottom: -80px;
+        opacity: 0
+      }
+      to {
+        bottom: 0px;
+        opacity: 1
+      }
+    }
+    @keyframes k-right {
+      from {
+        right: -80px;
+        opacity: 0
+      }
+      to {
+        right: 0px;
+        opacity: 1
+      }
+    }
+
+    .keyframes-down {
+      position: relative;
+      animation-timing-function: ease-out;
+      animation: k-down 1.8s;
+    }
+    .keyframes-left {
+      animation-timing-function: ease-out;
+      animation: k-left 1.8s;
+      animation-fill-mode: forwards;
+    }
+    .keyframes-up {
+      position: relative;
+      animation-timing-function: ease-out;
+      animation: k-up 1.8s;
+    }
+    .keyframes-right {
+      animation-timing-function: ease-out;
+      animation: k-right 1.8s;
+      animation-fill-mode: forwards;
+    }
+  }
+@media screen and (min-width: 1100px) {
+  .content {
+    margin: auto;
+    padding-top: 210px;
+    h3 > span {
+      width: 140px;
+      margin: 6px 20px;
+    }
+  }
+  .balance-type{
+    padding: 0 4rem;
+    ul {
+      li {
+        width: 138px;
+      }
+    }
+  }
+  .trade-content-app{
+    display: none;
+  }
+  .home-phone {
+    height:340px;
+    margin-bottom: 100px;
+    .mask {
+      height: 340px;
+    }
+    .phone-image {
+      height: 392px;
+    }
+    .wx-code {
+      width: 312px;
+      margin-right: 6rem;
+      margin-top: 40px;
+      h3 {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  //.keyframes-down{
+  //  margin-top: -6%;
+  //}
+  .home-message {
+    padding-bottom: 5rem;
+    img {
+      width: 157px;
+    }
+    h4 {
+      margin: 2rem;
+    }
+  }
+  .goback {
+    height: 62px;
+    bottom: -2rem;
+    right: 10%;
+  }
+}
+
+//媒介查询- -移动端
+@media screen and (max-width:768px){
+  .home-main{
+    width: 100%;
+    overflow-x: hidden;
+    .content{
+      padding-top: 130px;
+      h3 > span {
+        width: 20px;
+        margin: 6px 10px;
+      }
+      h3.keyframes-down{
+        font-size: 18px;
+      }
+    }
+    .balance-type{
+      display: none;
+    }
+    .trade-content{
+      display: none;
+    }
+    .trade-content-app{
+      margin: 1rem 0 2rem;
+      .table-title{
+        width: 100%;
+        li{
+          float: left;
+          width: 33%;
+          text-align: center;
+          font-size: 1.2rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+    .home-phone {
+      height:110px;
+      .mask {
+        height: 110px;
+      }
+      .phone-image {
+        height: 100px;
+        margin-top: 12px;
+        opacity: 1;
+      }
+      .wx-code {
+        opacity: 1;
+        width:120px;
+        margin-right: 0;
+        margin-top: 0;
+        h3 {
+          font-size: 12px;
+        }
+      }
+    }
+    .home-message {
+      padding:1rem;
+      img {
+        width: 80px;
+      }
+      h4{
+        font-size: 14px;
+        margin-top:1rem;
+      }
+    }
+    .goback {
+      right: 0;
+      bottom: 0;
+      height: 30px;
+    }
+  }
+
+}*/
+/* line 3, ../sass/common/_common.scss */
+.common-main {
+  overflow-x: hidden;
+  margin-top: 80px;
+  background: #f1f1f1;
+}
+/* line 7, ../sass/common/_common.scss */
+.common-main input::-webkit-outer-spin-button, .common-main input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+/* line 11, ../sass/common/_common.scss */
+.common-main .button-default {
+  cursor: not-allowed;
+}
+/* line 15, ../sass/common/_common.scss */
+.common-main .glyphicon-refresh-animate {
+  animation: spin 1.4s infinite linear;
+}
+@keyframes spin {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1) rotate(360deg);
+  }
+}
+/* line 24, ../sass/common/_common.scss */
+.common-main .common-main-title {
+  background: #fff;
+  text-align: center;
+}
+/* line 27, ../sass/common/_common.scss */
+.common-main .common-main-title .zh-title {
+  color: #151F3F;
+}
+/* line 30, ../sass/common/_common.scss */
+.common-main .common-main-title .en-title {
+  color: #69788e;
+  font-size: 28px;
+  font-weight: 200;
+  font-family: sans-serif;
+}
+/* line 36, ../sass/common/_common.scss */
+.common-main .common-main-title .line {
+  color: #69788e;
+  font-size: 28px;
+  margin: 0 20px;
+}
+/* line 43, ../sass/common/_common.scss */
+.common-main .form-horizontal .control-label {
+  color: #151F3F;
+}
+/* line 46, ../sass/common/_common.scss */
+.common-main .form-horizontal .form-control {
+  height: 38px;
+  font-size: .9rem;
+}
+/* line 50, ../sass/common/_common.scss */
+.common-main .form-horizontal .input-message {
+  margin-right: 106px;
+}
+/* line 52, ../sass/common/_common.scss */
+.common-main .form-horizontal .input-message .get-send-code {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  padding-left: 12px;
+}
+/* line 59, ../sass/common/_common.scss */
+.common-main .form-horizontal .input-img {
+  float: right;
+  width: 96px;
+  height: 38px;
+  text-align: center;
+  border-radius: 4px;
+  background: #f5f5f5;
+}
+/* line 67, ../sass/common/_common.scss */
+.common-main .form-horizontal .input-img .send-code-image {
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+/* line 71, ../sass/common/_common.scss */
+.common-main .form-horizontal .input-img .btn-code {
+  background: #11cfe0;
+  color: #fff;
+  height: 38px;
+  width: 96px;
+  padding: 0;
+}
+/* line 79, ../sass/common/_common.scss */
+.common-main .form-horizontal .last-group {
+  margin-top: 2.5rem;
+}
+/* line 82, ../sass/common/_common.scss */
+.common-main .form-horizontal .login {
+  width: 100%;
+  height: 42px;
+  background: #11cfe0;
+  color: #fff;
+  margin: .5rem 0;
+}
+/* line 90, ../sass/common/_common.scss */
+.common-main .form-horizontal .assist {
+  color: #aea5bc;
+}
+/* line 93, ../sass/common/_common.scss */
+.common-main .form-horizontal .back {
+  color: #11cfe0;
+}
+/* line 96, ../sass/common/_common.scss */
+.common-main .form-horizontal .has-error .form-control {
+  border-color: #e3556f;
+  box-shadow: none;
+}
+/* line 100, ../sass/common/_common.scss */
+.common-main .form-horizontal .text-error {
+  display: inline-block;
+  margin-right: 4px;
+  background: url(/assets/images/error.png) no-repeat;
+  width: 14px;
+  height: 14px;
+  background-size: cover;
+  position: relative;
+  top: 2px;
+}
+/* line 110, ../sass/common/_common.scss */
+.common-main .form-horizontal .text-success {
+  display: inline-block;
+  margin-right: 4px;
+}
+/* line 113, ../sass/common/_common.scss */
+.common-main .form-horizontal .text-success:after {
+  content: '\2714';
+  font-size: .8rem;
+  background: #7ec62a;
+  color: #f5f5f5;
+  border-radius: 50%;
+  padding: 0 3px;
+}
+/* line 122, ../sass/common/_common.scss */
+.common-main .form-horizontal .text-submit {
+  display: inline-block;
+  margin-right: 4px;
+}
+/* line 125, ../sass/common/_common.scss */
+.common-main .form-horizontal .text-submit:after {
+  content: 'i';
+  font-size: .8rem;
+  background: #4990e2;
+  color: #f5f5f5;
+  border-radius: 50%;
+  padding: 0 6px;
+}
+/* line 134, ../sass/common/_common.scss */
+.common-main .form-horizontal .warning {
+  color: #4990e2;
+}
+/* line 137, ../sass/common/_common.scss */
+.common-main .form-horizontal .error {
+  color: #e3556f;
+}
+/* line 140, ../sass/common/_common.scss */
+.common-main .form-horizontal .success {
+  color: #7ac02a;
+}
+/* line 143, ../sass/common/_common.scss */
+.common-main .form-horizontal .reset-success {
+  text-align: center;
+  color: #e44d68;
+  font-size: 14px;
+  margin-top: 3rem;
+}
+/* line 148, ../sass/common/_common.scss */
+.common-main .form-horizontal .reset-success span {
+  color: #11cfe0;
+  font-size: 16px;
+}
+/* line 154, ../sass/common/_common.scss */
+.common-main .clain-pins {
+  height: 4rem;
+  margin: 3rem auto;
+}
+/* line 157, ../sass/common/_common.scss */
+.common-main .clain-pins .itemsdefault {
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+/* line 161, ../sass/common/_common.scss */
+.common-main .clain-pins .itemsdefault .content {
+  position: absolute;
+  height: 1.2rem;
+  border-bottom: 1px dashed #888;
+  width: 3rem;
+}
+/* line 167, ../sass/common/_common.scss */
+.common-main .clain-pins .itemsdefault .item-number {
+  border-radius: 50%;
+  background: #B1D9F0;
+  width: 2.5rem;
+  height: 2.45rem;
+  margin: auto;
+  text-align: center;
+}
+/* line 174, ../sass/common/_common.scss */
+.common-main .clain-pins .itemsdefault .item-number div {
+  border-radius: 50%;
+  background: #87c9f1;
+  opacity: 1;
+  color: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+  line-height: 1.8rem;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+/* line 193, ../sass/common/_common.scss */
+.common-main .clain-pins .active .item-number > div {
+  background: #11cfe0;
+}
+/* line 196, ../sass/common/_common.scss */
+.common-main .clain-pins .active p {
+  color: #11cfe0;
+}
+
+/* line 207, ../sass/common/_common.scss */
+.chk_1 {
+  display: none;
+}
+
+/* line 211, ../sass/common/_common.scss */
+.intro-main h3 {
+  text-align: center;
+}
+/* line 214, ../sass/common/_common.scss */
+.intro-main p {
+  text-indent: 2em;
+  padding: 0 20px;
+  line-height: 25px;
+}
+/* line 218, ../sass/common/_common.scss */
+.intro-main p i {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+}
+/* line 224, ../sass/common/_common.scss */
+.intro-main p:nth-child(1) {
+  padding-top: 40px;
+}
+
+/* line 228, ../sass/common/_common.scss */
+.chk_1 + label {
+  background-color: #fff;
+  border: 1px solid #C1CACA;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 6px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin: -4px 4px 0 0;
+}
+
+/* line 239, ../sass/common/_common.scss */
+.chk_1 + label:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* line 243, ../sass/common/_common.scss */
+.chk_1:checked + label {
+  background-color: #11cfe0;
+  border: 1px solid #11cfe0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* line 250, ../sass/common/_common.scss */
+.chk_1:checked + label:after {
+  content: '\2714';
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  color: #fff;
+  width: 100%;
+}
+
+/* line 260, ../sass/common/_common.scss */
+.page-btn {
+  text-align: center;
+}
+/* line 262, ../sass/common/_common.scss */
+.page-btn .pagination {
+  margin: 10px 20px;
+}
+/* line 266, ../sass/common/_common.scss */
+.page-btn .pagination li a {
+  color: #494949;
+  outline: none;
+}
+/* line 272, ../sass/common/_common.scss */
+.page-btn .pagination .active a {
+  color: #fff;
+  border-color: #11cfe0;
+  background-color: #11cfe0;
+}
+/* line 279, ../sass/common/_common.scss */
+.page-btn .pagination .disabled a {
+  color: #777777;
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 287, ../sass/common/_common.scss */
+  .common-main {
+    min-height: 560px;
+    margin-top: 80px;
+  }
+  /* line 290, ../sass/common/_common.scss */
+  .common-main .common-main-title {
+    padding: 10px;
+  }
+  /* line 292, ../sass/common/_common.scss */
+  .common-main .common-main-title .zh-title {
+    font-size: 30px;
+  }
+  /* line 296, ../sass/common/_common.scss */
+  .common-main .form-horizontal {
+    margin: 80px auto;
+  }
+  /* line 299, ../sass/common/_common.scss */
+  .common-main .form-horizontal .form-control {
+    margin-bottom: 6px;
+  }
+  /* line 302, ../sass/common/_common.scss */
+  .common-main .form-horizontal .input-img {
+    margin-top: -44px;
+  }
+  /* line 306, ../sass/common/_common.scss */
+  .common-main .clain-pins {
+    width: 460px;
+    line-height: 3.5rem;
+  }
+  /* line 309, ../sass/common/_common.scss */
+  .common-main .clain-pins .content {
+    left: 96px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 318, ../sass/common/_common.scss */
+  .common-main {
+    margin-top: 50px;
+  }
+  /* line 320, ../sass/common/_common.scss */
+  .common-main .common-main-title {
+    padding: 4px;
+  }
+  /* line 322, ../sass/common/_common.scss */
+  .common-main .common-main-title .zh-title {
+    font-size: 22px;
+  }
+  /* line 325, ../sass/common/_common.scss */
+  .common-main .common-main-title .en-title {
+    font-size: 1.6rem;
+  }
+  /* line 329, ../sass/common/_common.scss */
+  .common-main .form-horizontal {
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+  /* line 332, ../sass/common/_common.scss */
+  .common-main .form-horizontal .input-img {
+    margin-top: -38px;
+  }
+  /* line 337, ../sass/common/_common.scss */
+  .common-main .clain-pins .content {
+    left: 68px;
+  }
+}
+/* line 343, ../sass/common/_common.scss */
+.down-content {
+  width: 100%;
+  position: absolute;
+  top: 4rem;
+}
+/* line 347, ../sass/common/_common.scss */
+.down-content img {
+  width: 100%;
+}
+/* line 350, ../sass/common/_common.scss */
+.down-content .down-btn {
+  border: 1px solid #3b3131;
+  /* width: 20%; */
+  /* padding: 5px 20px; */
+  width: 80%;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 30px;
+  font-size: 14px;
+  background: url(/assets/images/ios-icon.png) 20px no-repeat;
+  background-size: 20px;
+}
+/* line 363, ../sass/common/_common.scss */
+.down-content .down-btn a {
+  color: #000;
+}
+
+/* line 2, ../sass/common/_news.scss */
+.ql-editor {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 520px) {
+  /* line 6, ../sass/common/_news.scss */
+  .ql-align-center img {
+    width: 100%;
+  }
+}
+
+/* line 11, ../sass/common/_news.scss */
+.common-main {
+  padding-bottom: 28px;
+}
+/* line 13, ../sass/common/_news.scss */
+.common-main .news-main {
+  min-height: 640px;
+  margin-top: 28px;
+  background: #fff;
+  padding: 28px 44px 28px;
+}
+@media screen and (max-width: 520px) {
+  /* line 13, ../sass/common/_news.scss */
+  .common-main .news-main {
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+/* line 22, ../sass/common/_news.scss */
+.common-main .news-main .line {
+  border-right: 1px dashed #dbd9dd;
+}
+/* line 25, ../sass/common/_news.scss */
+.common-main .news-main h4 {
+  font-weight: 700;
+  font-size: 16px;
+  border-bottom: 2px solid #11cfe0;
+  padding-bottom: 16px;
+  word-wrap: break-word;
+  word-break: normal;
+}
+/* line 33, ../sass/common/_news.scss */
+.common-main .news-main .table {
+  table-layout: fixed;
+}
+/* line 36, ../sass/common/_news.scss */
+.common-main .news-main .table tr td {
+  border-top: none;
+  margin-top: 46px;
+  padding: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+/* line 45, ../sass/common/_news.scss */
+.common-main .news-main .new {
+  font-size: 12px;
+  font-weight: 700;
+}
+/* line 49, ../sass/common/_news.scss */
+.common-main .news-main .more {
+  color: #4990e2;
+  cursor: pointer;
+}
+/* line 54, ../sass/common/_news.scss */
+.common-main .news-detail {
+  color: #423350;
+}
+/* line 56, ../sass/common/_news.scss */
+.common-main .news-detail h4 {
+  border-bottom: none;
+}
+/* line 59, ../sass/common/_news.scss */
+.common-main .news-detail p.title-p {
+  color: #978da1;
+  border-bottom: 1px solid #423350;
+  padding-bottom: 16px;
+}
+/* line 64, ../sass/common/_news.scss */
+.common-main .news-detail p {
+  line-height: 2.5rem;
+  width: 100%;
+}
+@media screen and (max-width: 520px) {
+  /* line 67, ../sass/common/_news.scss */
+  .common-main .news-detail p img {
+    width: 100%;
+  }
+}
+/* line 74, ../sass/common/_news.scss */
+.common-main .close {
+  color: #151F3F;
+  border-radius: 50%;
+  border: 1px solid #151F3F;
+  width: 24px;
+  text-align: center;
+}
+
+/* line 6, ../sass/common/_trade.scss */
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+/* line 12, ../sass/common/_trade.scss */
+.common-main {
+  padding-bottom: 28px;
+}
+/* line 15, ../sass/common/_trade.scss */
+.common-main .up {
+  color: #83c03e !important;
+}
+/* line 18, ../sass/common/_trade.scss */
+.common-main .down {
+  color: #d94e68 !important;
+}
+/* line 22, ../sass/common/_trade.scss */
+.common-main .trade-main {
+  font-family: sans-serif, 'Microsoft Yahei';
+}
+/* line 25, ../sass/common/_trade.scss */
+.common-main .trade-main .hr {
+  height: 0px;
+  border-bottom: 1px dashed #bbbbbb;
+  margin: 10px 20px;
+}
+/* line 31, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module {
+  background: #fff;
+}
+/* line 33, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-popup {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 10;
+}
+/* line 42, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-popup .inner {
+  background: #FFFFFF;
+  height: auto;
+  transition: height ease .3s, margin-top .3s;
+  transition-timing-function: ease-out;
+}
+/* line 48, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-popup .inner .scroll {
+  min-height: auto;
+}
+/* line 52, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-popup .inner .popup-title {
+  display: flex;
+  font-weight: 300;
+  height: 42px;
+  line-height: 42px;
+}
+/* line 58, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-popup .inner .popup-title div {
+  padding: 0 20px;
+}
+/* line 62, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-popup .inner .popup-title .right {
+  text-align: right;
+}
+/* line 65, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-popup .inner .popup-title .right .popup-close {
+  width: 14px;
+  height: 14px;
+  background: #A99EB4;
+  display: inline-block;
+  border-radius: 50%;
+  color: #FFFFFF;
+  line-height: 12px;
+  text-align: center;
+  font-family: unset;
+  cursor: default;
+}
+/* line 81, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-popup .inner thead tr {
+  background-color: #A99EB4;
+}
+/* line 84, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-popup .inner thead tr th {
+  color: #FFFFFF;
+}
+/* line 91, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .trade-empty {
+  font-size: 12px;
+  font-weight: 300;
+  color: #999999;
+  text-align: center;
+  margin: 20px 0px;
+}
+/* line 99, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .module-cover {
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 9;
+  line-height: 554px;
+  text-align: center;
+}
+/* line 111, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .module-title {
+  height: 45px;
+  line-height: 45px;
+  padding-left: 27px;
+  color: #423350;
+  border-bottom: solid 1px #dbd9dd;
+}
+/* line 118, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .module-title h4 {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+}
+/* line 125, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .module-title .tab-btns .tab-btn {
+  font-size: 16px;
+  font-weight: 500;
+  color: #7e7d83;
+  height: 44px;
+  line-height: 44px;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  transition: border 0.3s, color 0.3s;
+  cursor: default;
+}
+/* line 137, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .module-title .tab-btns .tab-btn.active {
+  color: #413350;
+  border-bottom: 3px solid #11cfe0;
+}
+/* line 143, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .scroll {
+  max-height: 320px;
+  overflow-y: auto;
+}
+/* line 147, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .scroll::-webkit-scrollbar {
+  width: 6px;
+  background-color: #FFFFFF;
+  margin-right: 5px;
+}
+/* line 152, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .scroll::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: #FFFFFF;
+}
+/* line 156, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module .scroll::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #888888;
+}
+/* line 161, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table {
+  width: 100%;
+  cursor: default;
+  font-size: 12px;
+  font-weight: 400;
+  border-collapse: collapse;
+}
+/* line 168, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table tr {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  font-weight: 400;
+  transition: background 0.3s, border 0.3s;
+}
+/* line 177, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table tr th:first-child, .common-main .trade-main .trade-module table tr td:first-child {
+  padding-left: 27px;
+}
+/* line 180, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table tr th:last-child, .common-main .trade-main .trade-module table tr td:last-child {
+  padding-right: 27px;
+  text-align: right;
+}
+/* line 186, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table tr:nth-child(even) {
+  background: transparent;
+}
+/* line 191, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table thead tr {
+  border-bottom: 1px solid #dbd9dd;
+}
+/* line 194, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table thead tr th {
+  font-weight: 200;
+  color: #6a5f76;
+}
+/* line 202, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table tbody tr:hover, .common-main .trade-main .trade-module table tbody tr.active {
+  background: #f4fbff;
+  border-top: 1px solid #f4fbff;
+  border-bottom: 1px solid #f4fbff;
+}
+/* line 207, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table tbody tr.active td:first-child {
+  position: relative;
+  overflow: hidden;
+}
+/* line 211, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-module table tbody tr.active td:first-child:before {
+  position: absolute;
+  background: #11cfe0;
+  content: ' ';
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  left: -7px;
+  top: -7px;
+}
+/* line 228, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .trade-asset {
+  position: relative;
+  background: #fff url(/assets/images/trade-asset@2x.png) no-repeat center right;
+  background-size: contain;
+  color: #413350;
+}
+/* line 235, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .trade-asset .inner {
+  padding-left: 40px;
+  overflow: hidden;
+}
+/* line 239, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .trade-asset h3 {
+  font-size: 28px;
+  font-weight: 200;
+  margin-top: 14px;
+  margin-bottom: 5px;
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 400px) {
+  /* line 239, ../sass/common/_trade.scss */
+  .common-main .trade-main .trade-left .trade-asset h3 {
+    width: 100%;
+  }
+}
+/* line 250, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .trade-asset small {
+  font-size: 14px;
+  font-weight: 200;
+  float: left;
+  width: 100%;
+}
+/* line 256, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .trade-asset p {
+  float: left;
+  font-size: 14px;
+  width: 50%;
+  margin-top: 20px;
+  color: #11cfe0;
+}
+@media screen and (max-width: 400px) {
+  /* line 256, ../sass/common/_trade.scss */
+  .common-main .trade-main .trade-left .trade-asset p {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/* line 268, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .trade-asset:before {
+  display: block;
+  content: " ";
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #11cfe0;
+}
+/* line 279, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .quotes-dynamic {
+  min-height: 350px;
+}
+/* line 283, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .delegate-information {
+  min-height: 350px;
+}
+/* line 286, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .delegate-information .stalls {
+  float: right;
+  width: 100px;
+  text-align: center;
+  font-size: 12px;
+}
+/* line 292, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .delegate-information .stalls select {
+  width: auto;
+  height: 20px;
+  border: 1px solid #dddddd;
+}
+/* line 299, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .delegate-information .scroll {
+  height: 158px;
+  overflow-y: auto;
+}
+/* line 305, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .rt-transactions {
+  min-height: 520px;
+}
+/* line 308, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-left .rt-transactions .scroll {
+  max-height: 444px;
+  overflow-y: auto;
+}
+/* line 316, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right {
+  flex: 1;
+}
+/* line 320, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-preview {
+  height: auto;
+}
+/* line 322, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-preview .top {
+  display: flex;
+  height: auto;
+  border-bottom: 1px solid #dcdadd;
+}
+@media screen and (max-width: 1100px) {
+  /* line 322, ../sass/common/_trade.scss */
+  .common-main .trade-main .trade-right .trade-preview .top {
+    height: auto;
+    -webkit-flex-flow: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+/* line 333, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-preview .top .split {
+  width: 19%;
+  border-left: 1px solid #dcdadd;
+  padding: 0 20px;
+}
+/* line 337, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-preview .top .split .inner {
+  margin: 8px auto;
+}
+/* line 341, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-preview .top .split small {
+  font-weight: 200;
+  display: block;
+  margin-bottom: 2px;
+  color: #6a5f76;
+  font-size: 12px;
+}
+/* line 348, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-preview .top .split span {
+  font-weight: 400;
+  font-size: 14px;
+  color: #151F3F;
+}
+@media screen and (max-width: 1100px) {
+  /* line 333, ../sass/common/_trade.scss */
+  .common-main .trade-main .trade-right .trade-preview .top .split {
+    width: inherit;
+    border-left: none !important;
+  }
+}
+/* line 358, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-preview .top .split:first-child {
+  width: 28%;
+}
+@media screen and (max-width: 1100px) {
+  /* line 358, ../sass/common/_trade.scss */
+  .common-main .trade-main .trade-right .trade-preview .top .split:first-child {
+    width: inherit;
+  }
+}
+/* line 365, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-preview .bottom {
+  height: 33px;
+  line-height: 33px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #11cfe0;
+}
+/* line 375, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-k {
+  position: relative;
+  height: 396px;
+}
+/* line 379, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-k .trade-k-a {
+  position: absolute;
+  right: 80px;
+  top: 12px;
+}
+/* line 387, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .module-title {
+  padding-left: 0px;
+}
+/* line 391, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .hr {
+  margin: 30px 0px;
+}
+/* line 395, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .module-con {
+  max-height: none;
+}
+/* line 399, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .help {
+  position: absolute;
+  color: #978da1;
+  right: 30px;
+  top: 8px;
+  cursor: help;
+}
+/* line 406, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .help:hover .tips {
+  display: block;
+}
+/* line 409, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .tips {
+  display: none;
+  position: absolute;
+  top: -75px;
+  right: -40px;
+  width: 240px;
+  height: 70px;
+  background: #ffffff;
+  padding: 10px;
+  font-size: 12px;
+  box-shadow: 0 2px 4px 0 rgba(94, 94, 94, 0.5);
+  background: #fcf9f0;
+  color: #413350;
+  font-weight: 400;
+  transform: scale(0.9);
+}
+/* line 425, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .tips:before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  bottom: -5px;
+  right: 35px;
+  background: #fcf9f0;
+  box-shadow: 0 2px 4px rgba(94, 94, 94, 0.5);
+  transform: rotate(45deg);
+  z-index: 1;
+}
+/* line 437, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .tips:after {
+  z-index: 2;
+  background: #fcf9f0;
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 7px;
+  bottom: 0px;
+  right: 33px;
+}
+/* line 450, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .total-slider.rzslider .rz-bar {
+  background: #c1bdc6;
+  height: 2px;
+}
+/* line 454, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .total-slider.rzslider .rz-selection {
+  background: #6a5f76;
+}
+/* line 457, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .total-slider.rzslider .rz-pointer {
+  top: -7px;
+  width: 6px;
+  height: 14px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(153, 153, 153, 0.62);
+  border: solid 1px #dcdbdd;
+}
+/* line 473, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .total-slider.rzslider .rz-pointer:after {
+  display: none;
+}
+/* line 479, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .total-slider.rzslider .rz-bubble {
+  bottom: 14px;
+}
+/* line 482, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .total-slider.rzslider .rz-bubble:after {
+  content: '%';
+}
+/* line 485, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .total-slider.rzslider .rz-limit {
+  font-weight: bold;
+  color: #c1bdc6;
+}
+/* line 489, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .total-slider.rzslider .rz-tick {
+  width: 1px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0;
+  background: #ffe4d1;
+  top: -1px;
+}
+/* line 497, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .total-slider.rzslider .rz-tick.rz-selected {
+  background: #c1bdc6;
+}
+/* line 502, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action form {
+  font-weight: 200;
+}
+/* line 505, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action form label {
+  font-size: 12px;
+  font-weight: 300;
+  color: #000000;
+  padding-left: 0;
+}
+/* line 512, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action form .buy-info, .common-main .trade-main .trade-right .trade-action form .sell-info {
+  font-size: 12px;
+  line-height: 24px;
+}
+/* line 516, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action form .buy-info .right, .common-main .trade-main .trade-right .trade-action form .sell-info .right {
+  float: right;
+}
+/* line 521, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action form .buy-info span {
+  color: #83c03e;
+}
+/* line 526, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action form .sell-info span {
+  color: #da4e68;
+}
+/* line 532, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action form .input-group .form-control {
+  border-right: none;
+}
+/* line 535, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action form .input-group .input-group-addon {
+  height: 28px;
+  border-left: none;
+}
+/* line 541, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action form .form-control {
+  font-weight: 400;
+  height: 32px;
+  border-top-left-radius: 2px;
+  box-shadow: none;
+  border-bottom-left-radius: 2px;
+}
+/* line 551, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .btn-buy, .common-main .trade-main .trade-right .trade-action .btn-sell {
+  border-radius: 2px;
+  height: 38px;
+}
+/* line 555, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .btn-buy {
+  color: #ffffff;
+  background-color: #83c03e;
+  outline: none;
+  transition: background .3s;
+}
+/* line 561, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .btn-buy:hover, .common-main .trade-main .trade-right .trade-action .btn-buy:active, .common-main .trade-main .trade-right .trade-action .btn-buy:focus {
+  color: #fff;
+  background-color: #6aa726;
+}
+/* line 565, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .btn-buy[disabled] {
+  background-color: #c5dea9;
+  border: none;
+  color: #ffffff;
+}
+/* line 570, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .btn-sell {
+  color: #ffffff;
+  background-color: #da4e68;
+  outline: none;
+  transition: background .3s;
+}
+/* line 576, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .btn-sell:hover, .common-main .trade-main .trade-right .trade-action .btn-sell:active, .common-main .trade-main .trade-right .trade-action .btn-sell:focus {
+  color: #fff;
+  background-color: #ca3551;
+}
+/* line 580, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .btn-sell[disabled] {
+  background-color: #f1b5c0;
+  border: none;
+  color: #ffffff;
+}
+/* line 586, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action table {
+  margin-bottom: 10px;
+  font-weight: 200;
+}
+/* line 591, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action table tr td {
+  padding-left: 0px;
+}
+/* line 594, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action table tr td:nth-child(odd) {
+  color: #999999;
+}
+/* line 598, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action table tr td:last-child {
+  text-align: left;
+}
+/* line 602, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action table tr:hover {
+  background: none;
+  border-color: #ffffff;
+}
+/* line 609, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action small a {
+  color: #11cfe0;
+  text-decoration: underline;
+}
+/* line 615, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .form-horizontal {
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/* line 621, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .form-control {
+  margin-bottom: 0px;
+}
+/* line 625, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .tpass-error {
+  display: inline-block;
+  margin-top: 10px;
+  color: #e3556f;
+}
+/* line 630, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .tpass-error a {
+  color: #e3555f;
+  text-decoration: underline;
+}
+/* line 635, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .tpass-error:before {
+  position: relative;
+  margin-right: 10px;
+  content: 'i';
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #e3556f;
+  color: #ffffff;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  font-weight: 700;
+  transform: scale(0.8);
+}
+/* line 651, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .action-box {
+  display: flex;
+  padding: 27px 0;
+}
+/* line 655, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .action-box .split {
+  flex: 1;
+}
+/* line 658, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-action .action-box .split:first-child {
+  border-right: 1px dashed #c7c7c7;
+}
+/* line 666, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-history {
+  position: relative;
+}
+/* line 670, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-history .scroll {
+  min-height: 312px;
+}
+/* line 674, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-history .module-cover {
+  line-height: 395px;
+}
+/* line 677, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-history .module-cover a {
+  color: #11cfe0;
+  text-decoration: underline;
+}
+/* line 683, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-history .module-title {
+  padding-left: 0px;
+}
+/* line 686, ../sass/common/_trade.scss */
+.common-main .trade-main .trade-right .trade-history .module-con {
+  min-height: 398px;
+  max-height: 398px;
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 696, ../sass/common/_trade.scss */
+  .trade-app {
+    display: none !important;
+  }
+
+  /* line 699, ../sass/common/_trade.scss */
+  .trade-main {
+    max-width: 1220px;
+    min-width: 900px;
+    margin-top: 28px;
+    min-height: 800px;
+    display: flex;
+  }
+  /* line 705, ../sass/common/_trade.scss */
+  .trade-main .trade-left {
+    width: 350px;
+    margin-right: 14px;
+  }
+  /* line 709, ../sass/common/_trade.scss */
+  .trade-main .trade-module {
+    margin-bottom: 14px;
+  }
+  /* line 712, ../sass/common/_trade.scss */
+  .trade-main .split {
+    padding: 0 50px;
+  }
+  /* line 715, ../sass/common/_trade.scss */
+  .trade-main .trade-asset {
+    height: 86px;
+  }
+  /* line 718, ../sass/common/_trade.scss */
+  .trade-main .tab-btn {
+    padding: 0 30px;
+  }
+  /* line 721, ../sass/common/_trade.scss */
+  .trade-main .trade-module {
+    border: 1px solid #dbd9dd;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 728, ../sass/common/_trade.scss */
+  .trade-web-main {
+    display: none !important;
+  }
+
+  /* line 731, ../sass/common/_trade.scss */
+  .trade-module {
+    margin: 14px 0;
+  }
+
+  /* line 737, ../sass/common/_trade.scss */
+  .tab-btn {
+    width: 32%;
+    text-align: center;
+  }
+
+  /* line 741, ../sass/common/_trade.scss */
+  .trade-module {
+    border: 0;
+  }
+
+  /* line 744, ../sass/common/_trade.scss */
+  .input-group {
+    width: 100%;
+  }
+}
+/* line 2, ../sass/common/_account.scss */
+.common-main {
+  padding-bottom: 28px;
+}
+/* line 5, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step {
+  width: 100%;
+  height: 38px;
+}
+/* line 8, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .itemsdefault {
+  width: 160px;
+  padding-top: 8px;
+}
+/* line 11, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .itemsdefault p {
+  padding-top: 6px;
+  color: #aea5bc;
+  font-weight: 700;
+}
+/* line 15, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .itemsdefault p .content {
+  border-top: 1px dashed #aea5bc;
+  width: 34px;
+  display: inline-block;
+  height: 6px;
+  margin-left: 10px;
+}
+/* line 23, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .itemsdefault p a {
+  color: #aea5bc;
+}
+/* line 28, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .active .item-number > div {
+  background: #e44d68;
+}
+/* line 31, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .active p {
+  color: #e44d68;
+}
+/* line 33, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .active p .content {
+  border-top: 1px dashed #e44d68;
+}
+/* line 36, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .active p a {
+  color: #e44d68;
+}
+/* line 40, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .item-number {
+  border-radius: 50%;
+  background: #B1D9F0;
+  width: 2.4rem;
+  height: 2.4rem;
+  text-align: center;
+  float: left;
+}
+/* line 47, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .item-number div {
+  border-radius: 50%;
+  background: #B1D9F0;
+  opacity: 1;
+  color: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+  line-height: 1.8rem;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+/* line 61, ../sass/common/_account.scss */
+.common-main .nav-clain-pins .clain-pins-step .last {
+  width: 16%;
+}
+/* line 67, ../sass/common/_account.scss */
+.common-main .account-main {
+  color: #151F3F;
+  min-height: 640px;
+  margin-top: 28px;
+  background: #fff;
+}
+/* line 72, ../sass/common/_account.scss */
+.common-main .account-main .account-title {
+  height: 90px;
+  margin: 21px 28px;
+  border-bottom: 1px #69788e dashed;
+}
+/* line 76, ../sass/common/_account.scss */
+.common-main .account-main .account-title h5 {
+  color: #6a5f76;
+}
+/* line 79, ../sass/common/_account.scss */
+.common-main .account-main .account-title .number {
+  color: #151F3F;
+  font-weight: 600;
+}
+/* line 84, ../sass/common/_account.scss */
+.common-main .account-main .detail-main {
+  margin-top: 20px;
+}
+/* line 86, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund {
+  margin-top: 40px;
+}
+/* line 88, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund h4 {
+  border-left: 5px solid #11cfe0;
+  font-size: 16px;
+  padding-left: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* line 96, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .charge {
+  width: 100%;
+}
+/* line 98, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .charge ul {
+  height: 38px;
+  line-height: 38px;
+  width: 98%;
+  overflow-x: auto;
+  margin: 4px 10px;
+  white-space: nowrap;
+  overflow-y: hidden;
+}
+/* line 106, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .charge ul li {
+  display: inline;
+  color: #69788e;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 20px;
+}
+/* line 113, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .charge ul li.active {
+  color: #11cfe0;
+  border-bottom: none;
+}
+/* line 120, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .table tr th {
+  color: #69788e;
+  text-align: center;
+  border-bottom: solid 1px #ddd;
+}
+/* line 125, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .table tr td {
+  text-align: center;
+  border-top: solid 1px #f5f2f8;
+  padding: 0;
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+}
+/* line 132, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .table tr td a {
+  display: inline-block;
+  line-height: 16px;
+}
+/* line 136, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .table tr td .lock,
+.common-main .account-main .detail-main .fund .table tr td .withdraw {
+  color: #11cfe0;
+}
+/* line 140, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .table tr td .account-deposit {
+  background: #11cfe0;
+  color: #fff;
+  border-radius: 2px;
+}
+/* line 145, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .table tr td .applying {
+  color: #69788e;
+}
+/* line 148, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .table tr td .hash-sel {
+  width: auto;
+  color: #4990e2;
+}
+/* line 155, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .fund-nav-title li {
+  width: 25%;
+  float: left;
+  font-size: 14px;
+  padding-bottom: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 165, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund .bbs-title li {
+  width: 20%;
+}
+/* line 169, ../sass/common/_account.scss */
+.common-main .account-main .detail-main .fund li.active {
+  color: #151F3F;
+  font-weight: 700;
+  border-bottom: 2px solid #11cfe0;
+  cursor: pointer;
+}
+/* line 180, ../sass/common/_account.scss */
+.common-main .account-main .management .fund {
+  position: relative;
+}
+/* line 182, ../sass/common/_account.scss */
+.common-main .account-main .management .fund .recharge-nav-title {
+  border-bottom: 0 !important;
+}
+/* line 185, ../sass/common/_account.scss */
+.common-main .account-main .management .fund .addbank {
+  position: absolute;
+  top: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: #11cfe0;
+}
+/* line 192, ../sass/common/_account.scss */
+.common-main .account-main .management .fund .addbank .add {
+  font-size: 20px;
+  display: inline-block;
+  font-weight: 700;
+}
+/* line 198, ../sass/common/_account.scss */
+.common-main .account-main .management .fund .delete {
+  cursor: pointer;
+  color: #11cfe0;
+}
+/* line 208, ../sass/common/_account.scss */
+.common-main .recharge-main .recharge-nav-title {
+  margin-top: 36px;
+  height: 40px;
+  border-bottom: solid 1px #dbd9dd;
+}
+/* line 212, ../sass/common/_account.scss */
+.common-main .recharge-main .recharge-nav-title li {
+  width: 176px;
+  font-size: 16px;
+  height: 40px;
+  float: left;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+/* line 220, ../sass/common/_account.scss */
+.common-main .recharge-main .recharge-nav-title li .dot-top {
+  position: absolute;
+  margin: 8px 6px;
+  width: 4px;
+  height: 4px;
+  border-left: 4px solid transparent;
+  border-bottom: 8px solid #000;
+  border-right: 4px solid transparent;
+  cursor: pointer;
+}
+/* line 230, ../sass/common/_account.scss */
+.common-main .recharge-main .recharge-nav-title li .dot-down {
+  position: absolute;
+  margin: 8px 6px;
+  width: 4px;
+  height: 4px;
+  border-left: 4px solid transparent;
+  border-top: 8px solid #000;
+  border-right: 4px solid transparent;
+  cursor: pointer;
+}
+/* line 240, ../sass/common/_account.scss */
+.common-main .recharge-main .recharge-nav-title li .balance-box {
+  position: absolute;
+  width: 395px;
+  margin-top: 18px;
+  border: 1px solid #ddd;
+  border-top: none;
+  box-shadow: 0 0 4px 0 rgba(136, 136, 136, 0.5);
+  padding: 10px;
+  color: #988ea2;
+  z-index: 100;
+  background: #fff;
+  cursor: pointer;
+}
+/* line 252, ../sass/common/_account.scss */
+.common-main .recharge-main .recharge-nav-title li .balance-box div {
+  border-right: 1px dashed #988ea2;
+  padding: 8px;
+  font-size: 14px;
+  width: 33%;
+  float: left;
+}
+/* line 259, ../sass/common/_account.scss */
+.common-main .recharge-main .recharge-nav-title li .balance-box div:nth-child(3n) {
+  border-right: none;
+}
+/* line 262, ../sass/common/_account.scss */
+.common-main .recharge-main .recharge-nav-title li .balance-box .active {
+  color: #11cfe0;
+}
+/* line 269, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .mothod {
+  font-size: 14px;
+  margin-top: 10px;
+}
+/* line 273, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type ul {
+  position: relative;
+  height: 58px;
+  margin-left: 30px;
+}
+/* line 277, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type ul li {
+  float: left;
+  padding: 10px;
+}
+/* line 280, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type ul li img {
+  margin-right: 10px;
+}
+/* line 283, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type ul li p {
+  padding-right: 18px;
+  border-right: 1px dashed #979797;
+}
+/* line 288, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type ul li:last-child > p {
+  border-right: none;
+}
+/* line 291, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type ul li.active {
+  position: relative;
+}
+/* line 293, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type ul li.active i {
+  position: absolute;
+  width: 12px;
+  height: 13px;
+  background: url(/assets/images/triangle.png) no-repeat 50%;
+  background-size: contain;
+  top: 0;
+  left: 0;
+}
+/* line 304, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .deposit-text {
+  padding-left: 100px;
+  margin-top: 30px;
+}
+/* line 308, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .bank-step {
+  margin-top: 40px;
+}
+/* line 311, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .clain-pins-step {
+  width: 100%;
+}
+/* line 314, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .clain-pins-step .itemsdefault p {
+  line-height: 30px;
+  color: #11cfe0;
+  font-weight: 700;
+}
+/* line 320, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .clain-pins-step .gl {
+  width: 12px;
+  height: 12px;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 10px;
+}
+/* line 327, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .clain-pins-step .active .item-number > div {
+  background: #e44d68;
+}
+/* line 330, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .clain-pins-step .item-number {
+  border-radius: 50%;
+  background: #B1D9F0;
+  width: 2.4rem;
+  height: 2.4rem;
+  text-align: center;
+  float: left;
+  margin-right: 20px;
+}
+/* line 338, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .clain-pins-step .item-number div {
+  border-radius: 50%;
+  background: #11cfe0;
+  opacity: 1;
+  color: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+  line-height: 1.8rem;
+  position: absolute;
+  margin-left: 3.5px;
+  margin-top: 4px;
+}
+/* line 353, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money {
+  text-align: center;
+}
+/* line 355, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .charge-input {
+  border-bottom: 1px dashed #c7c7c7;
+  padding: 38px 0;
+}
+/* line 358, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .charge-input .money {
+  width: 240px;
+  height: 38px;
+  line-height: 38px;
+  margin-left: 40px;
+  padding-left: 10px;
+}
+/* line 366, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money button {
+  width: 266px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 0;
+  margin: 50px;
+}
+/* line 374, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .new-account {
+  height: 38px;
+  background: #e32849;
+}
+/* line 378, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .withdraw {
+  background: #11cfe0;
+}
+/* line 381, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .btn-code {
+  background: #11cfe0;
+}
+/* line 384, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .input-img button[disabled] {
+  background: #11cfe0;
+  opacity: .8;
+}
+/* line 388, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .money-address {
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+}
+/* line 391, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .money-address .copy-address {
+  display: inline-block;
+  background: #11cfe0;
+  width: 68px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 2px;
+  color: #fff;
+  margin-left: 10px;
+}
+/* line 402, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .data-code {
+  position: relative;
+  padding-top: 40px;
+}
+/* line 405, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .data-code h4 {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  background: #fff;
+  width: 40px;
+}
+/* line 412, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .charge-money .data-code p {
+  font-size: 16px;
+}
+/* line 418, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .notice h5 {
+  font-weight: 700;
+}
+/* line 421, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .notice p {
+  line-height: 20px;
+  text-indent: -20px;
+}
+/* line 426, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .bank-step2 {
+  width: 100%;
+  border-right: 1px dashed #c7c7c7;
+  margin: 30px 0;
+}
+/* line 430, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .bank-step2 table {
+  width: 60%;
+  margin: auto;
+  border: 1px solid #ddd;
+}
+/* line 434, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .bank-step2 table tr td:first-child {
+  border-right: 1px solid #ddd;
+  color: #69788e;
+}
+/* line 438, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .bank-step2 table tr td:last-child {
+  color: #11cfe0;
+  font-weight: 700;
+}
+/* line 443, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .bank-step2 .bank-notice h5 {
+  margin: 30px 80px;
+}
+/* line 447, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina {
+  padding: 5px 0 5px 80px;
+}
+/* line 449, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina .itemsdefault {
+  width: 260px;
+}
+/* line 453, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-step1 {
+  margin-top: 20px;
+}
+/* line 455, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-step1 .sina-notice {
+  font-size: 12px;
+  width: 26%;
+  margin: 2rem auto;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.8rem;
+}
+/* line 464, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-input {
+  margin: 30px 120px;
+  text-align: left;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 30px;
+}
+/* line 469, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-input h5 {
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+/* line 474, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money {
+  width: 50%;
+  border-right: 1px dashed #c7c7c7;
+}
+/* line 477, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money .form-horizontal {
+  margin: 0 auto;
+  width: 72%;
+}
+/* line 481, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money .form-group {
+  margin-bottom: 0;
+}
+/* line 483, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money .form-group select.bank-type, .common-main .recharge-main .deposit-type .sina-charge-money .form-group input {
+  height: 38px;
+  line-height: 38px;
+  padding-left: 10px;
+}
+/* line 489, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money .form-group .province,
+.common-main .recharge-main .deposit-type .sina-charge-money .form-group .city {
+  width: 47%;
+}
+/* line 493, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money .form-group .input-img {
+  background: #11cfe0;
+  line-height: 38px;
+  color: #fff;
+  border: none;
+}
+/* line 499, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money .form-group .input-message input {
+  width: 160px;
+}
+/* line 502, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money .form-group .input-img:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+/* line 506, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money .form-group .next {
+  width: 60%;
+  margin-top: 30px;
+}
+/* line 510, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .sina-charge-money .form-group .next:hover {
+  opacity: .8;
+}
+/* line 516, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .gift-charge .form-horizontal {
+  width: 100%;
+}
+/* line 518, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .gift-charge .form-horizontal p {
+  font-size: 12px;
+}
+/* line 521, ../sass/common/_account.scss */
+.common-main .recharge-main .deposit-type .gift-charge .form-horizontal .step-success {
+  margin-top: 30px;
+  font-size: 16px;
+}
+/* line 531, ../sass/common/_account.scss */
+.common-main table tr:nth-child(even) {
+  background: #f4fbff;
+}
+/* line 535, ../sass/common/_account.scss */
+.common-main input::-webkit-input-placeholder {
+  color: #999;
+}
+/* line 538, ../sass/common/_account.scss */
+.common-main input:-moz-placeholder {
+  color: #999;
+}
+/* line 541, ../sass/common/_account.scss */
+.common-main input::-moz-placeholder {
+  color: #999;
+}
+/* line 544, ../sass/common/_account.scss */
+.common-main input:-ms-input-placeholder {
+  color: #999;
+}
+/* line 551, ../sass/common/_account.scss */
+.common-main .withdraw-type .sina-step1 {
+  margin-bottom: 50px;
+}
+/* line 554, ../sass/common/_account.scss */
+.common-main .withdraw-type .withdraw-tr:nth-child(even) {
+  background: #f4fbff;
+}
+/* line 557, ../sass/common/_account.scss */
+.common-main .withdraw-type .authentication {
+  display: inline-block;
+  width: 348px;
+  height: 38px;
+  background: #11cfe0;
+  color: #fff;
+  line-height: 38px;
+  border-radius: 4px;
+  text-align: center;
+}
+/* line 567, ../sass/common/_account.scss */
+.common-main .withdraw-type .authentication:hover {
+  opacity: .8;
+}
+/* line 570, ../sass/common/_account.scss */
+.common-main .withdraw-type .form-horizontal {
+  position: relative;
+  margin: 0 auto;
+}
+/* line 573, ../sass/common/_account.scss */
+.common-main .withdraw-type .form-horizontal .add-account-app,
+.common-main .withdraw-type .form-horizontal .add-account {
+  position: absolute;
+  cursor: pointer;
+  padding: 2px 12px;
+}
+/* line 579, ../sass/common/_account.scss */
+.common-main .withdraw-type .form-horizontal .add-account:hover {
+  color: #888;
+  border: 1px solid #888;
+  opacity: .8;
+}
+/* line 584, ../sass/common/_account.scss */
+.common-main .withdraw-type .form-horizontal .bank-notice {
+  font-size: 12px;
+  transform: scale(0.9);
+  display: inline-block;
+}
+/* line 589, ../sass/common/_account.scss */
+.common-main .withdraw-type .form-horizontal .input-img {
+  line-height: 38px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+/* line 596, ../sass/common/_account.scss */
+.common-main .withdraw-type .form-horizontal .form-group:nth-child(2) {
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 20px;
+}
+/* line 600, ../sass/common/_account.scss */
+.common-main .withdraw-type .form-horizontal button {
+  padding: 0;
+  width: 100% !important;
+  margin: 0 !important;
+}
+/* line 605, ../sass/common/_account.scss */
+.common-main .withdraw-type .form-horizontal .probably {
+  color: #69788e;
+}
+/* line 610, ../sass/common/_account.scss */
+.common-main .withdraw-type .form .form-group:nth-child(2) {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* line 618, ../sass/common/_account.scss */
+.text-error {
+  display: inline-block;
+  margin-right: 4px;
+  background: url(/assets/images/error.png) no-repeat;
+  width: 14px;
+  height: 14px;
+  background-size: cover;
+  position: relative;
+  top: 2px;
+}
+
+/* line 629, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+/* line 633, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+  background: #fff;
+}
+/* line 635, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content .form-group {
+  box-shadow: none;
+  outline: none;
+}
+/* line 638, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content .form-group .remarks {
+  resize: none;
+}
+/* line 641, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content .form-group .data-num {
+  color: #151F3F;
+  margin-bottom: 20px;
+}
+/* line 649, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content .cancle:hover {
+  opacity: .8;
+}
+/* line 652, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content button {
+  outline: none;
+  border: none;
+}
+/* line 656, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content .cancle {
+  width: 60px;
+  border-radius: 2px;
+  border: 1px solid #11cfe0;
+  color: #11cfe0;
+  background: #fff;
+}
+/* line 663, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content .btn-danger {
+  background: #11cfe0;
+  color: #fff;
+}
+/* line 667, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content .modal-body {
+  border-top: 1px solid #ddd;
+  font-size: 12px;
+}
+/* line 671, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content .modal-footer {
+  border-top: 0;
+}
+/* line 674, ../sass/common/_account.scss */
+.ngdialog.ngdialog-theme-default .ngdialog-content .add {
+  width: 100%;
+  background: #40B2F0;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* line 683, ../sass/common/_account.scss */
+.scroll > ul::-webkit-scrollbar {
+  height: 8px;
+  background-color: #FFFFFF;
+}
+
+/* line 688, ../sass/common/_account.scss */
+.scroll > ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+
+/* line 694, ../sass/common/_account.scss */
+.scroll > ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f4fbff;
+}
+
+/* line 700, ../sass/common/_account.scss */
+.with-getcode {
+  padding: 0px;
+  height: 38px;
+  border-radius: 2px;
+  background-color: #11cfe0;
+  border: none;
+  transition: background-color .3s;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 712, ../sass/common/_account.scss */
+  .fund .addbank {
+    right: 40px;
+  }
+  /* line 716, ../sass/common/_account.scss */
+  .fund .table tr td:first-child {
+    width: 20%;
+  }
+  /* line 719, ../sass/common/_account.scss */
+  .fund .table tr td:last-child {
+    width: 25%;
+  }
+  /* line 722, ../sass/common/_account.scss */
+  .fund .table a {
+    padding: 4px 10px;
+  }
+
+  /* line 727, ../sass/common/_account.scss */
+  .deposit-type {
+    padding: 28px;
+  }
+  /* line 729, ../sass/common/_account.scss */
+  .deposit-type .clain-pins-step {
+    height: 38px;
+    background: #f4fbff;
+    padding: 5px 100px;
+  }
+  /* line 733, ../sass/common/_account.scss */
+  .deposit-type .clain-pins-step .itemsdefault {
+    width: 300px;
+  }
+  /* line 737, ../sass/common/_account.scss */
+  .deposit-type .charge-money {
+    width: 50%;
+    border-right: 1px dashed #c7c7c7;
+    margin: 30px 0;
+  }
+  /* line 741, ../sass/common/_account.scss */
+  .deposit-type .charge-money .data-code h4 {
+    margin-left: -30px;
+  }
+  /* line 744, ../sass/common/_account.scss */
+  .deposit-type .charge-money .charge-input {
+    margin: 30px;
+  }
+  /* line 746, ../sass/common/_account.scss */
+  .deposit-type .charge-money .charge-input span {
+    margin-left: 30px;
+  }
+  /* line 751, ../sass/common/_account.scss */
+  .deposit-type .notice {
+    width: 50%;
+  }
+  /* line 753, ../sass/common/_account.scss */
+  .deposit-type .notice h5 {
+    margin: 50px 80px;
+  }
+  /* line 756, ../sass/common/_account.scss */
+  .deposit-type .notice p {
+    padding-left: 100px;
+  }
+  /* line 760, ../sass/common/_account.scss */
+  .deposit-type .ngdialog-content {
+    width: 450px !important;
+    margin-top: 12%;
+  }
+  /* line 763, ../sass/common/_account.scss */
+  .deposit-type .ngdialog-content .modal-body {
+    padding: 40px;
+  }
+
+  /* line 768, ../sass/common/_account.scss */
+  .form-horizontal {
+    width: 365px;
+    margin-right: 70px;
+  }
+  /* line 771, ../sass/common/_account.scss */
+  .form-horizontal .data-num {
+    padding-top: 7px;
+  }
+  /* line 777, ../sass/common/_account.scss */
+  .form-horizontal .add-account-app {
+    display: none;
+  }
+  /* line 780, ../sass/common/_account.scss */
+  .form-horizontal .add-account {
+    border: 1px solid #ddd;
+    right: -36px;
+    color: #ddd;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 790, ../sass/common/_account.scss */
+  .form-horizontal {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* line 793, ../sass/common/_account.scss */
+  .form-horizontal .add-account {
+    display: none;
+  }
+  /* line 796, ../sass/common/_account.scss */
+  .form-horizontal .add-account-app {
+    right: 0;
+    top: 0;
+    border: 0;
+    color: #11cfe0;
+  }
+
+  /* line 803, ../sass/common/_account.scss */
+  .fund .addbank {
+    right: 0;
+  }
+
+  /* line 806, ../sass/common/_account.scss */
+  .charge-money {
+    width: 100%;
+  }
+  /* line 808, ../sass/common/_account.scss */
+  .charge-money .data-code h4 {
+    margin-left: -20px;
+  }
+
+  /* line 813, ../sass/common/_account.scss */
+  .notice p {
+    padding-left: 5%;
+  }
+  /* line 816, ../sass/common/_account.scss */
+  .notice .hint {
+    text-align: left;
+    text-indent: 0 !important;
+  }
+
+  /* line 822, ../sass/common/_account.scss */
+  .clain-pins-step .itemsdefault {
+    background: #f4fbff;
+    width: 100%;
+    padding: .5rem 0 0 1rem;
+  }
+
+  /* line 828, ../sass/common/_account.scss */
+  .table {
+    table-layout: fixed;
+  }
+  /* line 830, ../sass/common/_account.scss */
+  .table tr td:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* line 835, ../sass/common/_account.scss */
+  .table a {
+    padding: 0 2px;
+  }
+  /* line 838, ../sass/common/_account.scss */
+  .table .withdraw {
+    margin-right: 0;
+  }
+  /* line 841, ../sass/common/_account.scss */
+  .table .account-deposit {
+    background: #40B2F0;
+    color: #fff;
+    border-radius: 2px;
+    padding: 0 2px;
+  }
+
+  /* line 848, ../sass/common/_account.scss */
+  .ngdialog-content {
+    width: 90% !important;
+  }
+  /* line 850, ../sass/common/_account.scss */
+  .ngdialog-content .modal-body {
+    padding: 40px;
+  }
+
+  /* line 855, ../sass/common/_account.scss */
+  .form-group label {
+    float: left;
+  }
+
+  /* line 859, ../sass/common/_account.scss */
+  .bank-notice {
+    margin-left: 1.2rem;
+  }
+}
+/* line 1, ../sass/common/_setting.scss */
+.setting-main {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #FFFFFF;
+}
+/* line 6, ../sass/common/_setting.scss */
+.setting-main .setting-module {
+  padding: 20px 0px;
+}
+/* line 8, ../sass/common/_setting.scss */
+.setting-main .setting-module .backup-input {
+  height: 40px;
+}
+/* line 12, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-title {
+  height: 18px;
+  line-height: 18px;
+  border-left: 5px solid #11cfe0;
+  font-size: 16px;
+  padding-left: 28px;
+}
+/* line 19, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-title small {
+  font-size: 14px;
+  color: #69788e;
+  font-weight: 300;
+}
+/* line 27, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con ul {
+  border-bottom: 1px solid #f8f4f4;
+}
+/* line 29, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con ul li {
+  display: inline-block;
+  padding: 10px 8px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* line 36, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con ul li:nth-child(1) {
+  margin: 0;
+}
+/* line 39, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con ul .nopointer {
+  cursor: inherit;
+}
+/* line 42, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con ul .select-btm {
+  border-bottom: 3px solid #11cfe0;
+}
+/* line 46, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-pass-title {
+  padding-top: 27px;
+}
+/* line 49, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item {
+  display: flex;
+  padding: 27px 0px;
+  border-bottom: 1px solid #f3f1f6;
+}
+/* line 55, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item .module-img img {
+  width: 50px;
+}
+/* line 60, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item small {
+  font-weight: 200;
+  font-size: 12px;
+  color: #69788e;
+}
+/* line 66, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item label {
+  font-weight: 200;
+  font-size: 12px;
+  color: #000000;
+}
+/* line 70, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item label input {
+  margin-right: 5px;
+}
+/* line 75, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item .module-info {
+  flex: 1;
+}
+/* line 78, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item .module-info h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 8px 0px;
+}
+/* line 84, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item .module-info .module-list {
+  font-size: 14px;
+  line-height: 28px;
+}
+/* line 88, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item .module-info .module-list .name {
+  text-align: right;
+  font-weight: 300;
+}
+/* line 95, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item .module-status {
+  text-align: right;
+}
+/* line 98, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item .module-status p {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 6px 0px;
+}
+/* line 104, ../sass/common/_setting.scss */
+.setting-main .setting-module .module-con .module-item .module-status a {
+  margin: 8px 0px;
+  display: block;
+  font-size: 12px;
+  color: #11cfe0;
+}
+
+/* line 116, ../sass/common/_setting.scss */
+.last-set {
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  background-color: #C3EE97;
+  color: #417505;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* line 127, ../sass/common/_setting.scss */
+.setting-action form {
+  font-weight: 300;
+}
+/* line 130, ../sass/common/_setting.scss */
+.setting-action form label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #000000;
+}
+/* line 136, ../sass/common/_setting.scss */
+.setting-action form .tips {
+  position: relative;
+  padding-left: 40px;
+}
+/* line 140, ../sass/common/_setting.scss */
+.setting-action form .tips:before {
+  content: 'i';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background: #0be;
+  color: #ffffff;
+  text-align: center;
+  left: 10px;
+  top: 0px;
+  border-radius: 50%;
+  transform: scale(0.8);
+}
+/* line 155, ../sass/common/_setting.scss */
+.setting-action form .apikey {
+  padding: 20px;
+  background-color: #FFFFFF;
+  margin-bottom: 50px;
+  line-height: 28px;
+}
+/* line 161, ../sass/common/_setting.scss */
+.setting-action form .apikey .apikey-t {
+  font-size: 12px;
+  color: #999999;
+}
+/* line 165, ../sass/common/_setting.scss */
+.setting-action form .apikey .apikey-c {
+  word-wrap: break-word;
+  line-height: 18px;
+  font-size: 13px;
+  color: #000000;
+}
+/* line 173, ../sass/common/_setting.scss */
+.setting-action form button.btn-submit {
+  background-color: #11cfe0;
+  transition: background-color .3s;
+  color: #FFFFFF;
+  height: 42px;
+}
+/* line 179, ../sass/common/_setting.scss */
+.setting-action form button.btn-submit:active, .setting-action form button.btn-submit:hover, .setting-action form button.btn-submit:focus {
+  color: #FFFFFF;
+  background-color: #11cfe0;
+  outline: none;
+}
+/* line 186, ../sass/common/_setting.scss */
+.setting-action form .input-group .form-control {
+  border-right: none;
+  margin-bottom: 0px;
+}
+/* line 190, ../sass/common/_setting.scss */
+.setting-action form .input-group .input-group-addon {
+  cursor: default;
+  height: 28px;
+  border-left: none;
+}
+/* line 197, ../sass/common/_setting.scss */
+.setting-action form .form-control {
+  height: 32px;
+  border-top-left-radius: 2px;
+  box-shadow: none;
+  border-bottom-left-radius: 2px;
+  margin-bottom: 0px;
+}
+/* line 205, ../sass/common/_setting.scss */
+.setting-action form .code-group {
+  display: flex;
+}
+/* line 208, ../sass/common/_setting.scss */
+.setting-action form .code-group input {
+  flex: 1;
+}
+/* line 212, ../sass/common/_setting.scss */
+.setting-action form .code-group button {
+  width: 100px;
+  margin-left: 10px;
+  padding: 0px;
+  height: 38px;
+  border-radius: 2px;
+  background-color: #11cfe0;
+  border: none;
+  transition: background-color .3s;
+  color: #FFFFFF;
+}
+/* line 223, ../sass/common/_setting.scss */
+.setting-action form .code-group button:active, .setting-action form .code-group button:hover, .setting-action form .code-group button:focus {
+  color: #FFFFFF;
+  background-color: #11cfe0;
+  outline: none;
+}
+/* line 228, ../sass/common/_setting.scss */
+.setting-action form .code-group button[disable] {
+  background-color: #69788e;
+}
+/* line 231, ../sass/common/_setting.scss */
+.setting-action form .code-group button[disable]:active, .setting-action form .code-group button[disable]:hover, .setting-action form .code-group button[disable]:focus {
+  background-color: #69788e;
+}
+
+/* line 239, ../sass/common/_setting.scss */
+.common-ptext p {
+  padding: 0 20px;
+}
+
+/* line 244, ../sass/common/_setting.scss */
+.btn-with {
+  width: 100px;
+  margin-left: 10px;
+  padding: 0px;
+  height: 38px;
+  border-radius: 2px;
+  background-color: #11cfe0 !important;
+  border: none;
+  transition: background-color 0.3s !important;
+  color: #FFFFFF;
+}
+
+/* line 257, ../sass/common/_setting.scss */
+.setting-c2 .c2-box {
+  max-width: 570px;
+  margin: 50px auto;
+}
+/* line 262, ../sass/common/_setting.scss */
+.setting-c2 .pic-item {
+  display: -webkit-box;
+  padding: 40px 0;
+  border-bottom: 1px dashed #dbd9dd;
+}
+/* line 267, ../sass/common/_setting.scss */
+.setting-c2 .pic-item .pic-pic {
+  position: relative;
+  width: 217px;
+  height: 159px;
+  margin-right: 150px;
+  background: #f2f0f6 url("../images/settings/upload@2x.png") center center no-repeat;
+  background-size: 32px;
+  cursor: default;
+}
+/* line 276, ../sass/common/_setting.scss */
+.setting-c2 .pic-item .pic-pic canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+/* line 284, ../sass/common/_setting.scss */
+.setting-c2 .pic-item .pic-pic .pic-text {
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  background-color: #978da1;
+  color: #FFFFFF;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+/* line 297, ../sass/common/_setting.scss */
+.setting-c2 .pic-item .pic-case {
+  text-align: center;
+}
+/* line 300, ../sass/common/_setting.scss */
+.setting-c2 .pic-item .pic-case img {
+  width: 210px;
+}
+/* line 305, ../sass/common/_setting.scss */
+.setting-c2 .pic-item:last-child {
+  border: 0px;
+  margin-bottom: 50px;
+}
+/* line 310, ../sass/common/_setting.scss */
+.setting-c2 button.btn-submit {
+  background-color: #11cfe0;
+  transition: background-color .3s;
+  color: #FFFFFF;
+  height: 42px;
+}
+/* line 316, ../sass/common/_setting.scss */
+.setting-c2 button.btn-submit:active, .setting-c2 button.btn-submit:hover, .setting-c2 button.btn-submit:focus {
+  color: #FFFFFF;
+  background-color: #11cfe0;
+  outline: none;
+}
+/* line 328, ../sass/common/_setting.scss */
+.setting-c2 .description {
+  margin: 50px 0px;
+  font-size: 12px;
+  line-height: 1.67;
+  font-weight: 300;
+}
+/* line 334, ../sass/common/_setting.scss */
+.setting-c2 .description b {
+  font-weight: 500;
+}
+/* line 338, ../sass/common/_setting.scss */
+.setting-c2 .description .title {
+  margin-bottom: 10px;
+}
+/* line 342, ../sass/common/_setting.scss */
+.setting-c2 .description ol {
+  padding-left: 0px;
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 348, ../sass/common/_setting.scss */
+  .module-one {
+    padding: 0 125px 20px 80px;
+  }
+
+  /* line 351, ../sass/common/_setting.scss */
+  .module-img {
+    margin-right: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 356, ../sass/common/_setting.scss */
+  .module-img {
+    margin-right: 2rem;
+  }
+
+  /* line 359, ../sass/common/_setting.scss */
+  .container .radio-content {
+    width: 100% !important;
+  }
+
+  /* line 362, ../sass/common/_setting.scss */
+  .container .radio-content span {
+    position: relative !important;
+    left: 0 !important;
+  }
+
+  /* line 366, ../sass/common/_setting.scss */
+  .container .radio-content .radio {
+    margin-left: 0 !important;
+  }
+
+  /* line 369, ../sass/common/_setting.scss */
+  .verify-btn {
+    padding: 0 !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  /* line 374, ../sass/common/_setting.scss */
+  .container .radio-content .radio {
+    margin-left: 200px !important;
+  }
+
+  /* line 377, ../sass/common/_setting.scss */
+  .container .radio-content {
+    width: 100% !important;
+  }
+}
+/* line 2, ../sass/common/_support.scss */
+.common-main {
+  width: 100%;
+  padding-bottom: 28px;
+}
+/* line 5, ../sass/common/_support.scss */
+.common-main .account-main {
+  color: #151F3F;
+  min-height: 640px;
+  margin-top: 28px;
+  background: #fff;
+}
+/* line 10, ../sass/common/_support.scss */
+.common-main .account-main .detail-main {
+  margin-top: 20px;
+}
+/* line 12, ../sass/common/_support.scss */
+.common-main .account-main .detail-main h4 {
+  border-left: 5px solid #11cfe0;
+  font-size: 16px;
+  padding-left: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* line 19, ../sass/common/_support.scss */
+.common-main .account-main .detail-main .fund {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 520px) {
+  /* line 19, ../sass/common/_support.scss */
+  .common-main .account-main .detail-main .fund {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+}
+/* line 26, ../sass/common/_support.scss */
+.common-main .account-main .detail-main .fund .table {
+  border: 1px solid #eee;
+  width: 100%;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 520px) {
+  /* line 26, ../sass/common/_support.scss */
+  .common-main .account-main .detail-main .fund .table {
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+  }
+}
+/* line 36, ../sass/common/_support.scss */
+.common-main .account-main .detail-main .fund .help-image {
+  width: 100%;
+}
+/* line 38, ../sass/common/_support.scss */
+.common-main .account-main .detail-main .fund .help-image h5 {
+  margin: 20px 0 0 -40px;
+}
+/* line 40, ../sass/common/_support.scss */
+.common-main .account-main .detail-main .fund .help-image h5 span {
+  display: inline-block;
+  font-size: 14px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #f5f2f8;
+  text-align: center;
+  padding: 0 2px;
+  margin-right: 10px;
+}
+/* line 53, ../sass/common/_support.scss */
+.common-main .account-main .detail-main .fund .help-image p {
+  color: #6a5f76;
+  margin: 20px 0;
+}
+/* line 59, ../sass/common/_support.scss */
+.common-main .account-main .detail-main.data-main {
+  min-height: 430px;
+}
+
+@media screen and (min-width: 1100px) {
+  /* line 67, ../sass/common/_support.scss */
+  .help-image {
+    padding: 10px 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 72, ../sass/common/_support.scss */
+  .help-image {
+    padding: 10px;
+  }
+
+  /* line 75, ../sass/common/_support.scss */
+  .table {
+    table-layout: fixed;
+  }
+  /* line 77, ../sass/common/_support.scss */
+  .table tr td:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* line 81, ../sass/common/_support.scss */
+  .table tr td:first-child a {
+    padding: 0 2px;
+  }
+  /* line 84, ../sass/common/_support.scss */
+  .table tr td:first-child .withdraw {
+    margin-right: 0;
+  }
+}
+/* line 2, ../sass/common/_myloader.scss */
+#myloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  z-index: 1000000;
+}
+
+/* line 13, ../sass/common/_myloader.scss */
+#myloader .loader {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 23, ../sass/common/_myloader.scss */
+#myloader .loader .grid {
+  width: 100px;
+  height: 100px;
+  margin: 100px auto;
+}
+
+/* line 29, ../sass/common/_myloader.scss */
+#myloader .loader .grid .cube {
+  width: 33%;
+  height: 33%;
+  background-color: #11cfe0;
+  float: left;
+  -webkit-animation: cubeGridScaleDelay 1.3s infinite ease-in-out;
+  animation: cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+/* line 38, ../sass/common/_myloader.scss */
+#myloader .loader .grid .cube1 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+/* line 43, ../sass/common/_myloader.scss */
+#myloader .loader .grid .cube2 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+/* line 48, ../sass/common/_myloader.scss */
+#myloader .loader .grid .cube3 {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+/* line 53, ../sass/common/_myloader.scss */
+#myloader .loader .grid .cube4 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+/* line 58, ../sass/common/_myloader.scss */
+#myloader .loader .grid .cube5 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+/* line 63, ../sass/common/_myloader.scss */
+#myloader .loader .grid .cube6 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+/* line 68, ../sass/common/_myloader.scss */
+#myloader .loader .grid .cube7 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+/* line 73, ../sass/common/_myloader.scss */
+#myloader .loader .grid .ube8 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+/* line 78, ../sass/common/_myloader.scss */
+#myloader .loader .grid .cube9 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@-webkit-keyframes cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
+@keyframes cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
+/* line 2, ../sass/common/_tradeapp.scss */
+.trade-main2 {
+  position: relative;
+}
+/* line 4, ../sass/common/_tradeapp.scss */
+.trade-main2 .trade-right2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 9, ../sass/common/_tradeapp.scss */
+.trade-main2 .trade-left2 {
+  margin-top: 642px;
+}
+
+/* line 2, ../sass/common/_c2c.scss */
+input, select, textarea {
+  outline: none;
+}
+
+/* line 7, ../sass/common/_c2c.scss */
+.common_bod {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 50px 0 100px 0;
+}
+/* line 13, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+/* line 20, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  border-radius: 5px !important;
+  background: #1a262d;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+/* line 29, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details ul {
+  width: 100%;
+  height: 84px;
+}
+/* line 32, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details ul li {
+  width: 33.333%;
+  height: 84px;
+  box-sizing: border-box;
+  float: left;
+}
+/* line 37, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details ul li:nth-child(2) {
+  border-left: 1px dashed #36464f;
+  border-right: 1px dashed #36464f;
+}
+/* line 41, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details ul li label, .common_bod .common_bod_center .GCC_details ul li span {
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  float: left;
+  color: #fff;
+}
+/* line 51, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details ul li label {
+  font-size: 16px;
+}
+/* line 54, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details ul li span {
+  font-size: 26px;
+}
+/* line 58, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details ul li:nth-child(2) span {
+  color: #da4f68;
+}
+/* line 63, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details ul li:nth-child(3) span {
+  color: #25c871;
+}
+/* line 71, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details .trade_record .record_tit input {
+  width: 220px;
+  height: 36px;
+  float: left;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #303e47;
+  border: none;
+  color: #fff;
+  border-radius: 4px !important;
+  margin: 12px 10px 12px 100px;
+}
+/* line 83, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details .trade_record .record_tit input[type='submit'] {
+  width: 90px;
+  background: #303e47 url("/assets/images/search_icon.png") center no-repeat;
+  margin: 12px 0 12px 0;
+}
+/* line 87, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details .trade_record .record_tit input[type='submit']:hover {
+  background-color: #12cfe0;
+}
+/* line 92, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .GCC_details .trade_record .record_list ul li {
+  width: 14.28%;
+}
+/* line 97, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  border-radius: 5px !important;
+  background: #1a262d;
+  margin-bottom: 10px;
+}
+/* line 105, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .trade_card {
+  width: 100%;
+  height: 60px;
+  line-height: 20px;
+  border-bottom: 1px solid #36464f;
+  text-align: right;
+}
+/* line 111, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .trade_card > div {
+  width: auto;
+  height: 60px;
+  float: left;
+}
+/* line 115, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .trade_card > div h1 {
+  padding: 0 30px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  float: left;
+  color: #fff;
+  cursor: pointer;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* line 125, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .trade_card > div h1:hover {
+  border-bottom: 4px solid #12cfe0;
+}
+/* line 129, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .trade_card > div .alert_hover {
+  border-bottom: 4px solid #12cfe0;
+}
+/* line 133, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .trade_card a {
+  width: auto;
+  height: 20px;
+  display: inline-block;
+  margin: 20px 50px 20px 0;
+  color: #12cfe0;
+  padding-left: 25px;
+  background: url("/assets/images/add_icon.png") 0 0 no-repeat;
+}
+/* line 142, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .trade_card a:first-child {
+  background: url("/assets/images/card_icon.png") 0 2px no-repeat;
+}
+/* line 145, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .trade_card a:hover {
+  text-decoration: underline;
+}
+/* line 149, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+/* line 153, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul {
+  width: 50%;
+  height: auto;
+  float: left;
+  margin: 50px 0 70px 0;
+}
+/* line 158, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li {
+  width: 100%;
+  min-height: 50px;
+  line-height: 50px;
+  height: auto;
+  overflow: hidden;
+  padding-right: 120px;
+  box-sizing: border-box;
+  color: #949999;
+  text-align: right;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+/* line 170, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li > div {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  float: left;
+}
+/* line 177, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li label {
+  color: #fff;
+  font-weight: 100;
+  margin: 0;
+}
+/* line 182, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li input[type='number'] {
+  width: 250px;
+  height: 36px;
+  margin-top: 7px;
+  border-radius: 4px !important;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: none;
+  background: #303e47;
+  float: right;
+  color: #d44b5e;
+}
+/* line 194, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li input::-webkit-input-placeholder {
+  color: #d44b5e;
+}
+/* line 197, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li input::-moz-placeholder {
+  color: #d44b5e;
+}
+/* line 200, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li input:-moz-placeholder {
+  color: #d44b5e;
+}
+/* line 203, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li input:-ms-input-placeholder {
+  color: #d44b5e;
+}
+/* line 206, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li input.sub {
+  width: 250px;
+  height: 36px;
+  line-height: 36px;
+  color: #fff;
+  margin-top: 7px;
+  border-radius: 4px !important;
+  background: #a7838d;
+  border: none;
+}
+/* line 220, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li span {
+  float: right;
+}
+/* line 224, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul li:nth-child(3n+1) {
+  text-align: left;
+  text-indent: 130px;
+}
+/* line 229, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul:last-child {
+  border-left: 1px dashed #36464f;
+  box-sizing: border-box;
+}
+/* line 232, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul:last-child .num {
+  color: #25df9a;
+  width: 250px;
+  height: 36px;
+  margin-top: 7px;
+  border-radius: 4px !important;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: none;
+  background: #303e47;
+  float: right;
+}
+/* line 244, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul:last-child input::-webkit-input-placeholder {
+  color: #25df9a;
+}
+/* line 247, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul:last-child input::-moz-placeholder {
+  color: #25df9a;
+}
+/* line 250, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul:last-child input:-moz-placeholder {
+  color: #25df9a;
+}
+/* line 253, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul:last-child input:-ms-input-placeholder {
+  color: #25df9a;
+}
+/* line 257, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_main .common_bod_input ul:last-child li:last-child input[type='submit'] {
+  background: #73a294;
+}
+/* line 268, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  border-radius: 5px !important;
+  background: #1a262d;
+  margin-bottom: 10px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+/* line 278, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list .trade_list_main {
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+/* line 285, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list .trade_list_main ul {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+/* line 289, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list .trade_list_main ul li {
+  width: 25%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  color: #949999;
+}
+/* line 298, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list .trade_list_main .list_bod {
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+}
+/* line 302, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list .trade_list_main .list_bod li {
+  color: #fff;
+}
+/* line 305, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list .trade_list_main .list_bod li:first-child {
+  background: url("/assets/images/head_icon.png") 20px 13px no-repeat;
+}
+/* line 309, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list .trade_list_main .list_bod :nth-child(3) {
+  color: #d44b5e;
+}
+/* line 314, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list .trade_list_main:nth-child(2) {
+  padding-left: 20px;
+  border-left: 1px dashed #36464f;
+}
+/* line 317, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list .trade_list_main:nth-child(2) .list_bod li:nth-child(3) {
+  color: #25df9a;
+}
+/* line 321, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_list > p {
+  width: 96%;
+  padding: 20px 0;
+  margin: 30px 2% 0 2%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  color: #949999;
+  line-height: 25px;
+  border-top: 1px dashed #36464f;
+}
+/* line 334, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  border-radius: 5px !important;
+  background: #1a262d;
+  box-sizing: border-box;
+}
+/* line 342, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_tit {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  border-bottom: 1px solid #36464f;
+}
+/* line 347, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_tit p {
+  width: auto;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  border-bottom: 4px solid #12cfe0;
+  color: #fff;
+  font-size: 18px;
+  float: left;
+  box-sizing: border-box;
+}
+/* line 358, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_tit input {
+  width: 220px;
+  height: 36px;
+  float: left;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #303e47;
+  border: none;
+  color: #fff;
+  border-radius: 4px !important;
+  margin: 12px 10px 12px 100px;
+}
+/* line 370, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_tit input[type='button'] {
+  width: 40px;
+  background: #303e47 url("/assets/images/search_icon.png") center no-repeat;
+  margin: 12px 0 12px 0;
+}
+/* line 375, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_tit a {
+  width: auto;
+  height: 60px;
+  line-height: 60px;
+  float: right;
+  display: inline-block;
+  margin-right: 20px;
+  color: #949999;
+}
+/* line 383, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_tit a:hover {
+  text-decoration: underline;
+}
+/* line 388, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list {
+  width: 96%;
+  height: auto;
+  overflow: hidden;
+  margin: 10px 2% 30px 2%;
+}
+/* line 393, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 10px 0;
+}
+/* line 398, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul.pagination {
+  width: auto !important;
+  height: auto;
+  overflow: auto;
+  padding: 0;
+}
+/* line 404, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul.pagination li a {
+  background: #303e47;
+  border-color: #303e47;
+}
+/* line 411, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul:first-child li {
+  color: #949999;
+}
+/* line 415, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul:first-child:hover {
+  background: none;
+}
+/* line 418, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul:hover {
+  background: #111c22;
+}
+/* line 421, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li {
+  width: 14% !important;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  color: #fff;
+  text-align: center;
+}
+/* line 428, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li.longer {
+  width: 16%;
+}
+/* line 430, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li.longer span:hover {
+  border-bottom: 1px solid #11cfe0;
+}
+/* line 435, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li.pagination-page.active {
+  background: #11cfe0;
+}
+/* line 437, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li.pagination-page.active a {
+  background: #11cfe0;
+}
+/* line 442, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li.pagination-page a {
+  color: #fff;
+  background: #151F3F;
+  border-color: #151F3F;
+}
+/* line 449, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li.pagination-next a {
+  background: #303e47;
+  border-color: #303e47;
+}
+/* line 454, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li.pagination-last {
+  width: auto;
+}
+/* line 455, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li.pagination-last a {
+  background: #303e47;
+  border-color: #303e47;
+}
+/* line 461, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li img {
+  margin-left: 5px;
+  cursor: pointer;
+}
+/* line 465, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li a {
+  color: #12cfe0;
+}
+/* line 467, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul li a:hover {
+  text-decoration: underline;
+}
+/* line 473, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list .no_date {
+  width: 100%;
+  height: 270px;
+  text-align: center;
+}
+/* line 477, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list .no_date label {
+  width: auto;
+  height: 20px;
+  line-height: 20px;
+  margin: 125px auto;
+  display: inline-block;
+  background: url("/assets/images/no_date_icon.png") 0 3px no-repeat;
+  text-indent: 20px;
+  color: #949999;
+}
+
+/* line 494, ../sass/common/_c2c.scss */
+.Popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 502, ../sass/common/_c2c.scss */
+.Popup > a {
+  width: 20px;
+  height: 20px;
+  background: url("/assets/images/close_icon.png");
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+/* line 511, ../sass/common/_c2c.scss */
+.Popup > div {
+  background: #f2f2f2;
+  position: absolute;
+  border-radius: 10px !important;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+}
+/* line 518, ../sass/common/_c2c.scss */
+.Popup > div > h1 {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  float: left;
+  background: #2c3941;
+  margin: 0;
+}
+
+/* line 535, ../sass/common/_c2c.scss */
+.Reminder > a {
+  margin: -250px 0 0 370px;
+}
+/* line 538, ../sass/common/_c2c.scss */
+.Reminder .Reminder_bod {
+  width: 700px;
+  height: 540px;
+  margin: -270px 0 0 -350px;
+}
+/* line 542, ../sass/common/_c2c.scss */
+.Reminder .Reminder_bod > div {
+  width: 94%;
+  height: 450px;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: 10px 3% 0 3%;
+  float: left;
+}
+/* line 549, ../sass/common/_c2c.scss */
+.Reminder .Reminder_bod > div p {
+  width: 100%;
+  height: auto;
+  line-height: 38px;
+  font-size: 16px;
+  color: #666;
+  margin: 15px 0;
+  float: left;
+}
+
+/* line 566, ../sass/common/_c2c.scss */
+.New_bank_card > a {
+  margin: -310px 0 0 300px;
+}
+/* line 569, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod {
+  width: 560px;
+  height: 660px;
+  margin: -330px 0 0 -280px;
+}
+/* line 573, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod ul {
+  width: 70%;
+  margin: 20px 15%;
+  height: 600px;
+  float: left;
+  overflow: hidden;
+}
+/* line 579, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod ul li {
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  float: left;
+}
+/* line 584, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod ul li span {
+  width: 100%;
+  line-height: 30px;
+  color: #061623;
+  display: inline-block;
+}
+/* line 591, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod ul li input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px !important;
+}
+/* line 600, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod ul li select {
+  width: 45%;
+  height: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px !important;
+}
+/* line 610, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod ul li:nth-child(3) select {
+  width: 100%;
+}
+/* line 615, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod ul li:last-child input {
+  margin-top: 20px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  background: #2c3941;
+}
+/* line 623, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod ul li.err {
+  height: 90px;
+}
+/* line 625, ../sass/common/_c2c.scss */
+.New_bank_card .card_bod ul li.err span {
+  background: url("/assets/images/error_icon.png") 0 8px no-repeat;
+  color: red;
+  font-weight: 500;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+/* line 638, ../sass/common/_c2c.scss */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+/* line 645, ../sass/common/_c2c.scss */
+.confirm_k {
+  display: none;
+}
+/* line 647, ../sass/common/_c2c.scss */
+.confirm_k > a {
+  margin: -105px 0 0 320px;
+}
+/* line 650, ../sass/common/_c2c.scss */
+.confirm_k .confirm_bod {
+  width: 600px;
+  height: 250px;
+  margin: -125px 0 0 -300px;
+}
+/* line 654, ../sass/common/_c2c.scss */
+.confirm_k .confirm_bod > div {
+  width: 250px;
+  height: 40px;
+  float: left;
+  margin: 80px 0 0 175px;
+}
+/* line 659, ../sass/common/_c2c.scss */
+.confirm_k .confirm_bod > div input {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #12cfe0;
+  color: #12cfe0;
+  font-size: 16px;
+  border-radius: 4px !important;
+  background: #fff;
+  float: right;
+  box-sizing: border-box;
+}
+/* line 669, ../sass/common/_c2c.scss */
+.confirm_k .confirm_bod > div input:first-child {
+  float: left;
+  background: #12cfe0;
+  color: #fff;
+}
+
+/* line 682, ../sass/common/_c2c.scss */
+.Appeal > a {
+  margin: -180px 0 0 320px;
+}
+/* line 685, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod {
+  width: 600px;
+  height: 400px;
+  margin: -200px 0 0 -300px;
+}
+/* line 689, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div {
+  width: 530px;
+  height: 250px;
+  float: left;
+  margin-top: 50px;
+}
+/* line 694, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div label {
+  width: 100px;
+  height: 250px;
+  line-height: 50px;
+  display: inline-block;
+  text-align: right;
+  color: #555;
+  margin-right: 20px;
+  float: left;
+}
+/* line 704, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div textarea {
+  width: 400px;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px !important;
+  float: right;
+  margin-bottom: 70px;
+}
+/* line 714, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div input {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #12cfe0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px !important;
+  background: #12cfe0;
+  float: left;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+/* line 725, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div input:last-child {
+  float: left;
+  background: #fff;
+  color: #12cfe0;
+  margin-left: 100px;
+}
+
+/* line 740, ../sass/common/_c2c.scss */
+.Quota > a {
+  margin: -205px 0 0 300px;
+}
+/* line 743, ../sass/common/_c2c.scss */
+.Quota .Quota_bod {
+  width: 560px;
+  height: 450px;
+  margin: -225px 0 0 -280px;
+}
+/* line 747, ../sass/common/_c2c.scss */
+.Quota .Quota_bod > div {
+  width: 90%;
+  height: 360px;
+  background: url("/assets/images/quota_icon.png") center 60px no-repeat;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: 10px 5% 0 5%;
+  float: left;
+}
+/* line 755, ../sass/common/_c2c.scss */
+.Quota .Quota_bod > div p {
+  width: 100%;
+  height: auto;
+  line-height: 40px;
+  font-size: 18px;
+  color: #666;
+  margin-top: 170px;
+  float: left;
+  text-align: center;
+}
+
+/* line 772, ../sass/common/_c2c.scss */
+.Receivables > a {
+  margin: -280px 0 0 300px;
+}
+/* line 775, ../sass/common/_c2c.scss */
+.Receivables .card_bod {
+  height: 600px;
+  margin: -300px 0 0 -280px;
+}
+/* line 780, ../sass/common/_c2c.scss */
+.Receivables .card_bod ul li input {
+  background: #eee;
+}
+
+/* line 789, ../sass/common/_c2c.scss */
+.confirm_k {
+  display: none;
+}
+/* line 791, ../sass/common/_c2c.scss */
+.confirm_k > a {
+  margin: -105px 0 0 320px;
+}
+/* line 794, ../sass/common/_c2c.scss */
+.confirm_k .confirm_bod {
+  width: 600px;
+  height: 250px;
+  margin: -125px 0 0 -300px;
+}
+/* line 798, ../sass/common/_c2c.scss */
+.confirm_k .confirm_bod > div {
+  width: 250px;
+  height: 40px;
+  float: left;
+  margin: 80px 0 0 175px;
+}
+/* line 803, ../sass/common/_c2c.scss */
+.confirm_k .confirm_bod > div input {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #12cfe0;
+  color: #12cfe0;
+  font-size: 16px;
+  border-radius: 4px !important;
+  background: #fff;
+  float: right;
+  box-sizing: border-box;
+}
+/* line 813, ../sass/common/_c2c.scss */
+.confirm_k .confirm_bod > div input:first-child {
+  float: left;
+  background: #12cfe0;
+  color: #fff;
+}
+
+/* line 826, ../sass/common/_c2c.scss */
+.Appeal > a {
+  margin: -180px 0 0 320px;
+}
+/* line 829, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod {
+  width: 600px;
+  height: 400px;
+  margin: -200px 0 0 -300px;
+}
+/* line 833, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div {
+  width: 530px;
+  height: 250px;
+  float: left;
+  margin-top: 50px;
+}
+/* line 838, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div label {
+  width: 100px;
+  height: 250px;
+  line-height: 50px;
+  display: inline-block;
+  text-align: right;
+  color: #555;
+  margin-right: 20px;
+  float: left;
+}
+/* line 848, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div textarea {
+  width: 400px;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px !important;
+  float: right;
+  margin-bottom: 70px;
+}
+/* line 858, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div input {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #12cfe0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px !important;
+  background: #12cfe0;
+  float: left;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+/* line 869, ../sass/common/_c2c.scss */
+.Appeal .appeal_bod > div input:last-child {
+  float: left;
+  background: #fff;
+  color: #12cfe0;
+  margin-left: 100px;
+}
+
+/* line 883, ../sass/common/_c2c.scss */
+.common_bod_center .query_input {
+  width: 100%;
+  height: auto;
+  background: #1a262d;
+  padding: 15px 10px;
+  border-radius: 5px !important;
+  margin-bottom: 10px;
+}
+/* line 891, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul {
+  width: 100%;
+  height: 36px;
+}
+/* line 895, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li {
+  width: auto;
+  height: 36px;
+  float: left;
+  margin-right: 20px;
+}
+/* line 901, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li label {
+  width: auto;
+  height: 36px;
+  line-height: 36px;
+  color: #fff;
+  float: left;
+  padding: 0 10px;
+  display: inline-block;
+}
+/* line 910, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li select, .common_bod_center .query_input ul li input {
+  width: 160px;
+  height: 36px;
+  float: left;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #303e47;
+  border: none;
+  color: #fff;
+  border-radius: 4px !important;
+}
+/* line 921, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li input.form-control {
+  width: 120px;
+  height: 36px;
+  float: left;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #303e47;
+  border: none;
+  color: #fff;
+  border-radius: 0 !important;
+}
+/* line 932, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li select {
+  width: 100px;
+}
+/* line 935, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li:last-child {
+  float: right;
+  margin-right: 5px;
+}
+/* line 938, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li:last-child input[type='submit'] {
+  width: 90px;
+}
+/* line 940, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li:last-child input[type='submit']:hover {
+  background: #12cfe0;
+  color: #000;
+}
+/* line 945, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li:last-child input[type='button'] {
+  width: 90px;
+}
+/* line 947, ../sass/common/_c2c.scss */
+.common_bod_center .query_input ul li:last-child input[type='button']:hover {
+  background: #12cfe0;
+  color: #000;
+}
+
+/* line 959, ../sass/common/_c2c.scss */
+.alert_list {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+/* line 964, ../sass/common/_c2c.scss */
+.alert_list ul {
+  width: 96%;
+  height: 40px;
+  float: left;
+  margin: 0 2%;
+}
+/* line 969, ../sass/common/_c2c.scss */
+.alert_list ul li {
+  width: 20%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #949999;
+  overflow: hidden;
+  float: left;
+}
+/* line 979, ../sass/common/_c2c.scss */
+.alert_list .list_bod {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+/* line 987, ../sass/common/_c2c.scss */
+.alert_list .list_bod .no_date {
+  width: 100%;
+  height: 270px;
+  text-align: center;
+}
+/* line 991, ../sass/common/_c2c.scss */
+.alert_list .list_bod .no_date label {
+  width: auto;
+  height: 20px;
+  line-height: 20px;
+  margin: 125px auto;
+  display: inline-block;
+  background: url("/assets/images/no_date_icon.png") 0 3px no-repeat;
+  text-indent: 20px;
+  color: #949999;
+}
+/* line 1002, ../sass/common/_c2c.scss */
+.alert_list .list_bod ul:hover {
+  background: #111c22;
+}
+/* line 1005, ../sass/common/_c2c.scss */
+.alert_list .list_bod li {
+  color: #fff;
+}
+/* line 1009, ../sass/common/_c2c.scss */
+.alert_list .list_bod::-webkit-scrollbar {
+  width: 10px;
+  background-color: #111c22;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+/* line 1015, ../sass/common/_c2c.scss */
+.alert_list .list_bod::-webkit-scrollbar-thumb {
+  background-color: #222f37;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+/* line 1029, ../sass/common/_c2c.scss */
+._720kb-datepicker-calendar-day:hover, ._720kb-datepicker-calendar-day._720kb-datepicker-active {
+  color: #23527c;
+}
+
+/* line 1033, ../sass/common/_c2c.scss */
+._720kb-datepicker-calendar {
+  background: #36464f !important;
+  color: #fff !important;
+}
+
+/* line 1038, ../sass/common/_c2c.scss */
+._720kb-datepicker-calendar-day:hover,
+._720kb-datepicker-calendar-day._720kb-datepicker-active {
+  background: #fff !important;
+}
+
+/* line 1043, ../sass/common/_c2c.scss */
+._720kb-datepicker-calendar-header:nth-child(odd) {
+  background: #11cfe0 !important;
+}
+
+/* line 1047, ../sass/common/_c2c.scss */
+._720kb-datepicker-calendar-day._720kb-datepicker-disabled, ._720kb-datepicker-calendar-day._720kb-datepicker-disabled:hover, ._720kb-datepicker-calendar-years-pagination a._720kb-datepicker-disabled, ._720kb-datepicker-calendar-years-pagination a._720kb-datepicker-disabled:hover, ._720kb-datepicker-calendar-years-pagination a._720kb-datepicker-active._720kb-datepicker-disabled, ._720kb-datepicker-calendar-years-pagination a._720kb-datepicker-active._720kb-datepicker-disabled:hover {
+  color: #fff;
+}
+
+/* line 1053, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul:first-child li {
+  color: inherit;
+}
+
+/* line 1057, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul.page-btn .pagination li {
+  width: auto !important;
+}
+
+/* line 1060, ../sass/common/_c2c.scss */
+.pagination > .disabled > a, .pagination > .disabled > a:focus, .pagination > .disabled > a:hover, .pagination > .disabled > span, .pagination > .disabled > span:focus, .pagination > .disabled > span:hover {
+  background: #303e47;
+  border-color: #303e47;
+}
+
+/* line 1067, ../sass/common/_c2c.scss */
+.common_bod .common_bod_center .trade_record .record_list ul:first-child.tit li {
+  color: #949999;
+}
+
+/* line 1073, ../sass/common/_c2c.scss */
+.licontent {
+  width: 100% !important;
+}
+
+/* line 1, ../sass/common/_realIdentity.scss */
+.Unopened_conter {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 10, ../sass/common/_realIdentity.scss */
+.Unopened_conter > a {
+  width: 20px;
+  height: 20px;
+  background: url("/assets/images/close_icon.png");
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -160px 0 0 295px;
+}
+/* line 20, ../sass/common/_realIdentity.scss */
+.Unopened_conter > div {
+  width: 550px;
+  height: 360px;
+  background: #f2f2f2;
+  position: absolute;
+  border-radius: 10px !important;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  margin: -180px 0 0 -275px;
+}
+/* line 30, ../sass/common/_realIdentity.scss */
+.Unopened_conter > div > h1 {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  float: left;
+  background: #2c3941;
+  margin: 0;
+}
+/* line 41, ../sass/common/_realIdentity.scss */
+.Unopened_conter > div > p {
+  width: 100%;
+  height: 280px;
+  line-height: 300px;
+  color: #666;
+  text-align: center;
+  background: url("/assets/images/quota_icon.png") center 60px no-repeat;
+  float: left;
+}
+
+/* line 53, ../sass/common/_realIdentity.scss */
+.module_main {
+  width: 100%;
+  height: auto;
+  float: left;
+  overflow: hidden;
+  padding: 0 80px;
+}
+
+/* line 60, ../sass/common/_realIdentity.scss */
+.setting-module {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+/* line 67, ../sass/common/_realIdentity.scss */
+.chect_bod > p {
+  width: auto;
+  height: 20px;
+  overflow: hidden;
+  float: left;
+  font-size: 14px;
+  margin: 30px 50px 30px 0;
+  cursor: pointer;
+}
+/* line 75, ../sass/common/_realIdentity.scss */
+.chect_bod > p > input {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* line 83, ../sass/common/_realIdentity.scss */
+.chect_bod > p > span {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  float: left;
+  margin: 0 0 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* line 92, ../sass/common/_realIdentity.scss */
+.chect_bod > p:hover {
+  color: #29cfde;
+}
+
+/* line 97, ../sass/common/_realIdentity.scss */
+.chect_conter {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 30px 0;
+  float: left;
+  background: #f7f7f7;
+}
+/* line 104, ../sass/common/_realIdentity.scss */
+.chect_conter > ul {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 20px 80px;
+  box-sizing: border-box;
+}
+/* line 110, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin: 20px 0;
+}
+/* line 116, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > label {
+  width: 200px;
+  height: 76px;
+  line-height: 38px;
+  font-weight: bold;
+  float: left;
+}
+/* line 123, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div {
+  width: 820px;
+  height: auto;
+  overflow: hidden;
+  float: right;
+}
+/* line 128, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div > p {
+  margin: 8px 50px 8px 0;
+}
+/* line 131, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div > label {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  line-height: 30px;
+  color: #949999;
+  font-weight: 500;
+  margin: 20px 0;
+}
+/* line 140, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div > ul {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+}
+/* line 145, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div > ul li {
+  width: 100%;
+  height: 52px;
+  margin: 10px 0;
+  float: left;
+}
+/* line 150, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div > ul li label {
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  float: left;
+  color: #061623;
+  font-weight: 500;
+}
+/* line 158, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div > ul li input {
+  width: 260px;
+  height: 38px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 10px;
+  border-radius: 4px !important;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+/* line 168, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div > ul li input.error {
+  border: 2px solid red;
+}
+/* line 172, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div > ul li span {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin-left: 130px;
+  color: red;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+}
+/* line 184, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div .file_btn {
+  width: 150px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  padding: 0 30px;
+  background: #29cfde;
+  float: left;
+  position: relative;
+}
+/* line 196, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div .file_btn input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 38px;
+  opacity: 0;
+}
+/* line 205, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div .file_bod {
+  width: 300px;
+  height: 170px;
+  float: left;
+  border: 1px dashed #aeaeae;
+  box-sizing: border-box;
+  background: #eee url("/assets/images/file_btn_bg.png") center no-repeat;
+}
+/* line 212, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div .file_bod img {
+  width: 300px;
+  height: 170px;
+  margin: 0;
+  float: left;
+}
+/* line 218, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div .file_bod:last-child {
+  border: 1px solid #ccc;
+  background: #eee url("/assets/images/file_img.png") center no-repeat;
+}
+/* line 223, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li > div .file_sl {
+  width: 80px;
+  height: 170px;
+  line-height: 170px;
+  text-align: center;
+  float: left;
+  color: #949999;
+}
+/* line 234, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li:nth-child(3) .file_bod:last-child {
+  border: 1px solid #ccc;
+  background: #eee url("/assets/images/file_img_2.png") center no-repeat;
+}
+/* line 241, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li:nth-child(4) > label {
+  height: auto;
+  line-height: 19px;
+  overflow: hidden;
+}
+/* line 247, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li:nth-child(4) .file_bod:last-child {
+  border: 1px solid #ccc;
+  background: #eee url("/assets/images/file_img_3.png") center no-repeat;
+}
+/* line 252, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li:nth-child(4) .file_yz {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 20px;
+}
+/* line 258, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li:nth-child(4) .file_yz p {
+  width: auto;
+  height: 50px;
+  float: left;
+  display: inline-block;
+  margin-right: 30px;
+}
+/* line 264, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li:nth-child(4) .file_yz p label {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  float: left;
+  padding-left: 20px;
+  background: url("/assets/images/gou_icon.png") 0 center no-repeat;
+  font-weight: 500;
+  color: #949999;
+}
+/* line 277, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li .submit_btn {
+  width: 150px;
+  height: 38px;
+  line-height: 38px;
+  margin-left: 220px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  background: #29cfde;
+}
+/* line 286, ../sass/common/_realIdentity.scss */
+.chect_conter > ul > li .submit_btn.disabled {
+  background: #ebebeb;
+}
+
+/* line 298, ../sass/common/_realIdentity.scss */
+.real_bod > p {
+  width: auto;
+  height: 20px;
+  line-height: 20px;
+  padding-right: 100px;
+  float: left;
+  margin: 30px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* line 307, ../sass/common/_realIdentity.scss */
+.real_bod > p:last-child {
+  color: #fe9b2b;
+}
+
+/* line 313, ../sass/common/_realIdentity.scss */
+.card_bod {
+  padding: 0;
+}
+/* line 315, ../sass/common/_realIdentity.scss */
+.card_bod > ul {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 20px 0 50px 0;
+}
+/* line 320, ../sass/common/_realIdentity.scss */
+.card_bod > ul li {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  float: left;
+  color: #333;
+  background: #f4fbff;
+  font-size: 16px;
+}
+/* line 328, ../sass/common/_realIdentity.scss */
+.card_bod > ul li label {
+  width: 33.33%;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  text-align: center;
+  font-weight: 500;
+  overflow: auto;
+}
+/* line 337, ../sass/common/_realIdentity.scss */
+.card_bod > ul li:first-child {
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  color: #6e7c92;
+  background: #fff;
+  font-size: 14px;
+}
+
+/* line 2, ../sass/common/_trial.scss */
+.setting-ullist {
+  border-radius: 4px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #f2f2f2 !important;
+}
+/* line 7, ../sass/common/_trial.scss */
+.setting-ullist .navleft {
+  float: left;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 16%;
+  padding: 10px 0 30px 0;
+}
+/* line 13, ../sass/common/_trial.scss */
+.setting-ullist .navleft .navcontanier {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+/* line 17, ../sass/common/_trial.scss */
+.setting-ullist .navleft .navcontanier .showle i {
+  display: block;
+}
+/* line 20, ../sass/common/_trial.scss */
+.setting-ullist .navleft .navcontanier .nav-list {
+  float: right;
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 16px;
+  width: 75%;
+  text-align: left;
+}
+/* line 28, ../sass/common/_trial.scss */
+.setting-ullist .navleft .navcontanier i {
+  width: 4px;
+  height: 20px;
+  background: #12cfe0;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+/* line 38, ../sass/common/_trial.scss */
+.setting-ullist .navleft .navcontanier:hover {
+  color: #12cfe0;
+}
+/* line 43, ../sass/common/_trial.scss */
+.setting-ullist .navleft .Quo_tit_H {
+  color: #12cfe0;
+}
+/* line 47, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr {
+  position: relative;
+  width: 80%;
+  min-height: 427px;
+  float: right;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+/* line 54, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .box-container {
+  background-repeat: no-repeat !important;
+}
+/* line 58, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .apphelp-step-1 {
+  margin-top: 10px;
+  background: url("/assets/images/apphelp-step_1.jpg");
+  height: 290px;
+  background-size: 100%;
+}
+/* line 64, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .apphelp-step-2 {
+  background: url("/assets/images/apphelp-step_2.jpg");
+  height: 365px;
+  background-size: 100%;
+}
+/* line 69, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .apphelp-step-3 {
+  background: url("/assets/images/apphelp-step_3.jpg");
+  height: 250px;
+  background-size: 100%;
+}
+/* line 74, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .realname-step-1 {
+  margin-top: 10px;
+  background: url("/assets/images/realname-step_1.jpg");
+  height: 300px;
+  background-size: 100%;
+}
+/* line 80, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .realname-step-2 {
+  background: url("/assets/images/realname-step_2.jpg");
+  height: 460px;
+  background-size: 100%;
+}
+/* line 85, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .withdraw-step-1 {
+  margin-top: 10px;
+  background: url("/assets/images/withdraw-step_1.jpg");
+  height: 300px;
+  background-size: 100%;
+}
+/* line 91, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .withdraw-step-2 {
+  background: url("/assets/images/withdraw-step_2.jpg");
+  height: 395px;
+  background-size: 100%;
+}
+/* line 96, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .withdraw-step-3 {
+  background: url("/assets/images/withdraw-step_3.jpg");
+  height: 295px;
+  background-size: 100%;
+}
+/* line 101, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .withdraw-step-4 {
+  background: url("/assets/images/withdraw-step_4.jpg");
+  height: 520px;
+  background-size: 100%;
+}
+/* line 106, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .trade-step {
+  background: url("/assets/images/trade-step.jpg");
+  height: 700px;
+  background-size: 100%;
+}
+/* line 111, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .register-step {
+  background: url("/assets/images/register-step.jpg");
+  height: 800px;
+  background-size: 100%;
+}
+/* line 116, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .c2ctrade-step-1 {
+  background: url("/assets/images/c2ctrade-step-1.jpg");
+  height: 500px;
+  background-size: 100%;
+  margin-top: 15px;
+}
+/* line 122, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .c2ctrade-step-2 {
+  background: url("/assets/images/c2ctrade-step-2.jpg");
+  height: 540px;
+  background-size: 100%;
+}
+/* line 127, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .safe-step {
+  background: url(/assets/images/nodata.png) center no-repeat;
+  background-size: 25%;
+}
+/* line 131, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .nodata-en {
+  background: url(/assets/images/noData_en.jpg) center no-repeat;
+  height: 427px;
+  background-size: 100%;
+}
+/* line 136, ../sass/common/_trial.scss */
+.setting-ullist .ulnavr .nodata-zh {
+  background: url(/assets/images/noData_zh.jpg) center no-repeat;
+  height: 427px;
+  background-size: 100%;
+}
+/* line 142, ../sass/common/_trial.scss */
+.setting-ullist p {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 3, ../sass/common/_verify.scss */
+.container .email-input-button input {
+  float: left;
+  width: 57%;
+  height: 38px;
+}
+/* line 8, ../sass/common/_verify.scss */
+.container .email-input-button button {
+  width: 40%;
+  float: right;
+  width: 100px;
+  margin-left: 10px;
+  padding: 0;
+  height: 38px !important;
+  border-radius: 5px;
+  background-color: #11cfe0;
+  border: none;
+  transition: background-color .3s;
+  color: #FFF;
+}
+/* line 23, ../sass/common/_verify.scss */
+.container .text-center {
+  text-align: center;
+}
+/* line 26, ../sass/common/_verify.scss */
+.container pre {
+  background-color: #fff;
+  border: 0;
+  line-height: 25px;
+  overflow: hidden;
+  font-size: 14px;
+}
+/* line 33, ../sass/common/_verify.scss */
+.container .verify-content {
+  width: 50%;
+  margin: 40px auto;
+}
+/* line 36, ../sass/common/_verify.scss */
+.container .verify-content .control-label {
+  padding-top: 7px;
+  margin-bottom: 0;
+  text-align: right;
+  color: #151F3F;
+}
+/* line 43, ../sass/common/_verify.scss */
+.container .verify-content .verify-btn {
+  text-align: center;
+  margin-left: 33.3%;
+}
+/* line 46, ../sass/common/_verify.scss */
+.container .verify-content .verify-btn button {
+  font-size: 14px;
+  border-radius: 4px;
+  border: 0;
+  height: 35px;
+  width: 100%;
+  opacity: .6;
+}
+/* line 54, ../sass/common/_verify.scss */
+.container .verify-content .verify-btn .btn-submit {
+  background: #11cfe0;
+  color: #fff;
+}
+/* line 58, ../sass/common/_verify.scss */
+.container .verify-content .verify-btn .btn-cancel {
+  background: #fff;
+  color: #11cfe0;
+  border: 1px solid #11cfe0;
+}
+/* line 65, ../sass/common/_verify.scss */
+.container .verify-content .group-mid {
+  margin: 40px 0 10px 0px;
+}
+/* line 68, ../sass/common/_verify.scss */
+.container .verify-content .control-code {
+  height: 35px;
+}
+/* line 71, ../sass/common/_verify.scss */
+.container .verify-content p {
+  text-align: center;
+}
+/* line 74, ../sass/common/_verify.scss */
+.container .verify-content .nofloat {
+  float: none;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* line 79, ../sass/common/_verify.scss */
+.container .verify-content .btn-backup {
+  margin: 0 auto;
+}
+/* line 82, ../sass/common/_verify.scss */
+.container .verify-content .backup-title {
+  margin: 0 0 20px;
+}
+/* line 85, ../sass/common/_verify.scss */
+.container .verify-content .backup-input, .container .verify-content .backup-btn {
+  height: 40px !important;
+}
+/* line 89, ../sass/common/_verify.scss */
+.container .verify-content .radio {
+  font-size: 16px;
+}
+/* line 91, ../sass/common/_verify.scss */
+.container .verify-content .radio input {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin: 0px 0 0;
+  margin-left: -30px;
+}
+/* line 105, ../sass/common/_verify.scss */
+.container .radio-content label {
+  display: block;
+}
+/* line 109, ../sass/common/_verify.scss */
+.container .radio-content .radio {
+  margin-left: 160px;
+  margin-top: 15px;
+}
+/* line 113, ../sass/common/_verify.scss */
+.container .radio-content input {
+  margin-left: 0 !important;
+  position: absolute;
+  left: 0;
+}
+/* line 118, ../sass/common/_verify.scss */
+.container .radio-content span {
+  position: absolute;
+  left: 30px;
+}
+
+/* line 2, ../sass/common/_work.scss */
+.common-main .work-main {
+  padding: 15px;
+}
+/* line 4, ../sass/common/_work.scss */
+.common-main .work-main .question_tip {
+  font-size: 14px;
+  color: #69788d;
+}
+/* line 7, ../sass/common/_work.scss */
+.common-main .work-main .question_tip span {
+  color: red;
+}
+/* line 11, ../sass/common/_work.scss */
+.common-main .work-main .detail-title {
+  padding: 0 0 30px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* line 15, ../sass/common/_work.scss */
+.common-main .work-main .detail-title label {
+  color: #12cfe0;
+  margin-right: 10px;
+}
+/* line 19, ../sass/common/_work.scss */
+.common-main .work-main .detail-title span {
+  margin-left: 10px;
+  color: #69788d;
+}
+/* line 24, ../sass/common/_work.scss */
+.common-main .work-main .detail-tip {
+  width: 50%;
+  border: 1px solid #17cddb;
+  /* padding: 15px; */
+  padding: 10px 15px;
+  color: #3bd4e3;
+  background: #c6f5f9;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* line 34, ../sass/common/_work.scss */
+.common-main .work-main h2 {
+  margin-bottom: 20px;
+}
+/* line 37, ../sass/common/_work.scss */
+.common-main .work-main .form-control {
+  width: 50%;
+  margin: 5px 0 20px;
+}
+/* line 41, ../sass/common/_work.scss */
+.common-main .work-main .mtb3 {
+  margin-bottom: 3px !important;
+}
+/* line 44, ../sass/common/_work.scss */
+.common-main .work-main .less-tip {
+  color: #adadad;
+  margin-bottom: 20px;
+  display: block;
+  font-size: 12px;
+}
+
+/* line 52, ../sass/common/_work.scss */
+.error-tip {
+  color: red;
+  padding: 0;
+  margin: -15px 0 20px;
+}
+
+/* line 58, ../sass/common/_work.scss */
+.file-input img {
+  width: 200px !important;
+}
+
+/*# sourceMappingURL=style.css.map */

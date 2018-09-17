@@ -1,0 +1,125 @@
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-xs-3">
+                <a class="navbar-brand" href="#"><img src="/assets/images/hftlogo@2x.png" alt="hft-logo"></a>
+
+                <ul class="nav navbar-nav">
+                    <li><a href="/#!/home" ng-class="{'active':ishash=='home'}">{{'TOPBAR.HOME' | translate}}</a></li>
+                    <li><a href="/#!/trade" ng-class="{'active':ishash=='trade'}">{{'TOPBAR.TRADING' | translate}}</a></li>
+                    <li><a href="/#!/c2c" ng-class="{'active':ishash=='c2c'}" ng-if="_username">{{'C2C_TRADE' | translate}}</a></li>
+                    <!--<li><a href="/#!/news" ng-class="{'active':ishash=='news'}">{{'TOPBAR.NEWS' | translate}}</a></li>-->
+                    <!--<li><a href="#!/account" ng-if="_username" ng-class="{'active':ishash=='account'}">{{'TOPBAR.ACCOUNT' | translate}}</a></li>-->
+                    <li class="second-nav" ng-if="_username">
+                        <a ng-class="{'active':ishash=='account'}">{{'TOPBAR.ACCOUNT' | translate}}</a>
+                        <ul>
+                            <li><a ng-class="{'isactive':ishash=='account'&& ishashtwo == 'details'}"
+                                   href="/#!/account/details">{{'ACCOUNT.ASSET_DETAILS' | translate}}</a></li>
+                            <li><a ng-class="{'isactive':(ishash=='account' && ishashtwo == 'recharge')}"
+                                   href="/#!/account/recharge">{{'ACCOUNT.DEPOSIT' | translate}}</a></li>
+                            <li><a ng-class="{'isactive':(ishash=='account' && ishashtwo == 'withdraw')}"
+                                   href="/#!/account/withdraw">{{'ACCOUNT.WITHDRAWAL'| translate}}</a></li>
+                            <li><a ng-class="{'isactive':(ishash=='account' && ishashtwo == 'bankandaddress')}"
+                                   href="/#!/account/bankandaddress">{{'ACCOUNT.SEL_ADDRESS' | translate}}</a></li>
+                            <!--数据分析-->
+                            <li><a ng-class="{'isactive':(ishash=='account' && ishashtwo == 'dataanalysis')}"
+                                   href="/#!/account/dataanalysis">{{'ACCOUNT.DATA_ANALYSIS' | translate}}</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/#!/setting/menu" ng-if="_username" ng-class="{'active':ishash=='setting'}">{{'TOPBAR.SETTINGS'
+                        | translate}}</a></li>
+                    <!--<li class="second-nav">-->
+                    <!--<a ng-class="{'active':ishash=='support'}">{{'TOPBAR.SUPPORT' | translate}}</a>-->
+                    <!--<ul>-->
+                    <!--<li><a ng-class="{'isactive':ishash=='support' && ishashtwo == 'details'}" href="/#!/support/details">{{'SUPPORT.TRADE' | translate}}</a></li>-->
+                    <!--<li><a ng-class="{'isactive':ishash=='support' && ishashtwo == 'deposit'}" href="/#!/support/deposit">{{'ACCOUNT.DEPOSIT' | translate}}</a></li>-->
+                    <!--<li><a ng-class="{'isactive':ishash=='support' && ishashtwo == 'withdraw'}" href="/#!/support/withdraw">{{'ACCOUNT.WITHDRAWAL'| translate}}</a></li>-->
+                    <!--<li><a ng-class="{'isactive':ishash=='support' && ishashtwo == 'fee'}" href="/#!/support/fee">{{'FEES.TITLE' | translate}}</a></li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="col-md-4 col-xs-9">
+                <ul class="nav navbar-nav pull-right">
+                    <li>
+                        <a href="/#!/login" ng-if="!_username" ng-class="{'active':ishash=='login'}">{{'LOGIN.TITLE' |
+                            translate}}</a>
+                        <a href="/#!/setting/menu" ng-if="_username" ng-class="{'active':ishash=='login'}">{{_username
+                            | getUsernameFormat}}</a>
+                    </li>
+                    <li><span class="common" href="#">|</span></li>
+                    <li>
+                        <a href="/#!/register" ng-if="!_username" ng-class="{'active':ishash=='register'}">{{'REGISTER.TITLE'
+                            | translate}}</a>
+                        <a href="/#!/logout" ng-if="_username">{{'SIDEBAR.LOGOUT' | translate}}</a>
+                    </li>
+                    <!--<li  ng-controller="LangController" ><a href="javascript:;" ng-click="changeLanguage()" style="text-transform:uppercase;font-size: 14px;">{{lang_flag}}</a></li>-->
+                    <li class="language" ng-controller="LangController">
+                        <img class="languageBtn" ng-src="/assets/images/{{lang_flag}}.png" width="80%"
+                             style="margin-top: 18px;">
+                        <ul>
+                            <li ng-if="lang_flag!=='zh'" ng-click="changeLanguage('zh')">
+                                <img class="languageBtn" ng-src="/assets/images/zh.png" width="80%">
+                            </li>
+                            <li ng-if="lang_flag!=='en'" ng-click="changeLanguage('en')">
+                                <img class="languageBtn" ng-src="/assets/images/en.png" width="80%">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-app nabar-app">
+                    <div>
+                        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" ng-click="istoggle()">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <ul class="header-nav" id="navbarApp">
+                            <li><a href="/#!/home" ng-class="{'active':ishash=='home'}">{{'TOPBAR.HOME' | translate}}</a></li>
+                            <li><a href="/#!/trade" ng-class="{'active':ishash=='trade'}">{{'TOPBAR.TRADING' | translate}}</a></li>
+                            <li><a href="/#!/news" ng-class="{'active':ishash=='news'}">{{'TOPBAR.NEWS' | translate}}</a></li>
+                            <li ng-if="_username" ng-click="istoggle()"><a ng-class="{'active':ishash=='account'}">{{'TOPBAR.ACCOUNT' | translate}}</a>
+                                <ul>
+                                    <li><a ng-class="{'isactive':ishash=='account'&& ishashtwo == 'details'}"
+                                           href="/#!/account/details">{{'ACCOUNT.ASSET_DETAILS' | translate}}</a></li>
+                                    <li><a ng-class="{'isactive':(ishash=='account' && ishashtwo == 'recharge')}"
+                                           href="/#!/account/recharge">{{'ACCOUNT.DEPOSIT' | translate}}</a></li>
+                                    <li><a ng-class="{'isactive':(ishash=='account' && ishashtwo == 'withdraw')}"
+                                           href="/#!/account/withdraw">{{'ACCOUNT.WITHDRAWAL'| translate}}</a></li>
+                                    <li><a ng-class="{'isactive':(ishash=='account' && ishashtwo == 'bankandaddress')}"
+                                           href="/#!/account/bankandaddress">{{'ACCOUNT.SEL_ADDRESS' | translate}}</a></li>
+                                    <!--数据分析-->
+                                    <li><a ng-class="{'isactive':(ishash=='account' && ishashtwo == 'dataanalysis')}"
+                                           href="/#!/account/dataanalysis">{{'ACCOUNT.DATA_ANALYSIS' | translate}}</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/#!/setting/menu" ng-if="_username" ng-class="{'active':ishash=='setting'}">{{'TOPBAR.SETTINGS'| translate}}</a></li>
+                            <li class="language" ng-controller="LangController">
+                                <img class="languageBtn" src="/assets/images/zh.png" width="20%" ng-click="changeLanguage('zh')" ng-if="lang_flag=='en'">
+                                <img class="languageBtn" src="/assets/images/en.png" width="20%" ng-click="changeLanguage('en')" ng-if="lang_flag=='zh'">
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="login-nav">
+                        <li>
+                            <a href="/#!/register" ng-if="!_username" ng-class="{'active':ishash=='register'}">{{'REGISTER.TITLE'| translate}}</a>
+                            <a href="/#!/logout" ng-if="_username">{{'SIDEBAR.LOGOUT' | translate}}</a>
+                        </li>
+                        <li class="nav-line" ng-if="!_username">|</li>
+                        <li>
+                            <a href="/#!/login" ng-if="!_username" ng-class="{'active':ishash=='login'}">{{'LOGIN.TITLE' |
+                                translate}}</a>
+                            <a href="/#!/setting/menu" ng-if="_username" ng-class="{'active':ishash=='login'}">{{_username
+                                | getUsernameFormat}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<ui-view></ui-view>
+
+
+

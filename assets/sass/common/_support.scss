@@ -1,0 +1,92 @@
+@charset "utf-8";
+.common-main {
+  width: 100%;
+  padding-bottom: 28px;
+  .account-main {
+    color: $fontColor;
+    min-height: 640px;
+    margin-top: 28px;
+    background: $color;
+    .detail-main {
+      margin-top: 20px;
+      h4 {
+        border-left: 5px solid $button;
+        font-size: 16px;
+        padding-left: 28px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .fund {
+        margin-bottom: 40px;
+        @media screen and (max-width: 520px){
+          width:100%;
+          overflow:hidden;
+          overflow-x: scroll;
+        }
+        .table {
+          border:1px solid #eee;
+          width:100%;
+          margin-bottom: 40px;
+           @media screen and (max-width: 520px){
+             display: inline-block;
+             box-sizing: border-box;
+             border: none;
+           }
+         }
+        .help-image {
+          width: 100%;
+          h5 {
+            margin: 20px 0 0 -40px;
+            span {
+              display: inline-block;
+              font-size: 14px;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              border: 1px solid #f5f2f8;
+              text-align: center;
+              padding: 0 2px;
+              margin-right: 10px;
+            }
+          }
+
+          p {
+            color: #6a5f76;
+            margin: 20px 0;
+          }
+        }
+      }
+      &.data-main{
+        min-height: 430px;
+      }
+    }
+
+  }
+}
+@media screen and (min-width: 1100px) {
+  .help-image {
+    padding: 10px 100px;
+  }
+}
+@media screen and (max-width:768px){
+  .help-image {
+    padding: 10px;
+  }
+  .table{
+    table-layout: fixed;
+    tr td:first-child{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      a {
+        padding: 0 2px;
+      }
+      .withdraw {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,444 @@
+@charset "UTF-8";
+body{
+  overflow-x: hidden;
+}
+
+.common-main{
+  background: #f2f2f2;
+}
+
+.navbar{
+  background: #0b1723;
+}
+
+.common-main .common-main-title{
+  background: none;
+}
+
+.common-main .trade-main .trade-module {
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.img_bg {
+    background: url("/assets/images/background.jpg") no-repeat center center;
+    background-size: cover;
+    height: 750px;
+}
+
+.navbar .navbar-nav > li > a{
+  font-size: 18px;
+}
+
+.common-main .news-main h4{
+  border-bottom: 2px solid #11cfe0;
+}
+
+.navbar .second-nav ul li a:hover, .navbar .second-nav ul li a.isactive{
+  color: #11cfe0;
+}
+
+.common-main .account-main{
+  border-radius: 4px;
+}
+
+.common-main .trade-main .trade-left .trade-asset:before{
+  background: #11cfe0;
+  border-radius: 4px 0 0 4px;
+}
+
+.content{
+  padding-top: 0;
+}
+
+.trade_desk{
+  background: #2c3940;
+}
+
+.trade_desk .common-main-title .zh-title{
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-module, .trade_desk .trade-main .trade-left .trade-asset{
+  background: #1b262d;
+  border: 1px solid #222;
+}
+
+.trade_desk .trade-main .trade-right .trade-preview .top .split small{
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-module .module-title{
+  border-bottom: 1px solid #36464f;
+}
+
+.trade_desk .trade-main .trade-right .trade-preview .top .split span{
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-module .module-title .tab-btns .tab-btn.active{
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-left .trade-asset{
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-module table thead tr th{
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-module .module-title{
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-right .trade-action form label{
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-left .delegate-information .stalls select{
+  background: #1b262d;
+}
+
+.trade_desk .trade-main .trade-right .trade-preview .top{
+  border-bottom: 1px solid #36464f;
+}
+
+.trade_desk .trade-main .trade-right .trade-preview .top .split{
+  border-left: 1px solid #36464f;
+}
+
+.trade_desk .trade-main .trade-module table tbody tr:hover, .trade_desk .trade-main .trade-module table tbody tr.active{
+  background: #303e46;
+  border: none;
+}
+
+.trade_desk .form-control{
+  border: 1px solid #303e46;
+  background: #303e46;
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-module table tr{
+  color: #fff;
+}
+
+
+.trade_desk .input-group-addon{
+  background: #212d33;
+  border: 1px solid #303e46;
+  color: #fff;
+}
+
+.trade_desk .trade-main .trade-module table thead tr{
+  border-bottom: 1px solid #36464f;
+}
+
+.trade_desk .trade-main .trade-module table tr{
+  border-bottom: 1px solid #36464f;
+}
+
+.trade_desk .trade-main .trade-right .trade-action .action-box .split:first-child {
+  border-right: 1px dashed #36464f;
+}
+
+.trade_desk .trade-main .hr{
+  border-bottom: 1px dashed #36464f;
+}
+
+.trade_desk .trade-main .trade-module table tr{
+  border: none;
+}
+
+.trade_desk .rzslider .rz-bubble{
+  color: #11cfe0;
+}
+
+.trade_desk .trade-main .trade-module .module-cover{
+  background: rgba(27, 39, 46, 0.8);
+  color: #fff;
+}
+
+.common-main .trade-main .trade-module table tbody tr.active td:first-child:before{
+  background: #11cfe0;
+}
+
+.common-main .up{
+  color: #2dde99 !important;
+}
+
+.setting-main .setting-module .module-con .module-item .module-status a{
+  color: #11cfe0;
+}
+
+.setting-main .setting-module .module-title{
+  border-left: 5px solid #11cfe0;
+}
+
+.common-main .trade-main .trade-module .module-title .tab-btns .tab-btn.active {
+    border-bottom: 3px solid #11cfe0;
+}
+
+.common-main .news-main, .setting-main{
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.common-main .trade-main .trade-right .trade-action .btn-buy[disabled]{
+  background: #a4e6cc;
+}
+
+.common-main .trade-main .trade-right .trade-action .btn-buy {
+    background: #2dde99;
+  }
+
+/*.setting-action form button.btn-submit{*/
+  /*background-color: #83e7f1;*/
+/*}*/
+
+.setting-action form button.btn-submit:hover{
+  /*background: #83e7f1;*/
+}
+
+.dynamic-tab-btns{
+  color: #fff;
+  font-size: 16px;
+  margin: 10px 0 8px;
+}
+
+.dynamic-tab-btns>span{
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.dynamic-tab-btns .active{
+  color: #11cfe0;
+  border-bottom: 1px solid #11cfe0;
+}
+
+
+@media screen and (min-width: 1100px){
+  .navbar .navbar-brand {
+    padding-top: 0px;
+  }
+
+  .navbar .navbar-nav > li > a.active, .navbar .navbar-nav > li > a:hover {
+    color: #11cfe0;
+  }
+
+  .navbar .second-nav ul{
+    background: #0b1723;
+    min-width: 100px;
+    left: -10px;
+  }
+
+  .navbar .second-nav ul li a {
+    color: #fff;
+    padding: 6px 10px;
+    border-bottom: none;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .navbar .header-nav {
+    background: #0b1723;
+  }
+
+  .navbar .header-nav li .active, .navbar .header-nav li .isactive {
+    color: #11cfe0;
+  }
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+
+
+.logo_banner{
+    display: block;
+    margin: 0 auto;
+    width: 450px; 
+    padding-top: 280px;
+}
+
+.about_item{
+    min-height: 450px;
+    padding: 40px 0;
+    background: #0b1723;
+    width: 100%;
+    color: #fff;
+}
+
+.about_item .content{
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about_item .text{
+    max-width: 900px;
+    margin: 30px auto 90px;
+    font-size: 16px;
+    line-height: 1.94
+}
+
+.about_item .about_title{
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.about_item .about_text{
+    font-size: 14px;
+    color: #999;
+}
+
+.about_feature{
+    padding: 40px 0 60px;
+    background: #f4f7fb;
+    width: 100%;
+}
+
+.about_feature .content{
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about_feature h2{
+    margin-bottom: 30px;
+}
+
+.about_feature .col-md-4>div{
+
+    width: 340px;
+    padding: 0px 20px 40px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 9px 0 rgba(31, 85, 126, 0.1);
+    margin-left: 10px;
+}
+
+.about_feature .col-md-4 img{
+    margin: 50px 0 58px;
+}
+
+.about_feature .about_title{
+    font-size: 24px;
+    color: #424f63;
+}
+
+.about_feature .about_text{
+    font-size: 18px;
+    color: #adb1b7;
+    margin: 20px auto 0;
+}
+
+.footer{
+    padding: 40px 0;
+    width: 100%;
+    background: #262626;
+    font-size: 16px;
+    text-align: center;
+    color: #999;
+}
+
+.common-main .recharge-main .deposit-type .clain-pins-step .item-number{
+  background: #11cfe0;
+}
+
+.common-main .trade-main .trade-right .trade-action .btn-buy{
+  background: #2dde99;
+}
+
+.common-main .trade-main .trade-right .trade-action .btn-buy:hover, .common-main .trade-main .trade-right .trade-action .btn-buy:active, .common-main .trade-main .trade-right .trade-action .btn-buy:focus{
+  background: #48fbb5;
+}
+
+.common-main .trade-main .trade-module .trade-popup .inner{
+  background: #1b272e;
+}
+
+.common-main .trade-main .trade-module .trade-popup .inner .popup-title div{
+  color: #fff;
+}
+
+.common-main .trade-main .trade-module .trade-popup .inner thead tr{
+  background: #30434e;
+}
+
+.common-main .trade-main .trade-module .trade-popup .inner .popup-title .right .popup-close{
+  background: #30434e;
+}
+
+@media (max-width: 1100px){
+    .about_feature .col-md-4>div{
+        margin: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .logo_banner{
+        width: 60%;
+    }
+}
+@media screen and (min-width: 1100px){
+  .trade-main .split {
+    padding: 0 40px;
+  }
+
+}
+
+@media (max-width: 768px){
+    .leader_list li{
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .leader_list .active{
+        border: none;
+    }
+
+    .navbar-nav>li>a{
+        padding: 20px 0;
+    }
+
+    .leader_list{
+        margin: 0;
+    }
+
+    .leader_list .login_bar{
+        background: #0b1723;
+        position: inherit;
+    }
+
+    .leader_list .login_bar a{
+        font-size: 16px;
+        display: block;
+    }
+
+    .leader_list .login_bar span{
+        display: none;
+    }
+
+    .about_item .text{
+        margin: 30px 15px 90px;
+    }
+
+    #example-navbar-collapse{
+        padding: 0;
+    }
+
+    .about_feature .content{
+      margin: 0 10px;
+    }
+}
+
+

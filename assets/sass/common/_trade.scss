@@ -1,0 +1,747 @@
+@charset "utf-8";
+
+$trade-module-border: #dbd9dd;
+$trade-module-padding: 14px;
+
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.common-main {
+  padding-bottom: 28px;
+
+  .up {
+    color: #83c03e !important;
+  }
+  .down {
+    color: #d94e68 !important;
+  }
+
+  .trade-main {
+    font-family: sans-serif, 'Microsoft Yahei';
+
+    .hr {
+      height: 0px;
+      border-bottom: 1px dashed #bbbbbb;
+      margin: 10px 20px;
+    }
+
+    .trade-module {
+      background: $color;
+      .trade-popup {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .65);
+        z-index: 10;
+
+        .inner {
+          background: #FFFFFF;
+          height: auto;
+          transition: height ease .3s, margin-top .3s;
+          transition-timing-function: ease-out;
+
+          .scroll {
+            min-height: auto;
+          }
+
+          .popup-title {
+            display: flex;
+            font-weight: 300;
+            height: 42px;
+            line-height: 42px;
+
+            div {
+              padding: 0 20px;
+            }
+
+            .right {
+              text-align: right;
+
+              .popup-close {
+                width: 14px;
+                height: 14px;
+                background: #A99EB4;
+                display: inline-block;
+                border-radius: 50%;
+                color: #FFFFFF;
+                line-height: 12px;
+                text-align: center;
+                font-family: unset;
+                cursor: default;
+                // text-indent: 1px;
+              }
+            }
+          }
+
+          thead tr {
+            background-color: #A99EB4;
+
+            th {
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+
+      .trade-empty {
+        font-size: 12px;
+        font-weight: 300;
+        color: #999999;
+        text-align: center;
+        margin: 20px 0px;
+      }
+
+      .module-cover {
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        height:100%;
+        top:0px;
+        left: 0px;
+        position: absolute;
+        z-index: 9;
+        line-height: 554px;
+        text-align: center;
+      }
+
+      .module-title {
+        height: 45px;
+        line-height: 45px;
+        padding-left: 27px;
+        color: #423350;
+        border-bottom: solid 1px #dbd9dd;
+
+        h4 {
+          font-size: 16px;
+          font-weight: 400;
+          display: inline-block;
+        }
+
+        .tab-btns {
+          .tab-btn {
+            font-size: 16px;
+            font-weight: 500;
+            color: #7e7d83;
+            height: 44px;
+            line-height: 44px;
+            display: inline-block;
+            //padding: 0 30px;
+            border-bottom: 3px solid transparent;
+            transition: border 0.3s, color 0.3s;
+            cursor: default;
+          }
+          .tab-btn.active {
+            color: #413350;
+            border-bottom: 3px solid $button;
+          }
+        }
+      }
+      .scroll {
+        max-height: 320px;
+        overflow-y: auto;
+      }
+      .scroll::-webkit-scrollbar {
+        width: 6px;
+        background-color: #FFFFFF;
+        margin-right: 5px;
+      }
+      .scroll::-webkit-scrollbar-track {
+        border-radius: 0px;
+        background-color: #FFFFFF;
+      }
+      .scroll::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #888888;
+      }
+
+      table {
+        width: 100%;
+        cursor: default;
+        font-size: 12px;
+        font-weight: 400;
+        border-collapse:collapse;
+
+        tr {
+          position: relative;
+          height: 30px;
+          line-height: 30px;
+          border-top: 1px solid $color;
+          border-bottom: 1px solid $color;
+          font-weight: 400;
+          transition: background 0.3s, border 0.3s;
+
+          th:first-child, td:first-child {
+            padding-left: 27px;
+          }
+          th:last-child, td:last-child {
+            padding-right: 27px;
+            text-align: right;
+          }
+        }
+
+        tr:nth-child(even) {
+          background: transparent;
+        }
+
+        thead {
+          tr {
+            border-bottom: 1px solid #dbd9dd;
+
+            th {
+              font-weight: 200;
+              color: #6a5f76;
+            }
+          }
+        }
+
+        tbody {
+          tr:hover, tr.active {
+            background: #f4fbff;
+            border-top: 1px solid #f4fbff;
+            border-bottom: 1px solid #f4fbff;
+          }
+          tr.active td:first-child {
+            position: relative;
+            overflow: hidden;
+          }
+          tr.active td:first-child:before {
+            position: absolute;
+            background: $button;
+            content: ' ';
+            width: 14px;
+            height: 14px;
+            transform: rotate(45deg);
+            left: -7px;
+            top: -7px;
+          }
+        }
+      }
+    }
+
+    // 左边
+    .trade-left {
+      // 币种
+      .trade-asset {
+        position: relative;
+        //height: 86px;
+        background: $color url(/assets/images/trade-asset@2x.png) no-repeat center right;
+        background-size: contain;
+        color: #413350;
+
+        .inner {
+          padding-left: 40px;
+          overflow: hidden;
+        }
+        h3 {
+          font-size: 28px;
+          font-weight: 200;
+          margin-top: 14px;
+          margin-bottom: 5px;
+          float: left;
+          width:50%;
+          @media screen and(max-width: 400px) {
+            width: 100%;
+          }
+        }
+        small {
+          font-size: 14px;
+          font-weight: 200;
+          float: left;
+          width: 100%;
+        }
+        p{
+          float: left;
+          font-size: 14px;
+          width: 50%;
+          margin-top: 20px;
+          color: #11cfe0;
+          @media screen and(max-width: 400px) {
+            width: 100%;
+            margin-top: 0;
+          }
+        }
+      }
+      .trade-asset:before {
+        display: block;
+        content: " ";
+        width: 6px;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: $button;
+      }
+      // 动态行情
+      .quotes-dynamic {
+        min-height: 350px;
+      }
+      // 委托信息
+      .delegate-information {
+        min-height: 350px;
+
+        .stalls {
+          float: right;
+          width: 100px;
+          text-align: center;
+          font-size: 12px;
+
+          select {
+            width: auto;
+            height: 20px;
+            border: 1px solid #dddddd;
+          }
+        }
+
+        .scroll {
+          height: 158px;
+          overflow-y: auto;
+        }
+      }
+      // 实时成交
+      .rt-transactions {
+        min-height: 520px;
+
+        .scroll {
+          max-height: 444px;
+          overflow-y: auto;
+        }
+      }
+    }
+
+    // 右边
+    .trade-right {
+      flex: 1;
+
+      // 币种信息
+      .trade-preview {
+        height: auto;
+        .top {
+          display: flex;
+          height: auto;
+          border-bottom: 1px solid #dcdadd;
+            @media screen and (max-width:1100px){
+              height: auto;
+              -webkit-flex-flow: wrap;
+              flex-grow: 1;
+              justify-content: space-between;
+            }
+
+          .split {
+            width:19%;
+            border-left: 1px solid #dcdadd;
+            padding: 0 20px;
+            .inner {
+              margin: 8px auto;
+            }
+
+            small {
+              font-weight: 200;
+              display: block;
+              margin-bottom: 2px;
+              color: #6a5f76;
+              font-size: 12px;
+            }
+            span {
+              font-weight: 400;
+              font-size: 14px;
+              color: $fontColor;
+            }
+              @media screen and (max-width:1100px){
+                width: inherit;
+                border-left:none !important;
+              }
+          }
+          .split:first-child{
+            width: 28%;
+              @media screen and (max-width:1100px){
+                width: inherit;
+              }
+          }
+        }
+        .bottom {
+          height: 33px;
+          line-height: 33px;
+          padding-left: 20px;
+          font-size: 14px;
+          font-weight: 400;
+          color: #11cfe0;
+        }
+      }
+      // k线图
+      .trade-k {
+        position: relative;
+        height: 396px;
+
+        .trade-k-a {
+          position: absolute;
+          right: 80px;
+          top: 12px;
+        }
+      }
+      // 交易活动
+      .trade-action {
+        .module-title {
+          padding-left: 0px;
+        }
+
+        .hr {
+          margin: 30px 0px;
+        }
+
+        .module-con {
+          max-height: none;
+        }
+
+        .help {
+          position: absolute;
+          color: #978da1;
+          right: 30px;
+          top: 8px;
+          cursor: help;
+        }
+        .help:hover .tips {
+          display: block;
+        }
+        .tips {
+          display: none;
+          position: absolute;
+          top: -75px;
+          right: -40px;
+          width: 240px;
+          height: 70px;
+          background: #ffffff;
+          padding: 10px;
+          font-size: 12px;
+          box-shadow: 0 2px 4px 0 rgba(94, 94, 94, 0.5);
+          background: #fcf9f0;
+          color: #413350;
+          font-weight: 400;
+          transform: scale(0.9);
+        }
+        .tips:before{
+          position: absolute;
+          content: '';
+          width: 10px;
+          height: 10px;
+          bottom:-5px;
+          right: 35px;
+          background: #fcf9f0;
+          box-shadow: 0 2px 4px rgba(94, 94, 94, 0.5);
+          transform: rotate(45deg);
+          z-index: 1;
+        }
+        .tips:after{
+          z-index: 2;
+          background: #fcf9f0;
+          position: absolute;
+          content: '';
+          width: 15px;
+          height: 7px;
+          bottom: 0px;
+          right: 33px;
+        }
+
+
+        .total-slider.rzslider {
+          .rz-bar {
+            background: #c1bdc6;
+            height: 2px;
+          }
+          .rz-selection {
+            background: #6a5f76;
+          }
+          .rz-pointer {
+            // width: 8px;
+            // height: 16px;
+            // top: auto;
+            // bottom: 0;
+            // background-color: #333;
+            // border-top-left-radius: 3px;
+            // border-top-right-radius: 3px;
+            top: -7px;
+            width: 6px;
+            height: 14px;
+            border-radius: 2px;
+            background-color: #ffffff;
+            box-shadow: 0 1px 2px 0 rgba(153, 153, 153, 0.62);
+            border: solid 1px #dcdbdd;
+          }
+          .rz-pointer:after {
+            display: none;
+          }
+          // .rz-bubble, .rz-limit {
+          //   display: none;
+          // }
+          .rz-bubble {
+            bottom: 14px;
+          }
+          .rz-bubble:after {
+            content: '%';
+          }
+          .rz-limit {
+            font-weight: bold;
+            color: #c1bdc6;
+          }
+          .rz-tick {
+            width: 1px;
+            height: 10px;
+            margin-left: 4px;
+            border-radius: 0;
+            background: #ffe4d1;
+            top: -1px;
+          }
+          .rz-tick.rz-selected {
+            background: #c1bdc6;
+          }
+        }
+
+        form {
+          font-weight: 200;
+
+          label {
+            font-size: 12px;
+            font-weight: 300;
+            color: #000000;
+            padding-left: 0;
+          }
+
+          .buy-info, .sell-info{
+            font-size: 12px;
+            line-height: 24px;
+
+            .right {
+              float: right;
+            }
+          }
+          .buy-info {
+            span {
+              color: #83c03e;
+            }
+          }
+          .sell-info {
+            span{
+              color: #da4e68;
+            }
+          }
+
+          .input-group {
+            .form-control{
+              border-right: none;
+            }
+            .input-group-addon {
+              height: 28px;
+              border-left: none;
+            }
+          }
+
+          .form-control {
+            font-weight: 400;
+            height: 32px;
+            border-top-left-radius: 2px;
+            box-shadow: none;
+            // border-right-color: $color;
+            border-bottom-left-radius: 2px;
+          }
+        }
+
+        .btn-buy, .btn-sell {
+          border-radius: 2px;
+          height: 38px;
+        }
+        .btn-buy {
+          color: #ffffff;
+          background-color: #83c03e;
+          outline: none;
+          transition: background .3s;
+        }
+        .btn-buy:hover, .btn-buy:active, .btn-buy:focus {
+          color: $color;
+          background-color: #6aa726;
+        }
+        .btn-buy[disabled] {
+          background-color: #c5dea9;
+          border: none;
+          color: #ffffff;
+        }
+        .btn-sell {
+          color: #ffffff;
+          background-color: #da4e68;
+          outline: none;
+          transition: background .3s;
+        }
+        .btn-sell:hover, .btn-sell:active, .btn-sell:focus {
+          color: $color;
+          background-color: #ca3551;
+        }
+        .btn-sell[disabled] {
+          background-color: #f1b5c0;
+          border: none;
+          color: #ffffff;
+        }
+
+        table {
+          margin-bottom: 10px;
+          font-weight: 200;
+
+          tr {
+            td {
+              padding-left: 0px;
+            }
+            td:nth-child(odd) {
+              color: #999999;
+            }
+
+            td:last-child {
+              text-align: left;
+            }
+          }
+          tr:hover {
+            background: none;
+            border-color: #ffffff;
+          }
+        }
+
+        small {
+          a {
+            color: $button;
+            text-decoration: underline;
+          }
+        }
+
+        .form-horizontal {
+          width: 100%;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+
+        .form-control {
+          margin-bottom: 0px;
+        }
+
+        .tpass-error {
+          display: inline-block;
+          margin-top: 10px;
+          color: #e3556f;
+
+          a {
+            color: #e3555f;
+            text-decoration: underline;
+          }
+        }
+        .tpass-error:before {
+          position: relative;
+          margin-right: 10px;
+          content: 'i';
+          display: inline-block;
+          border-radius: 50%;
+          background-color: #e3556f;
+          color: #ffffff;
+          width: 14px;
+          height: 14px;
+          line-height: 14px;
+          text-align: center;
+          font-weight: 700;
+          transform: scale(0.8);
+        }
+
+        .action-box {
+          display: flex;
+          padding: 27px 0;
+
+          .split {
+            flex: 1;
+          }
+          .split:first-child {
+            border-right: 1px dashed #c7c7c7;
+          }
+        }
+
+
+      }
+      // 委托记录
+      .trade-history {
+
+        position: relative;
+
+        .scroll {
+          min-height: 312px;
+        }
+
+        .module-cover {
+          line-height: 395px;
+
+          a {
+            color: $button;
+            text-decoration: underline;
+          }
+        }
+
+        .module-title {
+          padding-left: 0px;
+        }
+        .module-con {
+          min-height: 398px;
+          max-height: 398px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .trade-app{
+    display: none !important;
+  }
+   .trade-main {
+     max-width: 1220px;
+     min-width: 900px;
+     margin-top: 28px;
+     min-height: 800px;
+     display: flex;
+     .trade-left {
+       width: 350px;
+       margin-right: $trade-module-padding;
+     }
+     .trade-module {
+       margin-bottom: $trade-module-padding;
+     }
+     .split {
+        padding: 0 50px;
+     }
+     .trade-asset{
+       height: 86px;
+     }
+     .tab-btn {
+       padding: 0 30px;
+     }
+     .trade-module {
+       border: 1px solid $trade-module-border;
+     }
+   }
+}
+//媒介查询- -移动端
+@media screen and (max-width:768px){
+  .trade-web-main{
+    display: none !important;
+  }
+  .trade-module {
+    margin: 14px 0;
+  }
+  //.trade-preview {
+  // display: none;
+  //}
+  .tab-btn{
+    width: 32%;
+    text-align: center;
+  }
+  .trade-module {
+    border: 0;
+  }
+  .input-group{
+    width: 100%;
+  }
+}

@@ -1,0 +1,356 @@
+<div class="common-main">
+    <div class="common-main-title">
+        <div class="container">
+            <span class="zh-title">{{'ACCOUNT.ASSET_DETAILS'|translate}}</span>
+            <span class="en-title hidden-xs"><span class="line">|</span>My Asset</span>
+        </div>
+    </div>
+    <div class="container account-main">
+        <!--<div class="account-title">-->
+            <!--<div class="pull-left">-->
+                <!--<h5>{{'ASSET.TOTAL_RMB'|translate}}</h5>-->
+
+                <!--<h3>฿ {{((assets.total + cnytotal) || 0).toFixed(2)}}</h3>-->
+            <!--</div>-->
+            <!--<div class="pull-right">-->
+                <!--<h5>{{'ASSET.TRADABLE'|translate}}：<span class="number">฿ {{(assets.balance||0).toFixed(2)}}</span></h5>-->
+                <!--<h5>{{'ASSET.FROZEN'|translate}}：<span class="number">฿ {{(assets.frozen||0).toFixed(2)}}</span></h5>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="detail-main">
+            <div class="fund">
+                <h4>{{'ASSET.ACCOUNT_TOTAL'|translate}}</h4>
+                <table class="table">
+                    <tr>
+                        <th>{{'TRADE.DELEGATE.ASSET'|translate}}</th>
+                        <th>{{'TRADE.ORDER_VOLUME'|translate}}</th>
+                        <th>{{'ASSET.TRADABLE'|translate}}</th>
+                        <th>{{'ASSET.FROZEN'|translate}}</th>
+                        <!--<th width="15%">{{'ASSET.RMB'|translate}}</th>-->
+                        <!--<th width="10%">{{'ASSET.POSITION'|translate}}</th>-->
+                        <th>{{'TRADE.DELEGATE.OPTION'|translate}}</th>
+                    </tr>
+                    <!--<tr ng-show="balance_num.length==0">-->
+                        <!--<td colspan = "7">暂无数据</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>{{'ASSET.CNY'|translate}}</td>-->
+                        <!--<td>{{cnytotal.toFixed(2)}}</td>-->
+                        <!--<td>{{cnybalance.toFixed(2)}}</td>-->
+                        <!--<td>{{cnyfrozen.toFixed(2)}}</td>-->
+                        <!--<td>{{(cnytotal || 0).toFixed(2)}}</td>-->
+                        <!--<td>{{((cnytotal/(assets.total + cnytotal)*100) || 0).toFixed(2)}}%</td>-->
+                        <!--<td>-->
+                            <!--<a class="lock" href="#"></a>-->
+                            <!--<a class="withdraw" href="javascript:;" ng-click="getWithdrawLink('CNY')">{{'SIDEBAR.WITHDRAW'|translate}}</a>-->
+                            <!--<a class="withdraw account-deposit" href="/#!/account/recharge">{{'SIDEBAR.DEPOSIT'|translate}}</a>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <tr  ng-repeat="item in balances" ng-if="balance_num.length>0">
+                        <td>{{'ASSET.'+ item.symbol | translate}}<span ng-if="language=='zh'">({{item.symbol}})</span></td>
+                        <td>{{item.total}}</td>
+                        <td>{{item.balance}}</td>
+                        <td>{{item.frozen}}</td>
+                        <!--<td>{{(item.cnyTotal|| 0).toFixed(2)}}</td>-->
+                        <!--<td>{{((item.cnyTotal/(assets.total + cnytotal)*100) || 0).toFixed(2)}}%</td>-->
+                        <td>
+                            <!--<a class="lock" ng-if="item.bid_asset_symbol=='ETP' && item.locked==0" href="/#!/account/lock">{{'ACCOUNT.LOCK'|translate}}</a>-->
+                            <!--<a class="lock" href="javascript:;"></a>-->
+                            <a class="withdraw" href="javascript:;" ng-click="getWithdrawLink(item.symbol)" ng-if="item.withdraw==0">{{'SIDEBAR.WITHDRAW'|translate}}</a>
+                            <a class="withdraw" href="javascript:;" ng-if="item.withdraw !==0"></a>
+                            <a class="withdraw account-deposit" ng-href="/#!/account/recharge/{{item.symbol}}" ng-if="item.deposit==0">{{'SIDEBAR.DEPOSIT'|translate}}</a>
+                            <a class="withdraw" ng-if="item.deposit !==0"></a>
+														<a class="withdraw" ng-click="cloudShow(item.symbol)" href="javascript:;" ng-if="item.symbol=='QGC'">{{'CLOUD_EX'|translate}}</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+            <!--资产明细-->
+            <div class="fund">
+                <h4>{{'ACCOUNT.ASSET_DETAILS'|translate}}</h4>
+                <ul class="fund-nav-title">
+                    <!--<li ng-class="{'active':isselect =='deposit'}" ng-click="getFundList('deposit')">{{'SIDEBAR.DEPOSIT'|translate}}</li>-->
+                    <!--<li ng-class="{'active':isselect =='withdraw'}" ng-click="getFundList('withdraw')">{{'SIDEBAR.WITHDRAW'|translate}}</li>-->
+                    <li ng-class="{'active':isselect =='charge'}" ng-click="getFundList('charge')">{{'TITLE.SETP.RECHARGE'|translate}}</li>
+                    <li ng-class="{'active':isselect =='currency'}" ng-click="getFundList('currency')">{{'ACCOUNT.A_WITHDRAWAL'|translate}}</li>
+                    <li ng-class="{'active':isselect =='trade'}" ng-click="getFundList('trade')">{{'SIDEBAR.TRADING'|translate}}</li>
+                    <li ng-class="{'active':isselect =='store'}" ng-click="getFundList('store')">{{'SIDEBAR.STORECROSS'|translate}}</li>
+                    <!--<li ng-class="{'active':isselect =='lock'}" ng-click="getFundList('lock')">{{'ACCOUNT.LOCK'|translate}}</li>-->
+                </ul>
+                <div class="clearfix"></div>
+                <!--充值-->
+                <!--<table class="table" ng-show="isselect =='deposit'">-->
+                    <!--<tr>-->
+                        <!--<th>{{'TRADE.ORDER_TIME'|translate}}</th>-->
+                        <!--<th>{{'TRADE.DELEGATE.ASSET'|translate}}</th>-->
+                        <!--<th>{{'ACCOUNT.DEPOSIT_TYPE'|translate}}</th>-->
+                        <!--<th>{{'ACCOUNT.DEPOSIT_MONEY'|translate}}</th>-->
+                        <!--<th>{{'DEPOSIT.TRANSFER_CODE'|translate}}</th>-->
+                        <!--<th>{{'TRADE.STATUS'|translate}}</th>-->
+                    <!--</tr>-->
+                    <!--<tr ng-show="params.depositList.length==0">-->
+                        <!--<td colspan = "6">{{'ACCOUNT.NOT_DATA'|translate}}</td>-->
+                    <!--</tr>-->
+                    <!--<tr ng-repeat="its in params.depositList">-->
+                        <!--<td>{{its.created_at |  date:'yyyy-MM-dd HH:mm:ss'}}</td>-->
+                        <!--<td>{{'ASSET.CNY'|translate}}</td>-->
+                        <!--<td ng-if="its.method=='OFFLINE'">{{'DEPOSIT.OPTION_OFFLINE'|translate}}</td>-->
+                        <!--<td ng-if="its.method=='ONLINE'">{{'DEPOSIT.OPTION_SINAPAY'|translate}}</td>-->
+                        <!--<td ng-if="its.method=='GIFTCODE'">{{'DEPOSIT.OPTION_GIFTCARD'|translate}}</td>-->
+                        <!--<td>{{(its.value/100000000).toFixed(2)}}</td>-->
+                        <!--<td>{{its.transfer_code}}</td>-->
+                        <!--<td>-->
+                            <!--<span ng-if="its.state=='COMPLETE'">{{'ACCOUNT.DEPOSIT_SUCCESS'|translate}}</span>-->
+                            <!--<span ng-if="its.state=='CANCELLED'">{{'ACCOUNT.REFUSE'|translate}}</span>-->
+                            <!--<span ng-if="its.state=='PENDING'">{{'STATUS.PENDING'|translate}}</span>-->
+                            <!--<span class="applying" ng-if="its.state=='REQUESTED'">{{'ACCOUNT.DEPOSIT_REQUEST'|translate}}</span>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+
+                <!--提现-->
+                <!--<table class="table" ng-show="isselect =='withdraw'">-->
+                    <!--<tr>-->
+                        <!--<th>{{'TRADE.ORDER_TIME'|translate}}</th>-->
+                        <!--<th>{{'ACCOUNT.FIAT_ACC_NUM'|translate}}</th>-->
+                        <!--<th>{{'ACCOUNT.WITHDRAWAL_MONEY'|translate}}</th>-->
+                        <!--<th>{{'ACCOUNT.ARRIVAL_MONEY'|translate}}</th>-->
+                        <!--<th>{{'TRADE.FEE'|translate}}</th>-->
+                        <!--<th>{{'TRADE.STATUS'|translate}}</th>-->
+                    <!--</tr>-->
+                    <!--<tr ng-show="params.withdrawList.length==0">-->
+                        <!--<td colspan = "6">{{'ACCOUNT.NOT_DATA'|translate}}</td>-->
+                    <!--</tr>-->
+                    <!--<tr ng-repeat="its in params.withdrawList">-->
+                        <!--<td>{{its.created_at |  date:'yyyy-MM-dd HH:mm:ss'}}</td>-->
+                        <!--<td>{{its.bank_account_number}}</td>-->
+                        <!--<td>{{(its.value/100000000).toFixed(2)}}</td>-->
+                        <!--<td>{{((its.value-its.fee)/100000000).toFixed(2)}}</td>-->
+                        <!--<td>{{(its.fee/100000000).toFixed(2)}}</td>-->
+                        <!--<td>-->
+                            <!--<span ng-if="its.state=='COMPLETE'">{{'ACCOUNT.SUCCESSFUL_WITH'|translate}}</span>-->
+                            <!--<span ng-if="its.state=='CANCELLED'">{{'ACCOUNT.REFUSE'|translate}}</span>-->
+                            <!--<span ng-if="its.state=='PENDING'">{{'STATUS.PENDING'|translate}}</span>-->
+                            <!--<span class="applying" ng-if="its.state=='REQUESTED'">{{'ACCOUNT.DEPOSIT_REQUEST'|translate}}</span>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+
+                <!--充币-->
+                <div class="charge scroll">
+                    <ul ng-show="isselect =='charge' || isselect =='currency'">
+                        <li ng-class="{'active':isactive == it.symbol}" ng-repeat="it in balances" ng-click="getFundName(it.symbol)">{{'ASSET.'+ it.symbol | translate}}<span ng-if="language=='zh'">({{it.symbol}})</span></li>
+                    </ul>
+                    <ul ng-show="isselect =='store'">
+                        <li ng-class="{'active':isactive == it.symbol}" ng-if="it.symbol!='BTC'&&it.symbol!='ETH'"    ng-repeat="it in balances" ng-click="getFundName(it.symbol)">{{'ASSET.'+ it.symbol | translate}}<span ng-if="language=='zh'">({{it.symbol}})</span></li>
+                    </ul>
+                </div>
+                <table class="table" ng-show="isselect =='charge'">
+                    <tr>
+                        <th>{{'TRADE.ORDER_TIME'|translate}}</th>
+                        <!--<th>{{'ACCOUNT.FIAT_ACC_NUM'|translate}}</th>-->
+                        <th>{{'ACCOUNT.PLACEHOLDER_ADDRESS'|translate}}</th>
+                        <th>{{'DEPOSIT.AMOUNT'|translate}}</th>
+                        <th>{{'TRADE.STATUS'|translate}}</th>
+                    </tr>
+                    <tr ng-if="params.deposit_list.length==0">
+                        <td colspan = "4">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+                    </tr>
+                    <tr ng-repeat="its in params.deposit_list">
+                        <td>{{its.created_at |  date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <!--<td>{{'ASSET.'+ its.asset | translate}}( g{{its.asset}})</td>-->
+                        <td>{{its.address}}</td>
+                        <td>{{its.amount/100000000}}</td>
+                        <td>
+                            <span ng-if="its.status=='COMPLETE'">{{'ACCOUNT.A_DEPOSIT_SUCCESS'|translate}}</span>
+                            <span ng-if="its.status=='CANCELLED'">{{'ACCOUNT.REFUSE'|translate}}</span>
+                            <span ng-if="its.status=='PENDING'">{{'STATUS.PENDING'|translate}}</span>
+                            <span class="applying" ng-if="its.status=='REQUESTED'">{{'ACCOUNT.DEPOSIT_REQUEST'|translate}}</span>
+                        </td>
+                    </tr>
+                </table>
+
+                <!--提币-->
+                <table class="table"  ng-show="isselect =='currency'">
+                    <tr >
+                        <th width="15%">{{'TRADE.ORDER_TIME'|translate}}</th>
+                        <th width="10%">{{'TRADE.DELEGATE.ASSET'|translate}}</th>
+                        <th width="20%">{{'ACCOUNT.PLACEHOLDER_ADDRESS'|translate}}</th>
+                        <th width="10%">{{'ACCOUNT.A_WITHDRAWAL_NUMBER'|translate}}</th>
+                        <th width="10%">{{'TRADE.STATUS'|translate}}</th>
+                        <th width="10%">{{'TRADE.DELEGATE.OPTION'|translate}}</th>
+                    </tr>
+                    <tr ng-if="params.withdraw_list.length==0">
+                        <td colspan = "6">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+                    </tr>
+                    <tr ng-repeat="its in params.withdraw_list">
+                        <td>{{its.created_at |  date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td>{{'ASSET.'+ its.asset | translate}}({{its.asset}})</td>
+                        <td>{{its.address}}</td>
+                        <td>{{its.amount/100000000}}</td>
+                        <td>
+                            <span ng-if="its.status=='COMPLETE'">{{'ACCOUNT.A_WITHDRAWAL_SUCCESS'|translate}}</span>
+                            <span ng-if="its.status=='CANCELLED'">{{'ACCOUNT.REFUSE'|translate}}</span>
+                            <span ng-if="its.status=='PENDING' || its.state=='REQUESTED'">{{'STATUS.PENDING'|translate}}</span>
+                            <span class="applying" ng-if="its.status=='REQUESTED'">{{'ACCOUNT.DEPOSIT_REQUEST'|translate}}</span>
+                        </td>
+                        <td>
+                            <a class="hash-sel" ng-href="//block.cc/q/{{its.asset}}" target="_blank" ng-if="its.status=='COMPLETE'">{{'ACCOUNT.HASH_SELECT'|translate}}</a>
+                            <span class="applying" ng-if="its.status!=='COMPLETE'">— —</span>
+                        </td>
+                    </tr>
+                </table>
+
+                <!--交易-->
+                <table class="table" ng-show="isselect =='trade'">
+                    <tr>
+                        <th>{{'TRADE.ORDER_TIME'|translate}}</th>
+                        <!--<th>{{'TRADE.DELEGATE.ASSET'|translate}}</th>-->
+                        <th>{{'TRADE.DELEGATE.TRADING_PAIR'|translate}}</th>
+                        <th>{{'HISTORY.METHOD'|translate}}</th>
+                        <th>{{'TRADE.DELEGATE.O_PRICE'|translate}}</th>
+                        <th>{{'ACCOUNT.TRADE_NUMBER'|translate}}</th>
+                        <th>{{'ACCOUNT.TRADE_MONEY'|translate}}</th>
+                    </tr>
+                    <tr ng-if="params.orders.length==0">
+                        <td colspan = "6">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+                    </tr>
+                    <tr ng-repeat="its in params.orders">
+                        <td>{{its.created_at |  date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <!--<td>{{'ASSET.'+ its.trading_pair | translate}}</td>-->
+                        <td>{{its.trading_pair}}</td>
+                        <td ng-if="its.side=='B'">{{'TRADE.BUY'|translate}}</td>
+                        <td ng-if="its.side=='S'">{{'TRADE.SELL'|translate}}</td>
+                        <td>{{its.limit/100000000}} {{its.trading_pair|getPriceAsset}}</td>
+                        <td>{{its.quantity/100000000}} {{its.trading_pair}}</td>
+                        <td>{{(its.limit/100000000) * (its.quantity/100000000)}}</td>
+                    </tr>
+                </table>
+
+                <!--划仓-->
+                <table class="table"  ng-show="isselect =='store'">
+                    <tr >
+                        <th >{{'TRADE.ORDER_TIME'|translate}}</th>
+                        <th>{{'HISTORY.METHOD'|translate}}</th>
+                        <th >{{'TRADE.QUANTITY'|translate}}</th>
+                        <th >{{'TRADE.DELEGATE.ASSET'|translate}}</th>
+                        <th >{{'TRADE.DELEGATE.DESP'|translate}}</th>
+                    </tr>
+                    <tr ng-if="params.store_list.length==0">
+                        <td colspan = "5">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+                    </tr>
+                    <tr ng-repeat="its in params.store_list">
+                        <td>{{its.createdAt |  date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td>
+                            <span ng-if="its.plusMinus=='加仓'">{{'STOCK_TYPE_DEP'|translate}}</span>
+                            <span ng-if="its.plusMinus=='减仓'">{{'STOCK_TYPE_WITH'|translate}}</span>
+                        </td>
+
+                        <td>{{its.amount}}</td>
+                        <td>{{'ASSET.'+ its.asset | translate}}({{its.asset}})</td>
+                        <td>{{its.description}}</td>
+                        <!--描述-->
+                        <!--描述11-->
+                        <!--描述22-->
+                    </tr>
+                </table>
+
+
+                <!--锁仓-->
+                <!--<table class="table" ng-show="isselect =='lock'">-->
+                    <!--<tr>-->
+                        <!--<th width="15%">{{'TRADE.ORDER_TIME'|translate}}</th>-->
+                        <!--<th width="10%">{{'TRADE.DELEGATE.ASSET'|translate}}</th>-->
+                        <!--<th width="20%">{{'ACCOUNT.LOCKED_NUMBER'|translate}}</th>-->
+                        <!--<th width="10%">{{'ACCOUNT.UNLOCKED_TIME'|translate}}</th>-->
+                        <!--<th width="10%">{{'ACCOUNT.LOCKED_PROFIT'|translate}}</th>-->
+                        <!--<th width="10%">{{'TRADE.STATUS'|translate}}</th>-->
+                    <!--</tr>-->
+                    <!--<tr ng-show="params.locks.length==0">-->
+                        <!--<td colspan = "6">{{'ACCOUNT.NOT_DATA'|translate}}</td>-->
+                    <!--</tr>-->
+                    <!--<tr ng-repeat="its in params.locks">-->
+                        <!--<td>{{its.created_at |  date:'yyyy-MM-dd HH:mm:ss'}}</td>-->
+                        <!--<td>{{'ASSET.'+ its.asset | translate}}({{its.asset}})</td>-->
+                        <!--<td>{{its.amount/100000000}}</td>-->
+                        <!--<td>{{its.locked_until |  date:'yyyy-MM-dd HH:mm:ss'}}</td>-->
+                        <!--<td>{{its.profit/100000000}}</td>-->
+                        <!--<td>-->
+                            <!--<span ng-if="its.status==''">{{'HISTORY.EXPIRED'|translate}}</span>-->
+                            <!--<span class="applying" ng-if="its.status=='LOCKED'">{{'ASSET.HISTORY.ACTIVE'|translate}}</span>-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+                  <div class="page-btn" ng-show="params.totalItems">
+                    <ul uib-pagination boundary-links="true" total-items="params.totalItems" ng-model="params.currentPage"  class="pagination-sm" max-size="5" ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--云矿机兑换-->
+<!-- <script type="text/ng-template" id="cloud-template">
+	<div class="recharge_bod">
+		<p class="rege_addre">{{'CLOUD_EX'|translate}}</p>
+		<select name="" id="" ng-model="cloudData.cloudLevel" style="border-radius: 3px;border: 1px solid #ccc;height: 25px;">
+			 <option value="1">{{'PRIMARY'|translate}}</option>
+			 <option value="2">{{'MIDDLE'|translate}}</option>
+			 <option value="3">{{'ADVANCED'|translate}}</option>
+		</select>
+		<input type="number"ng-model="cloudData.cloudNum" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" style="border-radius: 3px;border: 1px solid #ccc;" placeholder="{{'TRADE.AMOUNT'|translate}}" id="currency-number" name="number"onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')" required/>
+		<button href="javascript://" ng-disabled="!cloudData.cloudNum" class="btn txBtn" ng-click="confirmExchange()" style="display: block;border-radius:3px;background:#11cfe0;color: #fff;text-align: center;margin: 10px 0 0;">{{'BUTTON.CONFIRM'|translate}}</button>
+	</div>
+</script> -->
+
+<script type="text/ng-template" id="cloud-template">
+	<h5>{{'CLOUD_EX'|translate}}</h5>
+    <div class="modal-body text-center">
+        <form class="form-horizontal" name="myForm2" novalidate>
+            <div class="form-group">
+                <label for="currency-address" class="col-sm-4 control-label"><b><span class="down">*</span></b>{{'ADD_1_t3'|translate}}：</label>
+
+                <div class="col-sm-8">
+                   <!-- <input type="text" class="form-control" id="currency-address"
+                           placeholder="{{'ADD_1_t3'|translate}}" name="balance_address"
+                           ng-model="params.address" ng-pattern="/^[a-zA-Z0-9]*$/" maxlength="50" required/> -->
+										<select name="" class="form-control" id="currency-address" ng-model="cloudData.cloudLevel" style="border-radius: 3px;border: 1px solid #ccc;">
+											 <option value="1">{{'PRIMARY'|translate}}</option>
+											 <option value="2">{{'MIDDLE'|translate}}</option>
+											 <option value="3">{{'ADVANCED'|translate}}</option>
+										</select>
+                </div>
+						</div>
+								
+						<div class="form-group">
+								<label for="currency-address" class="col-sm-4 control-label"><b><span class="down">*</span></b>{{'ADD_1_t2'|translate}}：</label>
+									<div class="col-sm-8">
+											<input type="number" class="form-control" ng-model="cloudData.cloudNum" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" style="border-radius: 3px;border: 1px solid #ccc;" placeholder="{{'TRADE.AMOUNT'|translate}}" id="currency-address" name="number"onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')" required/>
+									</div>
+            </div>
+						
+						<div class="form-group" ng-if="isFirst">
+								<label for="currency-address" class="col-sm-4 control-label"><b><span class="down">*</span></b>{{'JOIN_FROM_ID'|translate}}：</label>
+									<div class="col-sm-8">
+											<input type="text" class="form-control" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+											onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}" maxlength="5"  ng-model="cloudData.recommended" style="border-radius: 3px;border: 1px solid #ccc;" placeholder="{{'JOIN_FROM_ID'|translate}}" id="currency-number" name="number"onkeyup="this.value=this.value.replace(/[^\-?\d.]/g,'')" required/>
+									</div>
+            </div>
+						
+						
+            <div class="form-group last-group">
+                <p class="down text-center" ng-if="errmessage">{{'ACCOUNT.ADDRESS_ERROR'|translate}}</p>
+                <div class="col-sm-offset-4 col-sm-8">
+										<button href="javascript://" ng-disabled="!cloudData.cloudNum||(isFirst&&!cloudData.recommended)" class="btn btn-danger add"  click-and-disable="confirmExchange()" style="display: block;border-radius:3px;background:#11cfe0;color: #fff;text-align: center;margin: 10px 0 0;">{{'BUTTON.CONFIRM'|translate}}</button>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+

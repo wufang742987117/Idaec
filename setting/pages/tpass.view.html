@@ -1,0 +1,57 @@
+<div class="common-main" auto-height>
+  <div class="common-main-title">
+    <div class="container">
+      <span class="zh-title"><span ng-if="!setting.tpass">{{"SIDEBAR.SETTINGS"|translate}}</span><span ng-if="setting.tpass">{{"SETTING.MENU.RESET"|translate}}</span>{{"SETTING.MENU.TPASS"|translate}}</span>
+      <span class="en-title hidden-xs"><span class="line">|</span><span ng-if="setting.tpass">RESET</span><span ng-if="!setting.tpass">SET</span> TRADING PASSWORD</span>
+    </div>
+  </div>
+  <div class="last-set" ng-if="setting.tpass_created_time">{{"SETTING.TPASS.TIPS"|translate}} {{setting.tpass_created_time|date: 'yyyy-MM-dd HH:mm:ss'}}</div>
+  <div class="container setting-action">
+    <form name="form" novaildate class="form-horizontal isform">
+      <div class="form-group">
+        <label for="buy" class="col-sm-5 control-label"><span ng-if="setting.tpass">{{"SETTING.TPASS.NEW_TPASS"|translate}}</span>{{"SETTING.MENU.TPASS"|translate}}:</label>
+        <div class="col-sm-7 ">
+          <input type="password" ng-minlength="8" name="tpass" class="form-control input-sm" ng-model="formData.tpass">
+          <span class="error" ng-if="form.tpass.$dirty && form.tpass.$invalid">{{"SETTING.TPASS.ERR1"|translate}}</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="amount" class="col-sm-5 control-label">{{"SETTING.TPASS.RE"|translate}}:</label>
+        <div class="col-sm-7">
+          <input type="password" ng-minlength="8" name="tpass_re" class="form-control input-sm" ng-model="formData.tpass_re">
+          <span class="error" ng-if="form.tpass_re.$dirty && !tpassRepeat">{{"SETTING.TPASS.ERR2"|translate}}</span>
+        </div>
+      </div>
+      <!--<div class="form-group" ng-if="setting.phone">-->
+        <!--<label for="total" class="col-sm-5 control-label">{{"REGISTER.MOBILE_NUMBER"|translate}}:</label>-->
+        <!--<div class="col-sm-7 ">-->
+          <!--<input type="text" class="form-control input-sm" readonly="readonly" ng-model="setting.phone">-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form-group" ng-if="setting.email ">
+        <label for="total" class="col-sm-5 control-label">{{"SETTING.TPASS.EMAIL"|translate}}:</label>
+        <div class="col-sm-7 ">
+          <input type="text" class="form-control input-sm" readonly="readonly" ng-model="setting.email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="tpass" class="col-sm-5 control-label">{{"REGISTER.CAPTCHA"|translate}}:</label>
+        <div class="col-sm-7 ">
+          <div class="code-group">
+            <input type="text" ng-minlength="6" maxlength="6" class="form-control input-sm" ng-model="formData.secret">
+            <button class="btn btn-default btn-sm" ng-disabled="!formData.tpass || form.tpass.$invalid || !tpassRepeat || counter>0 || code_sending" ng-click="askBind()">
+              <span ng-if="counter>0">{{"SETTING.TPASS.REMAINING"|translate}} {{counter}}'S</span>
+              <span ng-if="!counter">{{"ACCOUNT.GETCODE"|translate}}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="padding-top: 15px;">
+        <div class="col-sm-offset-5 col-sm-7 ">
+          <button type="submit" class="btn btn-submit btn-block" ng-click="answerBind()"
+            ng-disabled="!formData.tpass_re || !formData.tpass || !formData.secret || form.$invalid || submit_sending">{{"SETTING.UPDATE2"|translate}}</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

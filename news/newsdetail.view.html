@@ -1,0 +1,19 @@
+<div class="common-main">
+    <div class="common-main-title">
+        <div class="container">
+            <span class="zh-title">{{'NEWS.NEWSANDNOTICE_DETAILS'|translate}}</span>
+            <span class="en-title hidden-xs"><span class="line">|</span>NEWS DETAILS</span>
+        </div>
+    </div>
+    <div class="container news-main news-detail">
+        <h4 class="text-center">
+            <span ng-if="params.topic=='NEWS'">【{{'TOPBAR.NEWS'|translate}}】</span>
+            <span ng-if="params.topic=='NOTICES'">【{{'HOME.NOTICE'|translate}}】</span>
+
+            {{params.subject}}</h4>
+        <p class="text-center title-p">{{params.publication_date| date:'yyyy-MM-dd HH:mm:ss'}} <span>|</span> {{'NEWS.PUBLIC'|translate}}:
+            {{'MOBILE.TITLE'|translate}}</p>
+        <div ng-bind-html="params.content | to_trusted" class="ql-editor content-text"></div>
+    </div>
+</div>
+

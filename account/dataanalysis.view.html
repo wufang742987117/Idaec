@@ -1,0 +1,152 @@
+<div class="common-main">
+    <div class="common-main-title">
+        <div class="container">
+            <span class="zh-title">{{'ACCOUNT.DATA_ANALYSIS'|translate}}</span>
+            <span class="en-title hidden-xs"><span class="line">|</span>Data Analysis</span>
+        </div>
+    </div>
+    <div class="container account-main">
+        <div class="detail-main data-main">
+            <div class="fund">
+				<ul class="fund-nav-title bbs-title">
+                    <!--<li ng-class="{'active':isselect =='deposit'}" ng-click="getFundList('deposit')">{{'SIDEBAR.DEPOSIT'|translate}}</li>-->
+                    <!--<li ng-class="{'active':isselect =='withdraw'}" ng-click="getFundList('withdraw')">{{'SIDEBAR.WITHDRAW'|translate}}</li>-->
+                    <li ng-class="{'active':isselect =='dataAnaly'}" ng-click="getFundList('dataAnaly',1)">{{'ACCOUNT.DATA_ANALYSIS'|translate}}</li>
+                    <li ng-class="{'active':isselect =='ADD_1'}" ng-click="getFundList('ADD_1',1)">{{'ACCOUNT_ADD_1'|translate}}</li>
+                    <li ng-class="{'active':isselect =='ADD_2'}" ng-click="getFundList('ADD_2',1)">{{'ACCOUNT_ADD_2'|translate}}</li>
+                    <li ng-class="{'active':isselect =='ADD_3'}" ng-click="getFundList('ADD_3',1)">{{'ACCOUNT_ADD_3'|translate}}</li>
+					<li ng-class="{'active':isselect =='ADD_4'}" ng-click="getFundList('ADD_4',1)">{{'ACCOUNT_ADD_4'|translate}}</li>
+                    <!--<li ng-class="{'active':isselect =='lock'}" ng-click="getFundList('lock')">{{'ACCOUNT.LOCK'|translate}}</li>-->
+                </ul>
+                <div class="clearfix"></div>
+                <table class="table" ng-if="isselect=='dataAnaly'">
+                    <tr>
+                        <th>{{'DATA.TRADE_ID'|translate}}</th>
+                        <th>{{'DATA.DIRECT_SUBORDINATE_VIP_NUMBER'|translate}}</th>
+                        <th>{{'DATA.DIRECT_SUBORDINATE_GCC_NUMBER'|translate}}</th>
+                        <th>{{'DATA.RECOMMEND_TOTAL'|translate}}</th>
+                        <th>{{'DATA.TEAM_ASSETS_TOTAL'|translate}}</th>
+                    </tr>
+                    <tr ng-show="params.dataResResultArr.length==0">
+                        <td colspan = "5">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+                    </tr>
+                    <tr ng-repeat="items in params.dataResResultArr">
+                        <td>{{items.id}}</td>
+                        <td>{{items.direct_total}}</td>
+                        <td>{{items.direct_GCC_num/1e8 |number:8}}</td>
+                        <td>{{items.recommend_total}}</td>
+                        <td>{{items.team_GCC_num/1e8 |number:8}}</td>
+                    </tr>
+                </table>
+				<table class="table" ng-if="isselect=='ADD_1'">
+					<tr>
+						<th>{{'ADD_1_t1'|translate}}</th>
+						<th>{{'ADD_1_t2'|translate}}</th>
+						<th>{{'ADD_1_t3'|translate}}</th>
+						<th>{{'ADD_1_t4'|translate}}</th>
+					</tr>
+					<tr ng-if="dayRewardList.length==0">
+						<td colspan = "4">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+					</tr>
+					<tr ng-repeat="items in dayRewardList">
+						<td>{{items.bbsCurrencyType}}</td>
+						<td>{{items.cloudNum/1e8 |number:8}}</td>
+						<td>
+							<!-- {{items.cloudLevel}} -->
+							<span ng-if="items.cloudLevel=='1'">{{'PRIMARY'|translate}}</span>
+							<span ng-if="items.cloudLevel=='2'">{{'MIDDLE'|translate}}</span>
+							<span ng-if="items.cloudLevel=='3'">{{'ADVANCED'|translate}}</span>
+						</td>
+						<td>{{items.bbsDailyEarnings/1e8 |number:8}}</td>
+					</tr>
+				</table>
+				<table class="table" ng-if="isselect=='ADD_2'">
+					<tr>
+						<th>{{'ADD_1_t1'|translate}}</th>
+						<th>{{'ADD_2_t2'|translate}}</th>
+						<th>{{'ADD_2_t3'|translate}}</th>
+						<th>{{'ADD_2_t4'|translate}}</th>
+						<th>{{'ADD_2_t1'|translate}}</th>
+					</tr>
+					<tr ng-if="shareAwardList.length==0">
+						<td colspan = "5">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+					</tr>
+					<tr ng-repeat="items in shareAwardList">
+						<td>{{items.shareCurrencyType}}</td>
+						<td>
+							<span ng-if="items.shareLevel=='1'">{{'PRIMARY'|translate}}</span>
+							<span ng-if="items.shareLevel=='2'">{{'MIDDLE'|translate}}</span>
+							<span ng-if="items.shareLevel=='3'">{{'ADVANCED'|translate}}</span>
+						</td>
+						<td>
+							<span ng-if="items.shareType=='1'">{{'SHARE_TYPE_1'|translate}}</span>
+							<span ng-if="items.shareType=='2'">{{'SHARE_TYPE_2'|translate}}</span>
+						</td>
+						<td>{{items.shareNum/1e8 |number:8}}</td>
+						<td>{{items.shareEarnings/1e8 |number:8}}</td>
+					</tr>
+				</table>
+				<table class="table" ng-if="isselect=='ADD_3'">
+					<tr>
+						<th>{{'ADD_1_t1'|translate}}</th>
+						<th>{{'ADD_3_t1'|translate}}</th>
+						<th>{{'ADD_3_t2'|translate}}</th>
+						<th>{{'ADD_3_t3'|translate}}</th>
+					</tr>
+					<tr ng-if="!preRewardResult">
+						<td colspan = "4">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+					</tr>
+					<tr ng-if="preRewardResult">
+						<td>{{preRewardResult.bbsCurrencyType}}</td>
+						<td>
+							<span ng-if="preRewardResult.bbsLevel=='0'">{{'COMMON_LEVEL_1'|translate}}</span>
+							<span ng-if="preRewardResult.bbsLevel=='1'">{{'COMMON_LEVEL_2'|translate}}</span>
+							<span ng-if="preRewardResult.bbsLevel=='2'">{{'COMMON_LEVEL_3'|translate}}</span>
+							<span ng-if="preRewardResult.bbsLevel=='3'">{{'COMMON_LEVEL_4'|translate}}</span>
+							<span ng-if="preRewardResult.bbsLevel=='4'">{{'COMMON_LEVEL_5'|translate}}</span>
+						</td>
+						<td>{{preRewardResult.todayNewAsset/1e8 |number:8}}</td>
+						<td>{{preRewardResult.todayAwardAsset/1e8 |number:8}}</td>
+					</tr>
+				</table>
+				
+				<table class="table" ng-if="isselect=='ADD_4'">
+					<tr>
+						<th>{{'SETTING.MENU.USER_ID'|translate}}</th>
+						<th>{{'ADD_1_t1'|translate}}</th>
+						<th>{{'TRADE_VOLUE'|translate}}</th>
+						<th>{{'ADD_1_t3'|translate}}</th>
+						<th>{{'ADD_1_t2'|translate}}</th>
+						<th>{{'EXCHANGE_TIME'|translate}}</th>
+					</tr>
+					<tr ng-if="coinRecordResult.length == 0">
+						<td colspan = "6">{{'ACCOUNT.NOT_DATA'|translate}}</td>
+					</tr>
+					<tr ng-repeat="items in coinRecordResult">
+						<td>{{items.uid}}</td>
+						<td>{{items.cloudCurrencyType}}</td>
+						<td>{{items.convertNum/1e8 |number:8}}</td>
+						<td>
+							<span ng-if="items.cloudLevel=='1'">{{'PRIMARY'|translate}}</span>
+							<span ng-if="items.cloudLevel=='2'">{{'MIDDLE'|translate}}</span>
+							<span ng-if="items.cloudLevel=='3'">{{'ADVANCED'|translate}}</span>
+						</td>
+						<td>{{items.cloudNum/1e8 |number:8}}</td>
+						<td>{{items.createAt | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+					</tr>
+				</table>
+            </div>
+        </div>
+        <div class="page-btn" ng-show="params.totalItems">
+            <ul uib-pagination boundary-links="true" total-items="params.totalItems" ng-model="params.currentPage" class="pagination-sm" max-size="5" ng-change="pageChanged()" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+        </div>
+		<div class="page-btn" ng-show="totalItems">
+			<ul uib-pagination boundary-links="true" total-items="totalItems" ng-model="pageNo" class="pagination-sm" max-size="5" ng-change="pageChanged(type)" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+		</div>
+        <!--boundary-links   是否显示第一页和最后一页的按钮-->
+        <!--total-items   总共有多少条数据-->
+        <!--ng-model 当前页数-->
+        <!--max-size  可选择的页数范围-->
+        <!--ng-change 页数变化时调用的函数-->
+    </div>
+</div>

@@ -1,0 +1,123 @@
+.container{
+  .email-input-button {
+    input {
+      float: left;
+      width: 57%;
+      height: 38px;
+    }
+    button{
+      width: 40%;
+      float: right;
+      width: 100px;
+      margin-left: 10px;
+      padding: 0;
+      height: 38px!important;
+      border-radius: 5px;
+      background-color: #11cfe0;
+      border: none;
+      transition: background-color .3s;
+      color: #FFF;
+
+    }
+  }
+  .text-center {
+    text-align: center;
+  }
+  pre {
+    background-color:#fff;
+    border: 0;
+    line-height: 25px;
+    overflow: hidden;
+    font-size:14px;
+  }
+  .verify-content {
+    width: 50%;
+    margin: 40px auto;
+    .control-label {
+      padding-top: 7px;
+      margin-bottom: 0;
+      text-align: right;
+      color: #151F3F;
+    }
+
+    .verify-btn {
+      text-align: center;
+      margin-left: 33.3%;
+      button {
+        font-size: 14px;
+        border-radius: 4px;
+        border: 0;
+        height: 35px;
+        width: 100%;
+        opacity: .6;
+      }
+      .btn-submit {
+        background: #11cfe0;
+        color: #fff;
+      }
+      .btn-cancel {
+        background: #fff;
+        color:#11cfe0;
+        border:1px solid #11cfe0;
+      }
+
+    }
+    .group-mid {
+      margin: 40px 0 10px 0px;
+    }
+    .control-code {
+      height: 35px;
+    }
+    p {
+      text-align: center;
+    }
+    .nofloat {
+      float: none;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .btn-backup {
+      margin: 0 auto;
+    }
+    .backup-title {
+      margin: 0 0 20px;
+    }
+    .backup-input,.backup-btn {
+      height: 40px!important;
+      //line-height: 40px;
+    }
+    .radio {
+      font-size: 16px;
+      input {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        margin: 0px 0 0;
+        margin-left: -30px;
+
+      }
+
+    }
+
+
+  }
+  .radio-content {
+    label {
+      display: block;
+
+    }
+    .radio {
+      margin-left: 160px;
+      margin-top: 15px;
+    }
+    input {
+      margin-left:0!important;
+      position: absolute;
+      left: 0;
+    }
+    span {
+      position: absolute;
+      left: 30px;
+    }
+  }
+}

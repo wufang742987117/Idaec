@@ -1,0 +1,1077 @@
+@charset "utf-8";
+input, select, textarea {
+  outline: none;
+}
+
+//////////会员C2C交易首页
+.common_bod {
+  width: 100%;
+  height: auto;
+  //overflow: hidden;
+  float: left;
+  margin: 50px 0 100px 0;
+  .common_bod_center {
+    width: 1200px;
+    height: auto;
+    //overflow: hidden;
+    margin: 0 auto;
+
+    ////////////卖出商户C2C交易
+    .GCC_details {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      float: left;
+      border-radius: 5px !important;
+      background: #1a262d;
+      margin-bottom: 10px;
+      padding: 15px;
+      ul {
+        width: 100%;
+        height: 84px;
+        li {
+          width: 33.333%;
+          height: 84px;
+          box-sizing: border-box;
+          float: left;
+          &:nth-child(2) {
+            border-left: 1px dashed #36464f;
+            border-right: 1px dashed #36464f;
+          }
+          label, span {
+            width: 100%;
+            height: 42px;
+            line-height: 42px;
+            display: inline-block;
+            text-align: center;
+            margin: 0;
+            float: left;
+            color: #fff;
+          }
+          label {
+            font-size: 16px;
+          }
+          span {
+            font-size: 26px;
+          }
+          &:nth-child(2) {
+            span {
+              color: #da4f68;
+            }
+          }
+          &:nth-child(3) {
+            span {
+              color: #25c871;
+            }
+          }
+        }
+      }
+      .trade_record {
+        .record_tit {
+          input {
+            width: 220px;
+            height: 36px;
+            float: left;
+            padding: 0 10px;
+            box-sizing: border-box;
+            background: #303e47;
+            border: none;
+            color: #fff;
+            border-radius: 4px !important;
+            margin: 12px 10px 12px 100px;
+          }
+          input[type='submit'] {
+            width: 90px;
+            background: #303e47 url("/assets/images/search_icon.png") center no-repeat;
+            margin: 12px 0 12px 0;
+            &:hover {
+              background-color: #12cfe0;
+            }
+          }
+        }
+        .record_list ul li {
+          width: 14.28%;
+        }
+      }
+    }
+    .trade_main {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      float: left;
+      border-radius: 5px !important;
+      background: #1a262d;
+      margin-bottom: 10px;
+      .trade_card {
+        width: 100%;
+        height: 60px;
+        line-height: 20px;
+        border-bottom: 1px solid #36464f;
+        text-align: right;
+        > div {
+          width: auto;
+          height: 60px;
+          float: left;
+          h1 {
+            padding: 0 30px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 18px;
+            float: left;
+            color: #fff;
+            cursor: pointer;
+            margin: 0;
+            box-sizing: border-box;
+            &:hover {
+              border-bottom: 4px solid #12cfe0;
+            }
+          }
+          .alert_hover {
+            border-bottom: 4px solid #12cfe0;
+          }
+        }
+        a {
+          width: auto;
+          height: 20px;
+          display: inline-block;
+          margin: 20px 50px 20px 0;
+          color: #12cfe0;
+          padding-left: 25px;
+          background: url("/assets/images/add_icon.png") 0 0 no-repeat;
+        }
+        a:first-child {
+          background: url("/assets/images/card_icon.png") 0 2px no-repeat;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+      .common_bod_input {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        ul {
+          width: 50%;
+          height: auto;
+          float: left;
+          margin: 50px 0 70px 0;
+          li {
+            width: 100%;
+            min-height: 50px;
+            line-height: 50px;
+            height: auto;
+            overflow: hidden;
+            padding-right: 120px;
+            box-sizing: border-box;
+            color: #949999;
+            text-align: right;
+            font-weight: 500;
+            padding-bottom: 10px;
+            > div {
+              width: 100%;
+              height: 20px;
+              line-height: 20px;
+              display: inline-block;
+              float: left;
+            }
+            label {
+              color: #fff;
+              font-weight: 100;
+              margin: 0;
+            }
+            input[type='number'] {
+              width: 250px;
+              height: 36px;
+              margin-top: 7px;
+              border-radius: 4px !important;
+              padding: 0 10px;
+              box-sizing: border-box;
+              border: none;
+              background: #303e47;
+              float: right;
+              color: #d44b5e;
+            }
+            input::-webkit-input-placeholder {
+              color: #d44b5e;
+            }
+            input::-moz-placeholder {
+              color: #d44b5e;
+            }
+            input:-moz-placeholder {
+              color: #d44b5e;
+            }
+            input:-ms-input-placeholder {
+              color: #d44b5e;
+            }
+            input.sub {
+              width: 250px;
+              height: 36px;
+              line-height: 36px;
+              color: #fff;
+              margin-top: 7px;
+              border-radius: 4px !important;
+              background: #a7838d;
+              border: none;
+
+            }
+            input[type='submit']:hover {
+              //background: #d44b5e;
+            }
+            span {
+              float: right;
+            }
+          }
+          li:nth-child(3n+1 ) {
+            text-align: left;
+            text-indent: 130px;
+          }
+        }
+        ul:last-child {
+          border-left: 1px dashed #36464f;
+          box-sizing: border-box;
+          .num {
+            color: #25df9a;
+            width: 250px;
+            height: 36px;
+            margin-top: 7px;
+            border-radius: 4px !important;
+            padding: 0 10px;
+            box-sizing: border-box;
+            border: none;
+            background: #303e47;
+            float: right;
+          }
+          input::-webkit-input-placeholder {
+            color: #25df9a;
+          }
+          input::-moz-placeholder {
+            color: #25df9a;
+          }
+          input:-moz-placeholder {
+            color: #25df9a;
+          }
+          input:-ms-input-placeholder {
+            color: #25df9a;
+          }
+          li:last-child {
+            input[type='submit'] {
+              background: #73a294;
+            }
+            input[type='submit']:hover {
+              //background: #25df9a;
+            }
+          }
+        }
+      }
+    }
+
+    .trade_list {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      float: left;
+      border-radius: 5px !important;
+      background: #1a262d;
+      margin-bottom: 10px;
+      padding: 20px 10px;
+      box-sizing: border-box;
+      .trade_list_main {
+        width: 50%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        padding-right: 20px;
+        box-sizing: border-box;
+        ul {
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+          li {
+            width: 25%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            float: left;
+            color: #949999;
+          }
+        }
+        .list_bod {
+          width: 100%;
+          height: 80px;
+          overflow: hidden;
+            li {
+              color: #fff;
+            }
+            li:first-child {
+              //text-indent: 20px;
+              background: url("/assets/images/head_icon.png") 20px 13px no-repeat;
+            }
+            :nth-child(3) {
+              color: #d44b5e;
+            }
+        }
+      }
+      .trade_list_main:nth-child(2) {
+        padding-left: 20px;
+        border-left: 1px dashed #36464f;
+        .list_bod li:nth-child(3) {
+          color: #25df9a;
+        }
+      }
+      > p {
+        width: 96%;
+        padding: 20px 0;
+        margin: 30px 2% 0 2%;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        color: #949999;
+        line-height: 25px;
+        border-top: 1px dashed #36464f;
+      }
+    }
+
+    .trade_record {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      float: left;
+      border-radius: 5px !important;
+      background: #1a262d;
+      box-sizing: border-box;
+      .record_tit {
+        width: 100%;
+        height: 60px;
+        overflow: hidden;
+        border-bottom: 1px solid #36464f;
+        p {
+          width: auto;
+          height: 60px;
+          line-height: 60px;
+          padding: 0 20px;
+          border-bottom: 4px solid #12cfe0;
+          color: #fff;
+          font-size: 18px;
+          float: left;
+          box-sizing: border-box;
+        }
+        input {
+          width: 220px;
+          height: 36px;
+          float: left;
+          padding: 0 10px;
+          box-sizing: border-box;
+          background: #303e47;
+          border: none;
+          color: #fff;
+          border-radius: 4px !important;
+          margin: 12px 10px 12px 100px;
+        }
+        input[type='button'] {
+          width: 40px;
+          background: #303e47 url("/assets/images/search_icon.png") center no-repeat;
+          margin: 12px 0 12px 0;
+        }
+        a {
+          width: auto;
+          height: 60px;
+          line-height: 60px;
+          float: right;
+          display: inline-block;
+          margin-right: 20px;
+          color: #949999;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .record_list {
+        width: 96%;
+        height: auto;
+        overflow: hidden;
+        margin: 10px 2% 30px 2%;
+        ul {
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+          padding: 10px 0;
+          &.pagination {
+            width: auto !important;
+            height: auto;
+            overflow: auto;
+            padding: 0;
+            li{
+              a{
+                background: #303e47;
+                border-color: #303e47;
+              }
+            }
+          }
+          &:first-child {
+            li {
+              color: #949999;
+            }
+          }
+          &:first-child:hover {
+            background: none;
+          }
+          &:hover {
+            background: #111c22;
+          }
+          li {
+            width: 14%!important;
+            height: auto;
+            overflow: hidden;
+            float: left;
+            color: #fff;
+            text-align: center;
+            &.longer{
+              width: 16%;
+              span:hover{
+                border-bottom: 1px solid #11cfe0;
+              }
+            }
+            &.pagination-page{
+              &.active{
+                background: #11cfe0;
+                a{
+                  background: #11cfe0;
+                }
+              }
+              //width: auto;
+              a{
+                color: #fff;
+                background: #151F3F;
+                border-color: #151F3F;
+              }
+            }
+            &.pagination-next{
+              a{
+                 background: #303e47;
+                border-color: #303e47;
+              }
+            }
+            &.pagination-last{
+              a{
+                background: #303e47;
+                border-color: #303e47;
+              }
+              width: auto;
+            }
+            img {
+              margin-left: 5px;
+              cursor: pointer;
+            }
+            a {
+              color: #12cfe0;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        .no_date {
+          width: 100%;
+          height: 270px;
+          text-align: center;
+          label {
+            width: auto;
+            height: 20px;
+            line-height: 20px;
+            margin: 125px auto;
+            display: inline-block;
+            background: url("/assets/images/no_date_icon.png") 0 3px no-repeat;
+            text-indent: 20px;
+            color: #949999;
+          }
+        }
+      }
+    }
+  }
+}
+
+//弹出框（公用）
+.Popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+  > a {
+    width: 20px;
+    height: 20px;
+    background: url("/assets/images/close_icon.png");
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  > div {
+    background: #f2f2f2;
+    position: absolute;
+    border-radius: 10px !important;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    > h1 {
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      float: left;
+      background: #2c3941;
+      margin: 0;
+    }
+  }
+}
+
+//温馨提示（弹出框）
+.Reminder {
+  //display: none;
+  > a {
+    margin: -250px 0 0 370px;
+  }
+  .Reminder_bod {
+    width: 700px;
+    height: 540px;
+    margin: -270px 0 0 -350px;
+    > div {
+      width: 94%;
+      height: 450px;
+      overflow: hidden;
+      overflow-y: auto;
+      margin: 10px 3% 0 3%;
+      float: left;
+      p {
+        width: 100%;
+        height: auto;
+        line-height: 38px;
+        font-size: 16px;
+        color: #666;
+        margin: 15px 0;
+        float: left;
+      }
+    }
+  }
+
+}
+
+//新增银行卡（弹出框）
+.New_bank_card {
+  //display: none;
+  > a {
+    margin: -310px 0 0 300px;
+  }
+  .card_bod {
+    width: 560px;
+    height: 660px;
+    margin: -330px 0 0 -280px;
+    ul {
+      width: 70%;
+      margin: 20px 15%;
+      height: 600px;
+      float: left;
+      overflow: hidden;
+      li {
+        width: 100%;
+        height: 70px;
+        overflow: hidden;
+        float: left;
+        span {
+          width: 100%;
+          //height:100%;
+          line-height: 30px;
+          color: #061623;
+          display: inline-block;
+        }
+        input {
+          width: 100%;
+          height: 40px;
+          padding: 0 10px;
+          box-sizing: border-box;
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 4px !important;
+        }
+        select {
+          width: 45%;
+          height: 40px;
+          padding: 0 10px;
+          box-sizing: border-box;
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 4px !important;
+        }
+        &:nth-child(3) {
+          select {
+            width: 100%;
+          }
+        }
+        &:last-child {
+          input {
+            margin-top: 20px;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            background: #2c3941;
+          }
+        }
+        &.err {
+          height: 90px;
+          span {
+            background: url("/assets/images/error_icon.png") 0 8px no-repeat;
+            color: red;
+            font-weight: 500;
+            padding-left: 20px;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+//确认收款
+.confirm_k {
+  display: none;
+  > a {
+    margin: -105px 0 0 320px;
+  }
+  .confirm_bod {
+    width: 600px;
+    height: 250px;
+    margin: -125px 0 0 -300px;
+    > div {
+      width: 250px;
+      height: 40px;
+      float: left;
+      margin: 80px 0 0 175px;
+      input {
+        width: 100px;
+        height: 40px;
+        border: 1px solid #12cfe0;
+        color: #12cfe0;
+        font-size: 16px;
+        border-radius: 4px !important;
+        background: #fff;
+        float: right;
+        box-sizing: border-box;
+        &:first-child {
+          float: left;
+          background: #12cfe0;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+//申诉
+.Appeal {
+  //display: none;
+  > a {
+    margin: -180px 0 0 320px;
+  }
+  .appeal_bod {
+    width: 600px;
+    height: 400px;
+    margin: -200px 0 0 -300px;
+    > div {
+      width: 530px;
+      height: 250px;
+      float: left;
+      margin-top: 50px;
+      label {
+        width: 100px;
+        height: 250px;
+        line-height: 50px;
+        display: inline-block;
+        text-align: right;
+        color: #555;
+        margin-right: 20px;
+        float: left;
+      }
+      textarea {
+        width: 400px;
+        height: 100px;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px !important;
+        float: right;
+        margin-bottom: 70px;
+      }
+      input {
+        width: 100px;
+        height: 40px;
+        border: 1px solid #12cfe0;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 4px !important;
+        background: #12cfe0;
+        float: left;
+        margin-left: 10px;
+        box-sizing: border-box;
+        &:last-child {
+          float: left;
+          background: #fff;
+          color: #12cfe0;
+          margin-left: 100px;
+        }
+      }
+
+    }
+  }
+}
+
+//每日限额提示（弹出框）
+.Quota {
+  //display: none;
+  > a {
+    margin: -205px 0 0 300px;
+  }
+  .Quota_bod {
+    width: 560px;
+    height: 450px;
+    margin: -225px 0 0 -280px;
+    > div {
+      width: 90%;
+      height: 360px;
+      background: url("/assets/images/quota_icon.png") center 60px no-repeat;
+      overflow: hidden;
+      overflow-y: auto;
+      margin: 10px 5% 0 5%;
+      float: left;
+      p {
+        width: 100%;
+        height: auto;
+        line-height: 40px;
+        font-size: 18px;
+        color: #666;
+        margin-top: 170px;
+        float: left;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//收款账户（弹出框）
+.Receivables {
+  //display: none;
+  > a {
+    margin: -280px 0 0 300px;
+  }
+  .card_bod {
+    height: 600px;
+    margin: -300px 0 0 -280px;
+    ul {
+      li {
+        input {
+          background: #eee;
+        }
+      }
+    }
+  }
+}
+
+//确认收款
+.confirm_k {
+  display: none;
+  > a {
+    margin: -105px 0 0 320px;
+  }
+  .confirm_bod {
+    width: 600px;
+    height: 250px;
+    margin: -125px 0 0 -300px;
+    > div {
+      width: 250px;
+      height: 40px;
+      float: left;
+      margin: 80px 0 0 175px;
+      input {
+        width: 100px;
+        height: 40px;
+        border: 1px solid #12cfe0;
+        color: #12cfe0;
+        font-size: 16px;
+        border-radius: 4px !important;
+        background: #fff;
+        float: right;
+        box-sizing: border-box;
+        &:first-child {
+          float: left;
+          background: #12cfe0;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+//申诉
+.Appeal {
+  //display: none;
+  > a {
+    margin: -180px 0 0 320px;
+  }
+  .appeal_bod {
+    width: 600px;
+    height: 400px;
+    margin: -200px 0 0 -300px;
+    > div {
+      width: 530px;
+      height: 250px;
+      float: left;
+      margin-top: 50px;
+      label {
+        width: 100px;
+        height: 250px;
+        line-height: 50px;
+        display: inline-block;
+        text-align: right;
+        color: #555;
+        margin-right: 20px;
+        float: left;
+      }
+      textarea {
+        width: 400px;
+        height: 100px;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px !important;
+        float: right;
+        margin-bottom: 70px;
+      }
+      input {
+        width: 100px;
+        height: 40px;
+        border: 1px solid #12cfe0;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 4px !important;
+        background: #12cfe0;
+        float: left;
+        margin-left: 10px;
+        box-sizing: border-box;
+        &:last-child {
+          float: left;
+          background: #fff;
+          color: #12cfe0;
+          margin-left: 100px;
+        }
+      }
+
+    }
+  }
+}
+
+////////////会员历史交易记录页面
+.common_bod_center {
+  .query_input {
+    width: 100%;
+    height: auto;
+    //overflow: hidden;
+    background: #1a262d;
+    padding: 15px 10px;
+    border-radius: 5px !important;
+    margin-bottom: 10px;
+    ul {
+      width: 100%;
+      height: 36px;
+      //float: left;
+      li {
+        width: auto;
+        height: 36px;
+        //overflow: hidden;
+        float: left;
+        margin-right: 20px;
+        label {
+          width: auto;
+          height: 36px;
+          line-height: 36px;
+          color: #fff;
+          float: left;
+          padding: 0 10px;
+          display: inline-block;
+        }
+        select, input {
+          width: 160px;
+          height: 36px;
+          float: left;
+          padding: 0 10px;
+          box-sizing: border-box;
+          background: #303e47;
+          border: none;
+          color: #fff;
+          border-radius: 4px !important;
+        }
+        input.form-control {
+          width: 120px;
+          height: 36px;
+          float: left;
+          padding: 0 10px;
+          box-sizing: border-box;
+          background: #303e47;
+          border: none;
+          color: #fff;
+          border-radius: 0 !important;
+        }
+        select {
+          width: 100px;
+        }
+        &:last-child {
+          float: right;
+          margin-right: 5px;
+          input[type='submit'] {
+            width: 90px;
+            &:hover {
+              background: #12cfe0;
+              color: #000;
+            }
+          }
+          input[type='button'] {
+            width: 90px;
+            &:hover {
+              background: #12cfe0;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////买入商户C2C交易页面
+.alert_list {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  //display: none;
+  ul {
+    width: 96%;
+    height: 40px;
+    float: left;
+    margin: 0 2%;
+    li {
+      width: 20%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #949999;
+      overflow: hidden;
+      float: left;
+    }
+  }
+  .list_bod {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    .no_date {
+      width: 100%;
+      height: 270px;
+      text-align: center;
+      label {
+        width: auto;
+        height: 20px;
+        line-height: 20px;
+        margin: 125px auto;
+        display: inline-block;
+        background: url("/assets/images/no_date_icon.png") 0 3px no-repeat;
+        text-indent: 20px;
+        color: #949999;
+      }
+    }
+    ul:hover {
+      background: #111c22;
+    }
+    li {
+      color: #fff;
+
+    }
+    &::-webkit-scrollbar {
+      width: 10px;
+      background-color: #111c22;
+      border-radius: 10px !important;
+      overflow: hidden;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #222f37;
+      border-radius: 10px !important;
+      overflow: hidden;
+    }
+  }
+}
+
+
+
+//._720kb-datepicker-calendar-day._720kb-datepicker-today {
+//  background:red;
+//  color:white;
+//}
+._720kb-datepicker-calendar-day:hover, ._720kb-datepicker-calendar-day._720kb-datepicker-active {
+  color: #23527c;
+}
+
+._720kb-datepicker-calendar {
+  background: #36464f !important;
+  color: #fff !important;
+}
+
+._720kb-datepicker-calendar-day:hover,
+._720kb-datepicker-calendar-day._720kb-datepicker-active {
+  background: #fff !important;
+}
+
+._720kb-datepicker-calendar-header:nth-child(odd) {
+  background: #11cfe0 !important;
+}
+
+._720kb-datepicker-calendar-day._720kb-datepicker-disabled, ._720kb-datepicker-calendar-day._720kb-datepicker-disabled:hover, ._720kb-datepicker-calendar-years-pagination a._720kb-datepicker-disabled, ._720kb-datepicker-calendar-years-pagination a._720kb-datepicker-disabled:hover, ._720kb-datepicker-calendar-years-pagination a._720kb-datepicker-active._720kb-datepicker-disabled, ._720kb-datepicker-calendar-years-pagination a._720kb-datepicker-active._720kb-datepicker-disabled:hover {
+  color: #fff;
+}
+
+
+
+.common_bod .common_bod_center .trade_record .record_list ul:first-child li {
+  color: inherit;
+}
+
+.common_bod .common_bod_center .trade_record .record_list ul.page-btn .pagination li {
+  width: auto !important;
+}
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover{
+  background: #303e47;
+  border-color: #303e47;
+}
+
+.common_bod .common_bod_center .trade_record .record_list ul:first-child{
+  &.tit{
+    li{
+      color: #949999;
+    }
+  }
+}
+
+.licontent {
+  width: 100% !important;
+}
+
+
